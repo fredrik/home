@@ -1,0 +1,63 @@
+# aliaser
+
+# simple aliases
+alias ll='ls -l'
+alias lla='ls -la'
+
+# scheme
+alias mz='mzscheme -m'
+
+# a little piece of the history
+alias h='history | tail -n 32'
+
+# textmate
+function m() {
+	mate $@ & 2> /dev/null
+}
+
+# subversion
+# incidentally, this sequence of aliases mimic my workflow
+alias sta='svn status'
+alias sup='svn up'
+alias sdi='svn diff'
+alias sco='svn commit'
+
+# view svn diff in textmate
+alias sdim='svn diff | mate'
+
+
+## ctk
+
+# boass
+alias trunk='cd ~/boass-trunk'
+#alias boass_restart="ssh boass@orly.boass.se 'cd app/current && mongrel_rails cluster::restart'"
+
+# sys
+alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev/null 2>&1 &'
+
+
+
+
+alias ..=''
+alias ...=''
+
+alias ss=script/server
+alias sc=script/console
+
+
+
+# git
+alias status='git status'
+alias commit='git commit'
+alias diff='git diff'
+
+
+# reloas bashrc
+alias reload-bashrc='source  ~/.bashrc'
+# reload alias
+alias reloas-bash-alias='source ~/.bash_alias'
+
+
+
+
+
