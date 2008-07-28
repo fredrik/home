@@ -1,4 +1,5 @@
 source ~/.bash_alias
+source ~/.bash_functions
 
 # PS1, PATH, svedese
 export PS1="\[\033[01;32m\]lenbust@dlx:\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]> "
@@ -23,6 +24,12 @@ stty start undef
 
 # 
 EDITOR=emacs
+
+
+# amazon aws
+if [[ -f "$HOME/.amazon_keys" ]]; then
+  source "$HOME/.amazon_keys";
+fi
 
 
 function rehash() {
