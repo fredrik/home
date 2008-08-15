@@ -1,10 +1,24 @@
+
+# disable ^S and ^Q
+stty stop undef
+stty start undef
+
 source ~/.bashrc
+source ~/.bash_alias
+source ~/.bash_functions
 
-# setup macports' path
-export PATH=/port/bin:/port/sbin:$PATH
 
-# setup fink and its path
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
+# amazon aws
+if [[ -f "$HOME/.amazon_keys" ]]; then
+  source "$HOME/.amazon_keys";
+fi
 
-# setup local and private paths
-export PATH=/Users/fredrik/jdk/soylatte16-i386-1.0.2/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+# hadoop
+if [[ -f "$HOME/.hadoop" ]]; then
+  source "$HOME/.hadoop";
+fi
+
+# EC2
+if [[ -f "$HOME/.ec2" ]]; then
+  source "$HOME/.ec2";
+fi
