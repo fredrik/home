@@ -1,3 +1,11 @@
+bin
+lib
+src
+ec2
+s3
+code
+hack
+school
 Desktop
 Documents
 Library
@@ -6,6 +14,11 @@ Music
 Pictures
 Public
 Sites
+cbt
+dropbox
+elisp.d
+irclogs
+hack-metarepos
 .amazon_keys
 .bash_history
 .cabal
