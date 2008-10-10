@@ -1,5 +1,6 @@
-# aliaser
+# .bash_alias
 
+# type dot-dot-dot, do nothing
 alias ..=''
 alias ...=''
 
@@ -10,9 +11,8 @@ alias lla='ls -la'
 # a little piece of the history
 alias h='history | tail -n 32'
 
-# shell
+# shell - mac os x specific obv.
 alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev/null 2>&1 &'
-
 
 # rails
 alias ss=script/server
@@ -34,13 +34,5 @@ function m() {
 	mate $@ & 2> /dev/null
 }
 
-# subversion
-# incidentally, this sequence of aliases mimic my workflow
-alias sta='svn status'
-alias sup='svn up'
-alias sdi='svn diff'
-alias sco='svn commit'
-
-# view svn diff in textmate
-alias sdim='svn diff | mate'
-
+# hadoop
+alias hadoop='~/code/hadoop/current/bin/hadoop'
