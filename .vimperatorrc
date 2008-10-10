@@ -1,0 +1,3 @@
+set titlestring=egads
+set visualbell
+set guioptions+=b

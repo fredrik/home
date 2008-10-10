@@ -1,0 +1,7 @@
+[user]
+	name = Fredrik Mollerstrand
+	email = fredrik@mollerstrand.se
+[color]
+	diff = auto
+	status = auto
+	branch = auto
