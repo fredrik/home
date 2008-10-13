@@ -26,6 +26,7 @@ hack-metarepos
 .eclipse_keyring
 .emacs.d
 .ghc
+.irb-save-history
 .irssi
 .links
 .mutt
