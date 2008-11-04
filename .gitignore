@@ -34,8 +34,10 @@ hack-metarepos
 .mysql_history
 .netbeans
 .rdebug_hist
+.ruby_inline
 .sqlite_history
 .ssh
+.subversion
 .viminfo
 .DS_Store
 .MacOSX
