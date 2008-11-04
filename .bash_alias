@@ -20,11 +20,11 @@ alias sc=script/console
 alias gen=script/generate
 
 # git
-alias status='git-status'
-alias commit='git-commit'
-alias diff='git-diff'
-alias branch='git-branch'	
-alias checkout='git-checkout'
+alias status='git status'
+alias commit='git commit'
+alias diff='git diff'
+alias branch='git branch'	
+alias checkout='git checkout'
 
 # scheme
 alias mz='mzscheme -m'
