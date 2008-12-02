@@ -1,8 +1,5 @@
 bin
 lib
-src
-ec2
-s3
 code
 hack
 school
@@ -22,6 +19,7 @@ hack-metarepos
 .amazon_keys
 .bash_history
 .cabal
+.config
 .dropbox
 .eclipse_keyring
 .emacs.d
