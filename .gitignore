@@ -3,6 +3,7 @@ lib
 code
 hack
 school
+tmp
 Desktop
 Documents
 Library
@@ -23,10 +24,13 @@ hack-metarepos
 .dropbox
 .eclipse_keyring
 .emacs.d
+.fonts.cache-1
+.gdb_history
 .ghc
 .irb-save-history
 .irssi
 .links
+.lpoptions
 .mutt
 .muttrc
 .mysql_history
