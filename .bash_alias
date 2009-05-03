@@ -1,7 +1,9 @@
 # .bash_alias
 
+# up one
+alias ..='cd ..'
+
 # type dot-dot-dot, do nothing
-alias ..=''
 alias ...=''
 
 # simple aliases
