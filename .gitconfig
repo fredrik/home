@@ -1,3 +1,6 @@
+[core]
+	editor = "/usr/bin/emacs -nw"
+	pager = less
 [user]
 	name = Fredrik Mollerstrand
 	email = fredrik@mollerstrand.se

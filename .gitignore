@@ -6,6 +6,7 @@ school
 tmp
 Desktop
 Documents
+Downloads
 Library
 Movies
 Music
@@ -15,7 +16,7 @@ Sites
 cbt
 dropbox
 irclogs
-hack-metarepos
+workspace
 .amazon_keys
 .bash_history
 .cabal
@@ -27,10 +28,13 @@ hack-metarepos
 .gdb_history
 .ghc
 .hamachi
+.irb_history
 .irb-save-history
 .irssi
 .links
+.lesshst
 .lpoptions
+.macports
 .mutt
 .muttrc
 .mysql_history
