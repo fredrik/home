@@ -27,6 +27,17 @@ alias commit='git commit'
 alias diff='git diff'
 alias branch='git branch'	
 alias checkout='git checkout'
+# more.
+alias d='git diff | mate'
+
+# 1) write test.
+# 2) pass test.
+# 3) refactor.
+# .)
+# 5) commit
+alias s=status
+alias c='echo "COMMITING.";               git commit -a -m "passed test."'
+alias undocommit='echo "UNDOING COMMIT."; git reset --soft HEAD^'
 
 # scheme
 alias mz='mzscheme -m'
