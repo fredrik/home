@@ -23,21 +23,28 @@ alias gen=script/generate
 
 # git
 alias status='git status'
+alias add='git add .'
 alias commit='git commit'
 alias diff='git diff'
 alias branch='git branch'	
 alias checkout='git checkout'
 # more.
-alias d='git diff | mate'
+alias undo='echo "UNDOING COMMIT."; git reset --soft HEAD^'
+alias lastdiff='git diff HEAD^ HEAD'
+alias commit_all='echo "COMMITING."; git commit -a'
+# shorties.
+alias s=status
+alias l='git log --stat'
+alias d=diff
+alias dd='git diff --cached'
+alias ddd=lastdiff
+alias c=commit_all
 
 # 1) write test.
 # 2) pass test.
 # 3) refactor.
 # .)
 # 5) commit
-alias s=status
-alias c='echo "COMMITING.";               git commit -a -m "passed test."'
-alias undocommit='echo "UNDOING COMMIT."; git reset --soft HEAD^'
 
 # scheme
 alias mz='mzscheme -m'
