@@ -55,4 +55,7 @@ function m() {
 }
 
 # hadoop
-alias hadoop='~/code/hadoop/current/bin/hadoop'
+alias hadoop="$HADOOP_HOME/bin/hadoop"
+alias dfs="hadoop dfs"
+# hbase
+alias hbase="$HBASE_HOME/bin/hbase"
