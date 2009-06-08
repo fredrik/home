@@ -1,3 +1,13 @@
 set titlestring=egads
 set visualbell
-set guioptions+=b
+set guioptions+=B
+
+# function + key mapping to toggle toolbars
+# from http://vimperator.org/trac/ticket/2
+:js << EOF
+    toggle_element = function (name) {
+        document.getElementById(name).collapsed ^= 1;
+    }
+EOF
+# bookmarks toolbar - doesn't work; fix later.
+map <silent> <C-T> :js toggle_element('PersonalToolbar')<CR>
