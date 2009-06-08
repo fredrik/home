@@ -1,5 +1,0 @@
-export HADOOP_VERSION=0.17.0
-export S3_BUCKET=hadoop-ec2-images
-
-
-# ami-ee53b687

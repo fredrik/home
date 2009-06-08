@@ -49,13 +49,11 @@ alias c=commit_all
 # scheme
 alias mz='mzscheme -m'
 
-# textmate
-function m() {
-	mate $@ & 2> /dev/null
-}
+# moving data much?
+alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
+alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/* --ignore-existing --progress /Volumes/data/incoming/sync-mosfet'
 
-# hadoop
+# hadoop & hbase
 alias hadoop="$HADOOP_HOME/bin/hadoop"
 alias dfs="hadoop dfs"
-# hbase
 alias hbase="$HBASE_HOME/bin/hbase"

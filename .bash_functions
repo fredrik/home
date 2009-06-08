@@ -12,6 +12,7 @@ function didwhat() {
 	git diff $commit^ $commit
 }
 
-
-alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
-alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/* --ignore-existing --progress /Volumes/data/incoming/sync-mosfet'
+# textmate
+function m() {
+	mate $@ & 2> /dev/null
+}
