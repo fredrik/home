@@ -57,3 +57,8 @@ alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/*
 alias hadoop="$HADOOP_HOME/bin/hadoop"
 alias dfs="hadoop dfs"
 alias hbase="$HBASE_HOME/bin/hbase"
+
+alias start-hbase='~/workspace/hbase-0.19.3/bin/start-hbase.sh'
+alias stop-hbase='~/workspace/hbase-0.19.3/bin/stop-hbase.sh'
+
+alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
