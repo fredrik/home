@@ -1,4 +1,5 @@
 bin
+code
 data
 hack
 school
@@ -16,14 +17,20 @@ workspace
 zohmg-projects
 .DS_Store
 .Trash
+.amazon_keys
 .bash_history
 .cups
+.eclipse_keyring
 .emacs.d
+.dropbox
 .gdb_history
+.gem
 .ghc
+.heroku
 .irb_history
 .irb-save-history
 .irssi
+.ivy2
 .links
 .lesshst
 .macports
