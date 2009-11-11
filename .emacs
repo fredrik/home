@@ -1,9 +1,10 @@
 ;; egads@slacker.se
 
+; backspace
+(define-key global-map "\C-h" 'backward-delete-char)
 
 (global-set-key "\C-t" 'undo)
 (global-set-key "\C-x\C-x" 'switch-to-buffer)
-
 
 ; jag vill inte ha oordning bland mina filer.
 (setq make-backup-files nil)
