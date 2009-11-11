@@ -4,6 +4,6 @@ if [ -f "$HOME/.amazon_keys" ]; then
 fi
 
 # EC2
-if [ -f "$HOME/.ec2" ]; then
-  source "$HOME/.ec2";
+if [ -f "$HOME/.ec2rc" ]; then
+  source "$HOME/.ec2rc";
 fi
