@@ -1,3 +1,5 @@
+# when are we?
+date
 
 # disable ^S and ^Q
 stty stop undef
