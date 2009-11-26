@@ -1,12 +1,24 @@
 # mess with $PATH
 
+# default
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+# tex and X11
+PATH=$PATH:/usr/texbin:/usr/X11/bin
+
 # macports
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+PATH=$PATH:/opt/local/bin:/opt/local/sbin
 # + man pages
-export MANPATH=/opt/local/share/man:$MANPATH
+MANPATH=/opt/local/share/man:$MANPATH
 
 # fink
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
 # local and private paths
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
+# cloudera ec2
+PATH=$PATH:/Users/fredrik/burt/ec2/cloudera/cloudera-ec2-fork
+
+export PATH
+export MANPATH
