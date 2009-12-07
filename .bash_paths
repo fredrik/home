@@ -1,24 +1,23 @@
-# mess with $PATH
+# mess with $PATH #
+###################
 
 # default
-PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
-# tex and X11
-PATH=$PATH:/usr/texbin:/usr/X11/bin
+# X11
+# PATH=$PATH:/usr/X11/bin
 
-# macports
-PATH=$PATH:/opt/local/bin:/opt/local/sbin
-# + man pages
-MANPATH=/opt/local/share/man:$MANPATH
+# /usr/local
+# PATH=$PATH:/usr/local/bin
 
-# fink
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
+# homebrew
+PATH=$PATH:/usr/local/homebrew/bin
 
-# local and private paths
-PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+# ~/bin
+PATH=$PATH:$HOME/bin
 
 # cloudera ec2
-PATH=$PATH:/Users/fredrik/burt/ec2/cloudera/cloudera-ec2-fork
+# PATH=$PATH:$HOME/burt/ec2/cloudera/cloudera-ec2-fork
 
 export PATH
 export MANPATH
