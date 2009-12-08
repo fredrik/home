@@ -46,19 +46,10 @@ alias c=commit_all
 # .)
 # 5) commit
 
-# scheme
-alias mz='mzscheme -m'
-
 # moving data much?
 alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
 alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/* --ignore-existing --progress /Volumes/data/incoming/sync-mosfet'
 
-# hadoop & hbase
-#alias hadoop="$HADOOP_HOME/bin/hadoop"
-#alias dfs="hadoop dfs"
-#alias hbase="$HBASE_HOME/bin/hbase"
-
-#alias start-hbase='~/workspace/hbase-0.19.3/bin/start-hbase.sh'
-#alias stop-hbase='~/workspace/hbase-0.19.3/bin/stop-hbase.sh'
-
+# hadoop & hbase & zohmg
+alias dfs="hadoop dfs"
 alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
