@@ -46,6 +46,13 @@ alias c=commit_all
 # .)
 # 5) commit
 
+# ec2
+alias edi=ec2-describe-instances
+alias eri=ec2-run-instances
+alias edv=ec2-describe-volumes
+alias eav=ec2-attach-volume
+alias etv=ec2-detach-volume
+
 # moving data much?
 alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
 alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/* --ignore-existing --progress /Volumes/data/incoming/sync-mosfet'
