@@ -23,7 +23,7 @@ PATH=$PATH:/usr/local/hadoop/bin
 export PATH=$PATH:$HOME/.ec2/tools/bin
 
 # cloudera ec2
-# PATH=$PATH:$HOME/burt/ec2/cloudera/cloudera-ec2-fork
+PATH=$PATH:/usr/local/cloudera-ec2
 
 export PATH
 export MANPATH
