@@ -50,8 +50,8 @@ alias c=commit_all
 alias edi=ec2-describe-instances
 alias eri=ec2-run-instances
 alias edv=ec2-describe-volumes
-alias eav=ec2-attach-volume
-alias etv=ec2-detach-volume
+alias eatv=ec2-attach-volume
+alias edtv=ec2-detach-volume
 
 # moving data much?
 alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
