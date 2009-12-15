@@ -43,6 +43,7 @@ zohmg-projects
 .mysql_history
 .netbeans
 .pig_history
+.python-eggs
 .rdebug_hist
 .ruby_inline
 .s3curl
