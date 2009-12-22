@@ -19,6 +19,9 @@ PATH=$PATH:$HOME/bin
 # hadoop
 PATH=$PATH:/usr/local/hadoop/bin
 
+# mysql
+PATH=$PATH:/usr/local/mysql/bin
+
 # ec2 api+ami tools
 export PATH=$PATH:$HOME/.ec2/tools/bin
 
