@@ -2,7 +2,7 @@
 	editor = mate
 	pager = less
 [user]
-	name = Fredrik Mollerstrand
+	name = Fredrik Möllerstrand
 	email = fredrik@mollerstrand.se
 [color]
 	diff = auto
