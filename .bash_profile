@@ -1,5 +1,5 @@
-# when are we?
 date
+echo 'work hard and be nice to people.'
 
 # disable ^S and ^Q
 stty stop undef
