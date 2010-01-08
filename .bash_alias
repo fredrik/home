@@ -33,6 +33,7 @@ alias undo='echo "UNDOING COMMIT."; git reset --soft HEAD^'
 alias lastdiff='git diff HEAD^ HEAD'
 alias commit_all='echo "COMMITING."; git commit -a'
 # shorties.
+alias b='git branch'
 alias s=status
 alias l='git log --stat'
 alias d=diff
