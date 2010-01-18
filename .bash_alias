@@ -25,7 +25,6 @@ alias gen=script/generate
 alias status='git status'
 alias add='git add .'
 alias commit='git commit'
-alias diff='git diff'
 alias branch='git branch'	
 alias checkout='git checkout'
 # more.
@@ -36,7 +35,7 @@ alias commit_all='echo "COMMITING."; git commit -a'
 alias b='git branch'
 alias s=status
 alias l='git log --stat'
-alias d=diff
+alias d='git diff'
 alias dd='git diff --cached'
 alias ddd=lastdiff
 alias c=commit_all
