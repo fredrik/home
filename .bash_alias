@@ -62,3 +62,7 @@ alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/*
 # hadoop & hbase & zohmg
 alias dfs="hadoop dfs"
 alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
+
+# productivity.
+alias pda='cd ~/Desktop/pda'
+alias pda-update='pushd ~/Desktop/pda; git commit . -m "pda: updated"; popd'
