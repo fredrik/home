@@ -29,4 +29,7 @@ export PATH=$PATH:$HOME/.ec2/tools/bin
 PATH=$PATH:/usr/local/cloudera-ec2
 
 export PATH
-export MANPATH
+
+
+# also, java's class path
+export CLASSPATH=/usr/local/jars/*
