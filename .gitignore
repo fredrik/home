@@ -1,4 +1,3 @@
-bin
 burt
 code
 data
@@ -38,6 +37,7 @@ zohmg-projects
 .irb-save-history
 .irssi
 .ivy2
+.jline-clojure.main.history
 .links
 .lesshst
 .macports
