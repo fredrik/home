@@ -53,8 +53,12 @@ alias eri=ec2-run-instances
 alias edv=ec2-describe-volumes
 alias eatv=ec2-attach-volume
 alias edtv=ec2-detach-volume
+
 # hadoop-ec2
-alias he=hadoop-ec2
+alias che=hadoop-ec2
+alias chel='hadoop-ec2 launch-cluster'
+alias chet='hadoop-ec2 terminate-cluster'
+alias ches='hadoop-ec2 list'
 
 # moving data much?
 alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
