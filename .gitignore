@@ -9,6 +9,7 @@ tmp
 Desktop
 Documents
 Downloads
+Games
 Library
 Movies
 Music
@@ -35,6 +36,7 @@ zohmg-projects
 .ghc
 .gnuplot_history
 .hadoop-ec2
+.htoprc
 .heroku
 .irb-save-history
 .irb_history
@@ -58,3 +60,4 @@ zohmg-projects
 .subversion
 .viminfo
 .vimperator
+cbt
