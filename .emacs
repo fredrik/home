@@ -13,7 +13,7 @@
 
 ; som om jag bryr mig
 (menu-bar-mode -1)
-(tool-bar-mode 0)
+;(tool-bar-mode 0)
 
 ; visa alltid linenumbers
 (setq line-number-mode t)
