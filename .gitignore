@@ -55,9 +55,11 @@ zohmg-projects
 .rdebug_hist
 .ruby_inline
 .s3curl
+.scala_history
 .sqlite_history
 .ssh
 .subversion
 .viminfo
 .vimperator
 cbt
+
