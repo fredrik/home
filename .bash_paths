@@ -28,6 +28,9 @@ export PATH=$PATH:$HOME/.ec2/tools/bin
 # cloudera ec2
 PATH=$PATH:/usr/local/cloudera-ec2
 
+# tex
+PATH=$PATH:/usr/local/texlive/2009/bin/universal-darwin/
+
 export PATH
 
 
