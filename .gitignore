@@ -37,8 +37,9 @@ zohmg-projects
 .ghc
 .gnuplot_history
 .hadoop-ec2
-.htoprc
 .heroku
+.htoprc
+.hushlogin
 .irb-save-history
 .irb_history
 .irssi
