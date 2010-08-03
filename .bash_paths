@@ -16,8 +16,9 @@ PATH=$PATH:/usr/local/homebrew/bin
 # ~/bin
 PATH=$PATH:$HOME/bin
 
-# hadoop
+# hadoop + hbase
 PATH=$PATH:/usr/local/hadoop/bin
+PATH=$PATH:/usr/local/hbase/bin
 
 # mysql
 PATH=$PATH:/usr/local/mysql/bin
