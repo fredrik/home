@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ -z "$1" ]; then
-    # a repl, please.
-    java jline.ConsoleRunner clojure.main
-else
-    # run script.
-    java clojure.main $@
-fi
