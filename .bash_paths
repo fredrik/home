@@ -30,7 +30,7 @@ export PATH=$PATH:$HOME/.ec2/tools/bin
 PATH=$PATH:/usr/local/cloudera-ec2
 
 # tex
-PATH=$PATH:/usr/local/texlive/2009/bin/universal-darwin/
+PATH=$PATH:/usr/local/texlive/2010/bin/x86_64-darwin
 
 export PATH
 
