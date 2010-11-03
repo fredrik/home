@@ -8,7 +8,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin
 # PATH=$PATH:/usr/X11/bin
 
 # /usr/local
-PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/local/bin:/usr/local/sbin
 
 # homebrew
 PATH=$PATH:/usr/local/homebrew/bin
