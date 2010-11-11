@@ -1,8 +1,0 @@
-# on a fresh install:
-
-cd
-git init
-git remote add origin git@github.com:fredrikmollerstrand/home.git
-git fetch
-git branch master origin/master 
-git checkout master 
