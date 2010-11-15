@@ -1,17 +1,8 @@
 # mess with $PATH #
 ###################
 
-# default
-PATH=/usr/bin:/bin:/usr/sbin:/sbin
-
-# X11
-# PATH=$PATH:/usr/X11/bin
-
-# /usr/local
-PATH=$PATH:/usr/local/bin:/usr/local/sbin
-
-# homebrew
-PATH=$PATH:/usr/local/homebrew/bin
+# default - homebrew installs in /usr/local take precedence.
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # ~/bin
 PATH=$PATH:$HOME/bin
@@ -32,8 +23,7 @@ PATH=$PATH:/usr/local/cloudera-ec2
 # tex
 PATH=$PATH:/usr/local/texlive/2010/bin/x86_64-darwin
 
+# python packages installed with pip have their binaries in the cellar.
+PATH=$PATH:/usr/local/Cellar/python/2.7/bin
+
 export PATH
-
-
-# also, java's class path
-export CLASSPATH=/usr/local/jars/*
