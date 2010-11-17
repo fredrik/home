@@ -1,5 +1,5 @@
 date
-echo 'prestera ett oklanderligt hantverk.'
+echo 'work hard and be nice to people.'
 
 # disable ^S and ^Q
 stty stop undef
