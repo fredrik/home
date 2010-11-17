@@ -1,6 +1,6 @@
-burt
 code
 data
+editd
 hack
 juarez
 rich
@@ -28,10 +28,12 @@ zohmg-projects
 .bash_history
 .bundle
 .cups
+.dbshell
 .dropbox
 .ec2
 .eclipse_keyring
 .emacs.d
+.erlang.cookie
 .fontconfig
 .gdb_history
 .gem
