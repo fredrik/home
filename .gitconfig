@@ -1,6 +1,7 @@
 [core]
 	editor = mate
 	pager = less
+	excludesfile = /Users/fredrik/.gitignore-global
 [user]
 	name = Fredrik Möllerstrand
 	email = fredrik@mollerstrand.se
