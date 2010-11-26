@@ -5,7 +5,7 @@ export LC_CTYPE="sv_SE.UTF-8"
 #export LC_CTYPE=en_US.UTF-8
 #export LC_CTYPE=en_GB.UTF-8
 
-export EDITOR=mate
+export EDITOR='mate -w'
 export GIT_EDITOR='mate -w'
 
 export HADOOP_HOME='/usr/local/hadoop'
