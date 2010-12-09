@@ -14,9 +14,6 @@ PATH=$PATH:/usr/local/hbase/bin
 # mysql
 PATH=$PATH:/usr/local/mysql/bin
 
-# ec2 api+ami tools
-export PATH=$PATH:$HOME/.ec2/tools/bin
-
 # cloudera ec2
 PATH=$PATH:/usr/local/cloudera-ec2
 
