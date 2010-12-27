@@ -6,6 +6,9 @@ alias ..='cd ..'
 # type dot-dot-dot, do nothing
 alias ...=''
 
+# go to the desktop.
+alias dt='cd ~/Desktop'
+
 # simple aliases
 alias ll='ls -l'
 alias lla='ls -la'
