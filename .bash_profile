@@ -10,3 +10,4 @@ source ~/.bash_alias
 source ~/.bash_functions
 source ~/.bash_paths
 source ~/.bash_stuff
+source ~/.bashmarks # http://www.huyng.com/bashmarks-directory-bookmarks-for-the-shell/
