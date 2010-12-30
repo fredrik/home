@@ -1,12 +1,3 @@
-code
-data
-editd
-hack
-juarez
-rich
-school
-src
-tmp
 Desktop
 Documents
 Downloads
@@ -18,6 +9,15 @@ Music
 Pictures
 Public
 Sites
+code
+data
+editd
+hack
+juarez
+rich
+school
+src
+tmp
 workspace
 zohmg-projects
 .CFUserTextEncoding
@@ -66,5 +66,3 @@ zohmg-projects
 .subversion
 .viminfo
 .vimperator
-cbt
-
