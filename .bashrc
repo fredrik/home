@@ -11,5 +11,6 @@ export GIT_EDITOR='mate -w'
 export HADOOP_HOME='/usr/local/hadoop'
 export HBASE_HOME='/usr/local/hbase'
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
+export PRICEMONSTER_HOME='/Users/fredrik/editd/pricemonster'
 
 unset HISTFILESIZE # infinite history.
