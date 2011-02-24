@@ -30,6 +30,7 @@ alias add='git add .'
 alias commit='git commit'
 alias branch='git branch'	
 alias checkout='git checkout'
+alias push='git push origin master'
 # more.
 alias undo='echo "UNDOING COMMIT."; git reset --soft HEAD^'
 alias lastdiff='git diff HEAD^ HEAD'
