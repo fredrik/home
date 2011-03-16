@@ -24,5 +24,9 @@ PATH=$PATH:/usr/local/texlive/2010/bin/x86_64-darwin
 PATH=$PATH:/usr/local/Cellar/python/2.7/bin
 PYTHONPATH=$PYTHONPATH:/Users/fredrik/editd
 
+# npm installs packages here.
+NODE_PATH=/usr/local/lib/node
+
 export PATH
 export PYTHONPATH
+export NODE_PATH
