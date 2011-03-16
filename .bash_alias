@@ -10,7 +10,8 @@ alias ...=''
 alias dt='cd ~/Desktop'
 
 # add colours, please.
-alias ls='ls --color=auto'
+# the os x version of ls doesn't support colours. the hey!
+# alias ls='ls --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
