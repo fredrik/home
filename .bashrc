@@ -18,7 +18,7 @@ if [ `uname` = "Darwin" ]; then
 
 else
     # otherwise, any remote system.
-    export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:[\[\033[01;34m\]\w\[\033[00m\]]\$ '
+    export PS1='\[\e]0;\u@\h]\[\033[01;32m\]\u@\h\[\033[00m\]:[\[\033[01;34m\]\w\[\033[00m\]]\$ '
     export EDITOR='vim'
     export GIT_EDITOR='vim'
 fi
