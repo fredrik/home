@@ -20,6 +20,9 @@ alias grep='grep --color=auto'
 alias ll='ls -l'
 alias lla='ls -la'
 
+# python debugger.
+alias p='DEBUG=yes python -m pdb '
+
 # a little piece of the history
 alias h='history | tail -n 32'
 
@@ -43,6 +46,7 @@ alias undo='echo "UNDOING COMMIT."; git reset --soft HEAD^'
 alias lastdiff='git diff HEAD^ HEAD'
 alias commit_all='echo "COMMITING."; git commit -a'
 # shorties.
+alias a='git add'
 alias b='git branch'
 alias co=checkout
 alias s=status
@@ -50,7 +54,8 @@ alias l='git log --stat'
 alias d='git diff'
 alias dd='git diff --cached'
 alias ddd=lastdiff
-alias c=commit_all
+alias c=commit
+alias cc=commit_all
 
 # 1) write test.
 # 2) pass test.
