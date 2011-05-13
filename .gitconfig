@@ -11,3 +11,5 @@
     branch = auto
 [branch]
     autosetuprebase = always
+[alias]
+    tree = log --oneline --decorate --graph
