@@ -1,13 +1,13 @@
 [core]
-	editor = mate
-	pager = less
-	excludesfile = /Users/fredrik/.gitignore-global
+    editor = mate
+    pager = less
+    excludesfile = /Users/fredrik/.gitignore-global
 [user]
-	name = Fredrik Möllerstrand
-	email = fredrik@mollerstrand.se
+    name = Fredrik Möllerstrand
+    email = fredrik@mollerstrand.se
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
