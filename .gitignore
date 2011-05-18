@@ -53,6 +53,7 @@ zohmg-projects
 .links
 .local
 .macports
+.matplotlib
 .mutt
 .muttrc
 .mysql_history
