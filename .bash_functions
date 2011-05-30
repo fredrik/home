@@ -3,9 +3,10 @@ function rehash() {
     source $HOME/.bash_profile
 }
 
-function bssh() {
-     ssh -tt badger.last.fm ssh -A $1
+function jump() {
+     ssh -A -tt punktlich ssh -A $1
 }
+alias j=jump
 
 function didwhat() {
 	commit=$1
