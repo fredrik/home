@@ -3,8 +3,9 @@ function rehash() {
     source $HOME/.bash_profile
 }
 
+# $> jump slacker.se fakedew.net
 function jump() {
-     ssh -A -tt punktlich ssh -A $1
+    ssh -A -tt $1 ssh -A $2
 }
 alias j=jump
 
