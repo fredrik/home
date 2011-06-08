@@ -1,0 +1,11 @@
+# ssh aliases for quick remote access.
+
+alias sm='ssh fredrik@matrix'
+alias sh='ssh fredrik@holmes'
+alias sg='ssh fredrik@gardener'
+alias sp='ssh fredrik@punktlich'
+
+alias pm='ssh pricemonster@matrix'
+alias ph='ssh pricemonster@holmes'
+alias pg='ssh pricemonster@gardener'
+alias pp='ssh pricemonster@punktlich'

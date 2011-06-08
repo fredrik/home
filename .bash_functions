@@ -3,7 +3,6 @@ function rehash() {
     source $HOME/.bash_profile
 }
 
-# $> jump slacker.se fakedew.net
 function jump() {
     ssh -A -tt $1 ssh -A $2
 }

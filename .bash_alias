@@ -87,6 +87,3 @@ alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
 # productivity.
 alias pda='cd ~/Desktop/pda'
 alias pda-update='pushd ~/Desktop/pda; git commit . -m "pda: updated"; popd'
-
-# quick ssh to remote hosts
-alias bb3='ssh burt@burt-3'
