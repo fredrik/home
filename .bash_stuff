@@ -7,3 +7,6 @@ fi
 if [ -f "$HOME/.ec2rc" ]; then
   source "$HOME/.ec2rc";
 fi
+
+# virtualenvwrapper
+source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
