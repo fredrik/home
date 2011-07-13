@@ -85,5 +85,11 @@ alias dfs="hadoop dfs"
 alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
 
 # productivity.
-alias pda='cd ~/Desktop/pda'
+alias to-pda='cd ~/Desktop/pda'
 alias pda-update='pushd ~/Desktop/pda; git commit . -m "pda: updated"; popd'
+
+
+# transformations.
+alias html='markable | markdown'
+alias markable='cat'
+alias check_html='open http://validator.w3.org/#validate_by_input+with_options'
