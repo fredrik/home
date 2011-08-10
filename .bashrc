@@ -15,7 +15,7 @@ if [ `uname` = "Darwin" ]; then
     export HBASE_HOME='/usr/local/hbase'
     export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
     export PRICEMONSTER_HOME='/Users/fredrik/editd/pricemonster'
-
+    export DJANGO_SETTINGS_MODULE=web.settings
 else
     # otherwise, any remote system.
     export PS1='\[\e]0;\u@\h]\[\033[01;32m\]\u@\h\[\033[00m\]:[\[\033[01;34m\]\w\[\033[00m\]]\$ '
