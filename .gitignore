@@ -67,6 +67,7 @@ zohmg-projects
 .psql_history
 .python-eggs
 .rdebug_hist
+.pythonhist
 .ruby_inline
 .s3curl
 .scala_history
