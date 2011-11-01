@@ -29,11 +29,6 @@ alias h='history | tail -n 32'
 # shell - mac os x specific obv.
 alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev/null 2>&1 &'
 
-# rails
-alias ss=script/server
-alias sc=script/console
-alias gen=script/generate
-
 # git
 alias status='git status'
 alias add='git add .'
@@ -89,8 +84,10 @@ alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
 alias to-pda='cd ~/Desktop/pda'
 alias pda-update='pushd ~/Desktop/pda; git commit . -m "pda: updated"; popd'
 
-
 # transformations.
 alias html='markable | markdown'
 alias markable='cat'
 alias check_html='open http://validator.w3.org/#validate_by_input+with_options'
+
+# ssh and remote access.
+alias jp='jump punktlich'

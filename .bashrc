@@ -14,6 +14,7 @@ if [ `uname` = "Darwin" ]; then
     export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
 
     export PRICEMONSTER_HOME='/Users/fredrik/editd/pricemonster'
+    export SKUSCRAPER_HOME='/Users/fredrik/editd/skuscraper'
     export DJANGO_SETTINGS_MODULE=web.settings
 else
     # any other system.
