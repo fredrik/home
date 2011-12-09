@@ -33,8 +33,8 @@ zohmg-projects
 .config
 .cups
 .dbshell
-.dvdcss
 .dropbox
+.dvdcss
 .ec2
 .eclipse_keyring
 .emacs.d
@@ -64,10 +64,11 @@ zohmg-projects
 .mysql_history
 .netbeans
 .pig_history
+.pip
 .psql_history
 .python-eggs
-.rdebug_hist
 .pythonhist
+.rdebug_hist
 .ruby_inline
 .s3curl
 .scala_history
@@ -75,6 +76,7 @@ zohmg-projects
 .sqlite_history
 .ssh
 .subversion
+.vagrant.d
 .viminfo
 .vimperator
 .virtualenvs
