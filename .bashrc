@@ -15,7 +15,7 @@ if [ `uname` = "Darwin" ]; then
 
     export PRICEMONSTER_HOME='/Users/fredrik/editd/pricemonster'
     export SKUSCRAPER_HOME='/Users/fredrik/editd/skuscraper'
-    export DJANGO_SETTINGS_MODULE=web.settings
+    # export DJANGO_SETTINGS_MODULE=web.settings
 else
     # any other system.
     export PS1='\[\e]0;\u@\h]\[\033[01;32m\]\u@\h\[\033[00m\]:[\[\033[01;34m\]\w\[\033[00m\]]\$ '
