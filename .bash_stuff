@@ -9,4 +9,4 @@ if [ -f "$HOME/.ec2rc" ]; then
 fi
 
 # virtualenvwrapper
-source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
+# source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
