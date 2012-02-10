@@ -8,5 +8,10 @@ if [ -f "$HOME/.ec2rc" ]; then
   source "$HOME/.ec2rc";
 fi
 
+# bring in all keys.
+ssh-add ~/.ssh/id_[rd]sa &> /dev/null
+ssh-add ~/editd/docs/keys/private-keys/root.pem &> /dev/null
+ssh-add ~/editd/docs/keys/private-keys/search.pem &> /dev/null
+
 # virtualenvwrapper
 # source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
