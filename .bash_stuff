@@ -11,6 +11,7 @@ fi
 # bring in all keys.
 ssh-add ~/.ssh/id_[rd]sa &> /dev/null
 ssh-add ~/editd/docs/keys/private-keys/root.pem &> /dev/null
+ssh-add ~/editd/docs/keys/private-keys/root-us-east.pem &> /dev/null
 ssh-add ~/editd/docs/keys/private-keys/search.pem &> /dev/null
 
 # virtualenvwrapper
