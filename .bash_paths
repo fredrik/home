@@ -18,7 +18,7 @@ PATH=$PATH:/usr/local/mysql/bin
 PATH=$PATH:/usr/local/cloudera-ec2
 
 # tex
-PATH=$PATH:/usr/local/texlive/2010/bin/x86_64-darwin
+PATH=$PATH:/usr/local/texlive/2011/bin/x86_64-darwin
 
 # python packages installed with pip have their binaries in the cellar.
 PATH=$PATH:/usr/local/Cellar/python/2.7/bin
