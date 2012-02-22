@@ -91,3 +91,8 @@ alias check_html='open http://validator.w3.org/#validate_by_input+with_options'
 
 # ssh and remote access.
 alias jp='jump punktlich'
+
+# loading the virtuelenv wrappers is really slow!
+# instead of loading on each new shell invocation,
+# whenever I need them I go 'loadvirtualenvwrappers'.
+alias loadvirtualenvwrappers='source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh'
