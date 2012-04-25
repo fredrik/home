@@ -1,3 +1,4 @@
+
 function rehash() {
     echo "reloading .bash_profile"
     source $HOME/.bash_profile

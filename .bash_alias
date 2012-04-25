@@ -10,11 +10,12 @@ alias ...=''
 alias dt='cd ~/Desktop'
 
 # add colours, please.
-# the os x version of ls doesn't support colours. the hey!
-# alias ls='ls --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
+# the os x version of ls doesn't support the --color switch; use -G.
+# thinking of using ls from GNU coreutils.
+alias ls='ls -G'
 
 # simple aliases
 alias ll='ls -l'
@@ -88,9 +89,6 @@ alias pda-update='pushd ~/Desktop/pda; git commit . -m "pda: updated"; popd'
 alias html='markable | markdown'
 alias markable='cat'
 alias check_html='open http://validator.w3.org/#validate_by_input+with_options'
-
-# ssh and remote access.
-alias jp='jump punktlich'
 
 # loading the virtuelenv wrappers is really slow!
 # instead of loading on each new shell invocation,

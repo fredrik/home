@@ -12,10 +12,6 @@ if [ `uname` = "Darwin" ]; then
     export GIT_EDITOR='mate -w'
 
     export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
-
-    export PRICEMONSTER_HOME='/Users/fredrik/editd/pricemonster'
-    export SKUSCRAPER_HOME='/Users/fredrik/editd/skuscraper'
-    # export DJANGO_SETTINGS_MODULE=web.settings
 else
     # any other system.
     export PS1='\[\e]0;\u@\h]\[\033[01;32m\]\u@\h\[\033[00m\]:[\[\033[01;34m\]\w\[\033[00m\]]\$ '
