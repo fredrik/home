@@ -22,5 +22,3 @@ else
     export EDITOR='vim'
     export GIT_EDITOR='vim'
 fi
-
-source "`brew --prefix grc`/etc/grc.bashrc"
