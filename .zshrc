@@ -2,6 +2,8 @@ PROMPT='[%~]> '
 
 export PATH=$PATH:/usr/local/sbin
 
-source /usr/local/bin/virtualenvwrapper.sh
+# git completion.
+autoload -U compinit && compinit
 
 source ~/.aliases
+source /usr/local/bin/virtualenvwrapper.sh
