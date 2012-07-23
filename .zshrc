@@ -7,7 +7,7 @@ autoload -U compinit && compinit
 
 source ~/.aliases
 
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
-  source /usr/local/bin/virtualenvwrapper.sh
+if [[ -f /usr/local/share/python/virtualenvwrapper_lazy.sh ]]; then
+  source /usr/local/share/python/virtualenvwrapper_lazy.sh
 fi
 
