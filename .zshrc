@@ -6,4 +6,8 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X1
 autoload -U compinit && compinit
 
 source ~/.aliases
-source /usr/local/bin/virtualenvwrapper.sh
+
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
