@@ -1,6 +1,6 @@
 PROMPT='[%~]> '
 
-export PATH=$PATH:/usr/local/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
 
 # git completion.
 autoload -U compinit && compinit
