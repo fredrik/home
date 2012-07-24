@@ -11,3 +11,4 @@ if [[ -f /usr/local/share/python/virtualenvwrapper_lazy.sh ]]; then
   source /usr/local/share/python/virtualenvwrapper_lazy.sh
 fi
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
