@@ -16,3 +16,10 @@ if [[ -f /usr/local/share/python/virtualenvwrapper.sh ]]; then
 fi
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+
+
+# aws auths
+if [[ -f ~/.aws ]]; then
+  source ~/.aws
+fi
+
