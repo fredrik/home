@@ -23,3 +23,15 @@ if [[ -f ~/.aws ]]; then
   source ~/.aws
 fi
 
+
+
+workwork() {
+  project=$1
+  if [[ -z $project ]]; then echo 'work on what, sire?'; return; fi
+  cd ~/hack/${project} && workon $project
+  export PYTHONPATH=~/hack/${project}:$PYTHONPATH
+  export DJANGO_SETTINGS_MODULE=scores.settings.local.fredrik
+  export DO_NOT_CONFIRM_DEPLOY=true
+}
+alias ww=workwork
+
