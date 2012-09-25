@@ -18,3 +18,6 @@ else
     export EDITOR='vim'
     export GIT_EDITOR='vim'
 fi
+
+# scores hack for le fab.
+export PYTHONPATH=~/hack/scores
