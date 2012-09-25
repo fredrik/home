@@ -20,8 +20,8 @@ PATH=$PATH:/usr/local/cloudera-ec2
 # tex
 PATH=$PATH:/usr/local/texlive/2011/bin/x86_64-darwin
 
-# python packages installed with pip have their binaries in the cellar.
-PATH=$PATH:/usr/local/Cellar/python/2.7/bin
+# python packages installed with pip have their binaries in the cellar and/or /usr/local/share
+PATH=$PATH:/usr/local/Cellar/python/2.7/bin:/usr/local/share/python
 PYTHONPATH=$PYTHONPATH:/Users/fredrik/editd
 
 # npm installs packages here.
