@@ -27,7 +27,8 @@ fi
 
 workwork() {
   project=$1
-  if [[ -z $project ]]; then echo 'work on what, sire?'; return; fi
+  if [[ -z $project ]]; then echo "work on what, sire?"; return; fi
+  if [[ ! -d ~/hack/${project} ]]; then echo "don't know that one, sire."; return; fi
   cd ~/hack/${project} && workon $project
   export PYTHONPATH=~/hack/${project}:$PYTHONPATH
   export DJANGO_SETTINGS_MODULE=scores.settings.local.fredrik
