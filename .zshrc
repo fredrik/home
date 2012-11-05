@@ -36,3 +36,6 @@ workwork() {
 }
 alias ww=workwork
 
+# comments are okay.
+setopt interactivecomments
+
