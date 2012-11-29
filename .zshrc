@@ -38,3 +38,8 @@ alias ww=workwork
 # comments are okay.
 setopt interactivecomments
 
+
+rehash() {
+    # reload all the configuration.
+    source ~/.zshrc
+}
