@@ -31,8 +31,7 @@ workwork() {
   if [[ ! -d ~/hack/${project} ]]; then echo "don't know that one, sire."; return; fi
   cd ~/hack/${project} && workon $project
   export PYTHONPATH=~/hack/${project}:$PYTHONPATH
-  export DJANGO_SETTINGS_MODULE=scores.settings.local.fredrik
-  export DO_NOT_CONFIRM_DEPLOY=true
+  if [[ -f ~/hack/.${project}.rc ]]; then source ~/hack/.${project}.rc; fi
 }
 alias ww=workwork
 
