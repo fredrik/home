@@ -34,7 +34,7 @@ alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev
 alias status='git status'
 alias add='git add .'
 alias commit='git commit'
-alias branch='git branch'	
+alias branch='git branch'
 alias checkout='git checkout'
 alias push='git push origin master'
 alias fetch='git fetch --all'
@@ -53,6 +53,9 @@ alias dd='git diff --cached'
 alias ddd=lastdiff
 alias c=commit
 alias cc=commit_all
+# two 'git log' variants
+alias t='git tree'
+alias lg='git lg'
 
 # 1) write test.
 # 2) pass test.
