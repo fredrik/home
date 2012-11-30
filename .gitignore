@@ -16,6 +16,7 @@ VirtualBox VMs
 .DS_Store
 .Trash
 .Xauthority
+.aws
 .bash_history
 .bundle
 .certs
@@ -46,6 +47,7 @@ VirtualBox VMs
 .muttrc
 .pip
 .psql_history
+.pythonhist
 .ssh
 .vagrant.d
 .viminfo
