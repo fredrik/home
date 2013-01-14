@@ -53,9 +53,9 @@ alias dd='git diff --cached'
 alias ddd=lastdiff
 alias c=commit
 alias cc=commit_all
-# two 'git log' variants
-alias t='git tree'
-alias lg='git lg'
+# two 'git log' variants, defined in ~/.gitconfig
+alias t='git lg'
+alias tt='git tree'
 
 # 1) write test.
 # 2) pass test.
