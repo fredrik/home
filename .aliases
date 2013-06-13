@@ -30,6 +30,9 @@ alias h='history | tail -n 32'
 # shell - mac os x specific obv.
 alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev/null 2>&1 &'
 
+# py.test
+alias pt=py.test
+
 # git
 alias status='git status'
 alias add='git add .'
