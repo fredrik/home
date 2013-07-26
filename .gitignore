@@ -2,12 +2,14 @@ Desktop
 Documents
 Downloads
 Dropbox
+Games
 Library
 Movies
 Music
 Pictures
 Public
 Sites
+apps
 hack
 src
 virtual-machines
@@ -23,6 +25,7 @@ VirtualBox VMs
 .config
 .cups
 .dbshell
+.djangopypi2
 .dropbox
 .dsh
 .ec2
@@ -34,6 +37,7 @@ VirtualBox VMs
 .gnupg
 .gnuplot_history
 .heroku
+.hitch_export_authors
 .htoprc
 .ipython
 .irb-save-history
@@ -47,8 +51,13 @@ VirtualBox VMs
 .muttrc
 .pip
 .psql_history
+.pydistutils.cfg
+.pylint.d
+.pypirc
+.python-eggs
 .pythonhist
 .ssh
+.vagrant
 .vagrant.d
 .viminfo
 .vimperator
