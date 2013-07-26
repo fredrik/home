@@ -1,0 +1,9 @@
+[ui]
+username = Fredrik Mollerstrand <fredrik@mollerstrand.se>
+
+
+[pager]
+pager = LESS='FRX' less
+
+[extensions]
+pager =
