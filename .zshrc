@@ -24,7 +24,6 @@ if [[ -f ~/.aws ]]; then
 fi
 
 
-
 workwork() {
   project=$1
   if [[ -z $project ]]; then echo "work on what, sire?"; return; fi
@@ -35,6 +34,7 @@ workwork() {
 }
 alias ww=workwork
 
+
 # comments are okay.
 setopt interactivecomments
 
@@ -43,9 +43,3 @@ rehash() {
     # reload all the configuration.
     source ~/.zshrc
 }
-
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
