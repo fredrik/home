@@ -19,8 +19,10 @@ VirtualBox VMs
 .Trash
 .Xauthority
 .aws
+.aws.d
 .bash_history
 .bundle
+.cache
 .certs
 .config
 .cups
@@ -56,6 +58,7 @@ VirtualBox VMs
 .pypirc
 .python-eggs
 .pythonhist
+.s3cfg
 .ssh
 .vagrant
 .vagrant.d
