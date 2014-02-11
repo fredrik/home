@@ -31,7 +31,7 @@ alias h='history | tail -n 32'
 alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev/null 2>&1 &'
 
 # py.test
-alias pt=py.test
+alias pt='py.test -n 4'
 
 # git
 alias status='git status'
