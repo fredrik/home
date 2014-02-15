@@ -62,6 +62,9 @@ alias cc=commit_all
 # two 'git log' variants, defined in ~/.gitconfig
 alias t='git lg'
 alias tt='git tree'
+# quickies.
+alias gpd='git push origin develop'
+alias gpm='git push origin master'
 
 # 1) write test.
 # 2) pass test.
