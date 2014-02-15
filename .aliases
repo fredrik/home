@@ -6,6 +6,9 @@ alias ..='cd ..'
 # type dot-dot-dot, do nothing
 alias ...=''
 
+# quick auths
+alias sup='sudo -i'
+
 # go to the desktop.
 alias dt='cd ~/Desktop'
 
