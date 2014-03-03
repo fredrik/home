@@ -1,8 +1,9 @@
 PROMPT='[%~]> ⚡  '
 
-export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 
+
+# history
 HISTSIZE=10000 # session history size
 SAVEHIST=1000 # saved history
 
