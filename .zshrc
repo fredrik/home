@@ -39,7 +39,7 @@ alias ww=workwork
 # py.test
 function watchpytest {
   echo "running tests ($*) on changes."
-  watchmedo shell-command  -p '*.py' -R -c "py.test $*"
+  watchmedo shell-command -w -p '*.py' -R -c "py.test $*"
 }
 alias wpt=watchpytest
 
