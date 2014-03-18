@@ -106,3 +106,13 @@ alias check_html='open http://validator.w3.org/#validate_by_input+with_options'
 # instead of loading on each new shell invocation,
 # whenever I need them I go 'loadvirtualenvwrappers'.
 alias loadvirtualenvwrappers='source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh'
+
+# watch *.py and execute main.py on any change.
+# (uses `watchmedo` from the watchdog package)
+alias watchmain='watchmedo shell-command -w -R -p "*.py" -c "python main.py"'
+
+# django
+alias pm='python manage.py'
+
+# gpg
+alias gp='gpg2'
