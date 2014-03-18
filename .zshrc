@@ -1,6 +1,14 @@
-PROMPT='[%~]> ⚡  '
+# hello!
+# this is fredrik's ~/.zshrc
+# please enjoy and direct any questions and answers to fredrik@mollerstrand.se
 
 
+
+autoload -U promptinit && promptinit
+prompt bigfade
+
+# old prompt:
+# PROMPT='[%~]> ⚡  '
 
 
 # history
@@ -23,6 +31,11 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 if [[ -f ~/.aws ]]; then
   source ~/.aws
 fi
+
+
+# path
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=$PATH:~/bin
 
 
 workwork() {
