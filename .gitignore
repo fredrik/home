@@ -7,3 +7,16 @@ Library/
 Music/
 Pictures/
 Public/
+
+VirtualBox VMs/
+
+data/
+developer-journal/
+hack/
+src/
+
+envs-etc/
+mini-Desktop/
+mini-home/
+scratch/
+sqls/
