@@ -116,3 +116,6 @@ alias pm='python manage.py'
 
 # gpg
 alias gp='gpg2'
+
+# ssh jump
+alias j=jump

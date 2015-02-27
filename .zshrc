@@ -1,7 +1,8 @@
-# hello!
+# hello,
 # this is fredrik's ~/.zshrc
-# please enjoy and direct any questions and answers to fredrik@mollerstrand.se
-
+#
+# direct any questions to fredrik@mollerstrand.se
+# enjoy!
 
 
 autoload -U promptinit && promptinit
@@ -18,6 +19,7 @@ SAVEHIST=1000 # saved history
 # git completion.
 autoload -U compinit && compinit
 
+source ~/.functions
 source ~/.aliases
 
 if [[ -f /usr/local/share/python/virtualenvwrapper.sh ]]; then
@@ -35,7 +37,6 @@ fi
 
 # path
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-export PATH=$PATH:~/bin
 
 
 workwork() {
@@ -58,6 +59,14 @@ alias wpt=watchpytest
 
 # comments are okay.
 setopt interactivecomments
+
+# bring in all keys.
+ssh-add ~/.ssh/id_[rd]sa &> /dev/null
+
+# EC2
+if [ -f "$HOME/.ec2rc" ]; then
+  source "$HOME/.ec2rc";
+fi
 
 
 rehash() {

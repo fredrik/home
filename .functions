@@ -1,0 +1,3 @@
+function jump() {
+    ssh -A -tt $1 ssh -A $2
+}
