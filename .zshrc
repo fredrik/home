@@ -5,28 +5,26 @@
 # enjoy!
 
 
-autoload -U promptinit && promptinit
-prompt bigfade
-
-# old prompt:
-# PROMPT='[%~]> ⚡  '
-
-
-# history
-HISTSIZE=10000 # session history size
-SAVEHIST=1000 # saved history
-
-# git completion.
-autoload -U compinit && compinit
+PROMPT='[%~]> ⚡  '
 
 source ~/.functions
 source ~/.aliases
 
-if [[ -f /usr/local/share/python/virtualenvwrapper.sh ]]; then
-  source /usr/local/share/python/virtualenvwrapper.sh
-fi
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+# path
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+
+# git completion.
+autoload -U compinit && compinit
+
+
+# comments are okay.
+setopt interactivecomments
+
+
+# ssh: bring in all keys.
+ssh-add ~/.ssh/id_[rd]sa &> /dev/null
 
 
 # aws auths
@@ -35,10 +33,8 @@ if [[ -f ~/.aws ]]; then
 fi
 
 
-# path
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-
-
+# this is python specific and worse.
+# TODO: make not python specific.
 workwork() {
   project=$1
   if [[ -z $project ]]; then echo "work on what, sire?"; return; fi
@@ -48,28 +44,3 @@ workwork() {
   if [[ -f ~/hack/.${project}.rc ]]; then source ~/hack/.${project}.rc; fi
 }
 alias ww=workwork
-
-
-# py.test
-function watchpytest {
-  echo "running tests ($*) on changes."
-  watchmedo shell-command -w -p '*.py' -R -c "py.test $*"
-}
-alias wpt=watchpytest
-
-# comments are okay.
-setopt interactivecomments
-
-# bring in all keys.
-ssh-add ~/.ssh/id_[rd]sa &> /dev/null
-
-# EC2
-if [ -f "$HOME/.ec2rc" ]; then
-  source "$HOME/.ec2rc";
-fi
-
-
-rehash() {
-    # reload all the configuration.
-    source ~/.zshrc
-}

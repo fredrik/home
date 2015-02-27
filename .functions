@@ -1,3 +1,8 @@
+rehash() {
+    # reload all the configuration.
+    source ~/.zshrc
+}
+
 function jump() {
     ssh -A -tt $1 ssh -A $2
 }
