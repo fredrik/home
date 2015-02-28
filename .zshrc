@@ -13,6 +13,10 @@ source ~/.zsh-gpg
 # rbenv
 eval "$(rbenv init -)"
 
+# go
+export GOPATH=/usr/local/go
+export PATH=$PATH:/usr/local/go/bin
+
 
 rehash() {
     # reload all the configuration.
