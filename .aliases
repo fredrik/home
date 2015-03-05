@@ -1,0 +1,126 @@
+##
+## ~/.aliases
+
+
+# up one
+alias ..='cd ..'
+
+# type dot-dot-dot, do nothing
+alias ...=''
+
+# quick auths
+alias sup='sudo -i'
+
+# go to the desktop.
+alias dt='cd ~/Desktop'
+
+# add colours, please.
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+# the os x version of ls doesn't support the --color switch; use -G.
+# thinking of using ls from GNU coreutils.
+alias ls='ls -G'
+
+# simple aliases
+alias ll='ls -l'
+alias lla='ls -la'
+
+# python debugger.
+alias p='DEBUG=yes python -m pdb '
+
+# a little piece of the history
+alias h='history | tail -n 32'
+
+# shell - mac os x specific obv.
+alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev/null 2>&1 &'
+
+# py.test
+alias pt='py.test -n 4'
+
+# git
+alias status='git status'
+alias add='git add .'
+alias commit='git commit'
+alias branch='git branch'
+alias checkout='git checkout'
+alias push='git push origin master'
+alias fetch='git fetch --all'
+# more.
+alias undo='echo "UNDOING COMMIT."; git reset --soft HEAD^'
+alias lastdiff='git diff HEAD^ HEAD'
+alias commit_all='echo "COMMITING."; git commit -a'
+# shorties.
+alias a='git add'
+alias b='git branch'
+alias co=checkout
+alias s=status
+alias l='git log --stat --abbrev-commit --show-signature'
+alias d='git diff'
+alias dd='git diff --cached'
+alias ddd=lastdiff
+alias c=commit
+alias cc=commit_all
+# two 'git log' variants, defined in ~/.gitconfig
+alias t='git lg'
+alias tt='git tree'
+# quickies.
+alias gpd='git push origin develop'
+alias gpm='git push origin master'
+
+# 1) write test.
+# 2) pass test.
+# 3) refactor.
+# .)
+# 5) commit
+
+# ec2
+alias edi=ec2-describe-instances
+alias eri=ec2-run-instances
+alias edv=ec2-describe-volumes
+alias eatv=ec2-attach-volume
+alias edtv=ec2-detach-volume
+
+# hadoop-ec2
+alias che=hadoop-ec2
+alias chel='hadoop-ec2 launch-cluster'
+alias chet='hadoop-ec2 terminate-cluster'
+alias ches='hadoop-ec2 list'
+
+# moving data much?
+alias sync-torrents='rsync -avu ~/torrent-files/*.torrent mosfet:~/.torrent-watch --ignore-existing'
+alias suck-back-mosfet='rsync --archive --verbose --update -r mosfet:~/torrent/* --ignore-existing --progress /Volumes/data/incoming/sync-mosfet'
+
+# hadoop & hbase & zohmg
+alias dfs="hadoop dfs"
+alias activate-zohmg='source ~/workspace/python-environs/zohmg/bin/activate'
+
+# productivity.
+alias to-pda='cd ~/Desktop/pda'
+alias pda-update='pushd ~/Desktop/pda; git commit . -m "pda: updated"; popd'
+
+# transformations.
+alias html='markable | markdown'
+alias markable='cat'
+alias check_html='open http://validator.w3.org/#validate_by_input+with_options'
+
+# loading the virtuelenv wrappers is really slow!
+# instead of loading on each new shell invocation,
+# whenever I need them I go 'loadvirtualenvwrappers'.
+alias loadvirtualenvwrappers='source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh'
+
+# watch *.py and execute main.py on any change.
+# (uses `watchmedo` from the watchdog package)
+alias watchmain='watchmedo shell-command -w -R -p "*.py" -c "python main.py"'
+
+# django
+alias pm='python manage.py'
+
+# gpg
+alias gpg='gpg2'
+
+# generate a strong random password
+alias password='head -c 128 /dev/random | shasum | cut -c -40'
+
+alias ls='ls -Flg'
+
