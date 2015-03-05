@@ -122,5 +122,6 @@ alias gpg='gpg2'
 # generate a strong random password
 alias password='head -c 128 /dev/random | shasum | cut -c -40'
 
-alias ls='ls -Flg'
-
+# list with colour (-F) and symbols that indicate type (-G),
+# without group name (-o).
+alias ls='ls -oFG'
