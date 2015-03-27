@@ -9,6 +9,8 @@ source ~/.aliases
 source ~/.zsh-gpg
 
 
+# add local sbin to $PATH
+export PATH=$PATH:/usr/local/sbin
 
 # rbenv
 eval "$(rbenv init -)"
