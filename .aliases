@@ -125,3 +125,9 @@ alias password='head -c 128 /dev/random | shasum | cut -c -40'
 # list with colour (-F) and symbols that indicate type (-G),
 # without group name (-o).
 alias ls='ls -oFG'
+
+# silent curl
+alias curl='curl -s'
+
+# rails console on flo
+alias floc="ssh -t flo 'sudo -u deploy bash -c \"cd /srv/www/web/current && RAILS_ENV=production bin/rails c\"'"
