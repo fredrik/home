@@ -8,6 +8,9 @@ autoload -U compinit && compinit
 source ~/.aliases
 source ~/.zsh-gpg
 
+# history
+HISTSIZE=10000
+SAVEHIST=0
 
 # add local sbin to $PATH
 export PATH=$PATH:/usr/local/sbin
