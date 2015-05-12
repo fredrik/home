@@ -131,3 +131,6 @@ alias curl='curl -s'
 
 # rails console on flo
 alias floc="ssh -t flo 'sudo -u deploy bash -c \"cd /srv/www/web/current && RAILS_ENV=production bin/rails c\"'"
+
+# bundle exec
+alias be='bundle exec'
