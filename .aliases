@@ -134,3 +134,9 @@ alias floc="ssh -t flo 'sudo -u deploy bash -c \"cd /srv/www/web/current && RAIL
 
 # bundle exec
 alias be='bundle exec'
+
+# project shortcuts
+alias hw='cd ~/hack/web'
+
+# rspec for feature specs
+alias fspec='time be rspec -t type:feature'
