@@ -39,6 +39,7 @@ alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev
 alias pt='py.test -n 4'
 
 # git
+alias g='git'
 alias status='git status'
 alias add='git add .'
 alias commit='git commit'
