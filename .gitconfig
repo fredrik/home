@@ -1,0 +1,19 @@
+[core]
+    editor = mate -w
+    pager = less
+    excludesfile = /Users/fredrik/.gitignore-global
+[user]
+    name = Fredrik Möllerstrand
+    email = fredrik@mollerstrand.se
+    signingkey = DE658F7E
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[branch]
+    autosetuprebase = always
+[alias]
+    tree = log --oneline --decorate --graph
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+    default = simple
