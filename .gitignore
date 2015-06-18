@@ -1,4 +1,3 @@
-.*
 Applications/
 Desktop/
 Documents/
@@ -7,6 +6,7 @@ Library/
 Music/
 Pictures/
 Public/
+.Trash
 
 VirtualBox VMs/
 
@@ -20,3 +20,33 @@ mini-Desktop/
 mini-home/
 scratch/
 sqls/
+
+.*_history
+.lesshst
+
+.config/
+
+# ruby
+.bundle/
+.rbenv/
+.gem/
+.npm/
+.irbrc
+
+# auth and secrets etc
+.aws/
+.gnupg/
+.ssh/
+.netrc
+.pgpass
+.rnd
+
+.cups/
+
+.berkshelf/
+.boot2docker/
+.deis/
+.vagrant.d/
+
+.viminfo
+.zcompdump
