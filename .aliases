@@ -139,6 +139,7 @@ alias be='time bundle exec'
 
 # project shortcuts
 alias hw='cd ~/hack/web'
+alias hg='cd ~/hack/gifstash'
 
 # rspec for feature specs
 alias fspec='time be rspec -t type:feature'
