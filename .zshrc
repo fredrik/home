@@ -1,6 +1,17 @@
-PROMPT='[%~]> ⚡  '
 
 echo work hard and be nice to people
+
+# pure
+# https://github.com/sindresorhus/pure
+# (npm install --global pure-prompt)
+autoload -U promptinit && promptinit
+PURE_PROMPT_SYMBOL=⚡
+PURE_CMD_MAX_EXEC_TIME=2
+prompt pure
+
+# legacy prompt:
+# PROMPT='[%~]> ⚡  '
+
 
 # git completion.
 autoload -U compinit && compinit
