@@ -64,6 +64,7 @@ alias c=commit
 alias cc=commit_all
 # two 'git log' variants, defined in ~/.gitconfig
 alias t='git lg'
+alias ta='git lg --all'
 alias tt='git tree'
 # quickies.
 alias gpd='git push origin develop'
