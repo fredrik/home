@@ -1,6 +1,7 @@
 {
-
 	"auto_complete": false,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 	"copy_with_empty_selection": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -11,6 +12,11 @@
 	[
 		"Vintage"
 	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"remember_open_files": false,
@@ -20,6 +26,7 @@
 		100
 	],
 	"tab_size": 2,
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false,
