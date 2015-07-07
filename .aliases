@@ -144,6 +144,8 @@ alias hg='cd ~/hack/gifstash'
 # rspec for feature specs
 alias fspec='time be rspec -t type:feature'
 
+# docker
+alias dinit='eval `boot2docker shellinit`'
 
 
 ## playground
@@ -152,3 +154,6 @@ alias gs='git show'
 alias gss='git show --stat'
 # rake and rails
 alias rt='be rake test -v'
+
+
+
