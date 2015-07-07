@@ -31,12 +31,14 @@ sqls/
 .rbenv/
 .gem/
 .npm/
+.byebug_hist
 .irbrc
 
 # auth and secrets etc
 .aws/
 .gnupg/
 .ssh/
+.fog
 .netrc
 .pgpass
 .rnd
@@ -47,6 +49,8 @@ sqls/
 .boot2docker/
 .deis/
 .vagrant.d/
+.heroku/
+.subversion/
 
 .viminfo
 .zcompdump
