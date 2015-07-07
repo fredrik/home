@@ -1,5 +1,5 @@
 [core]
-    editor = mate -w
+    editor = vim
     pager = less
     excludesfile = /Users/fredrik/.gitignore-global
 [user]
