@@ -8,6 +8,10 @@ autoload -U compinit && compinit
 source ~/.aliases
 source ~/.zsh-gpg
 
+
+# default editor
+export EDITOR=vim
+
 # history
 HISTSIZE=10000
 SAVEHIST=0
