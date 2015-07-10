@@ -1,1 +1,2 @@
+ino kj <esc>
 
