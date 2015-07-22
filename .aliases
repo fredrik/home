@@ -8,6 +8,9 @@ alias ..='cd ..'
 # type dot-dot-dot, do nothing
 alias ...=''
 
+# ¯\_(ツ)_/¯
+alias shrug='cat ~/shrug | pbcopy'
+
 # quick auths
 alias sup='sudo -i'
 
