@@ -38,10 +38,15 @@ autoload -U compinit && compinit
 # comments are okay.
 setopt interactivecomments
 
-
 # ssh: bring in all keys.
 ssh-add ~/.ssh/id_[rd]sa &> /dev/null
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export WORKON_HOME=$HOME/.virtualenvs
+
+if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
+  source /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
 
 # aws auths
 if [[ -f ~/.aws ]]; then
