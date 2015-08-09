@@ -10,3 +10,5 @@ set expandtab  " spaces instead of tabs
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+ino kj <esc>

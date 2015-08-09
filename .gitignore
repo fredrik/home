@@ -1,20 +1,20 @@
-Applications
-Desktop
-Documents
-Downloads
-Library
-Movies
-Music
-Pictures
-Public
-Sites
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+.Trash/
 
-apps
-hack
-src
+data/
+hack/
+src/
 
-virtual-machines
-VirtualBox VMs
+virtual-machines/
+VirtualBox VMs/
 
 # secret configuration
 .aws
@@ -29,11 +29,6 @@ VirtualBox VMs
 .ssh
 .vagrant
 .vagrant.d
-
-# apple junk
-.CFUserTextEncoding
-.DS_Store
-.Trash
 
 # debris
 .bundle
@@ -65,4 +60,37 @@ VirtualBox VMs
 .pythonhist
 .viminfo
 .virtualenvs
+
+.*_history
+.lesshst
+
+.config/
+
+# ruby
+.bundle/
+.rbenv/
+.gem/
+.npm/
+.byebug_hist
+.irbrc
+
+# auth and secrets etc
+.aws/
+.gnupg/
+.ssh/
+.fog
+.netrc
+.pgpass
+.rnd
+
+.cups/
+
+.berkshelf/
+.boot2docker/
+.deis/
+.vagrant.d/
+.heroku/
+.subversion/
+
+.viminfo
 .zcompdump

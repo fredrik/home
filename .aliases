@@ -1,10 +1,14 @@
-# .bash_alias
+##
+## ~/.aliases
+
 
 # up one
 alias ..='cd ..'
 
 # type dot-dot-dot, do nothing
 alias ...=''
+
+alias shrug='echo -n "¯\_(ツ)_/¯" | pbcopy'
 
 # quick auths
 alias sup='sudo -i'
@@ -37,6 +41,7 @@ alias shell='/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal > /dev
 alias pt='py.test -n 4'
 
 # git
+alias g='git'
 alias status='git status'
 alias add='git add .'
 alias commit='git commit'
@@ -53,7 +58,7 @@ alias a='git add'
 alias b='git branch'
 alias co=checkout
 alias s=status
-alias l='git log --stat --abbrev-commit'
+alias l='git log --stat --abbrev-commit --show-signature'
 alias d='git diff'
 alias dd='git diff --cached'
 alias ddd=lastdiff
@@ -61,6 +66,7 @@ alias c=commit
 alias cc=commit_all
 # two 'git log' variants, defined in ~/.gitconfig
 alias t='git lg'
+alias ta='git lg --all'
 alias tt='git tree'
 # quickies.
 alias gpd='git push origin develop'
@@ -116,6 +122,38 @@ alias pm='python manage.py'
 
 # gpg
 alias gp='gpg2'
+alias gpg='gpg2'
 
-# ssh jump
-alias j=jump
+# generate a strong random password
+alias password='head -c 128 /dev/random | shasum | cut -c -40'
+
+# list with colour (-F) and symbols that indicate type (-G),
+# without group name (-o).
+alias ls='ls -oFG'
+
+# silent curl
+alias curl='curl -s'
+
+# rails console on flo
+alias floc="ssh -t flo 'sudo -u deploy bash -c \"cd /srv/www/web/current && RAILS_ENV=production bin/rails c\"'"
+
+# bundle exec
+alias be='time bundle exec'
+
+# project shortcuts
+alias hw='cd ~/hack/web'
+alias hg='cd ~/hack/gifstash'
+
+# rspec for feature specs
+alias fspec='time be rspec -t type:feature'
+
+# docker
+alias dinit='eval `boot2docker shellinit`'
+
+
+## playground
+#  git
+alias gs='git show'
+alias gss='git show --stat'
+# rake and rails
+alias rt='be rake test -v'
