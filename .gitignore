@@ -32,6 +32,7 @@ VirtualBox VMs/
 
 # debris
 .bundle
+.bundler
 .cache
 .certs
 .cups
