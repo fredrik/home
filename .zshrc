@@ -20,7 +20,7 @@ source ~/.zsh-gpg
 # TODO: paths in their own file
 
 # path
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.rbenv/bin
 
 # git completion.
 autoload -U compinit && compinit
@@ -59,11 +59,12 @@ alias ww=workwork
 # default editor
 export EDITOR=vim
 
+# rbenv
+eval "$(rbenv init -)"
+
 
 ## stuff from bob
 #
-## rbenv
-# eval "$(rbenv init -)"
 #
 ## go
 # export GOPATH=/usr/local/go
