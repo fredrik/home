@@ -6,6 +6,7 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 16,
+	"folder_exclude_patterns": ["__pycache__"],
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
