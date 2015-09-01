@@ -21,7 +21,7 @@
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
-	"remember_open_files": false,
+	"remember_open_files": true,
 	"rulers":
 	[
 		80,
