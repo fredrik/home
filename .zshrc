@@ -29,7 +29,7 @@ autoload -U compinit && compinit
 setopt interactivecomments
 
 # ssh: bring in all keys.
-ssh-add ~/.ssh/id_[rd]sa &> /dev/null
+ssh-add ~/.ssh/id_[rd]sa* &> /dev/null
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
