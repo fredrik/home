@@ -60,7 +60,10 @@ alias ww=workwork
 export EDITOR=vim
 
 # rbenv
-eval "$(rbenv init -)"
+if (( $+commands[rbenv] )) ; then
+  eval "$(rbenv init -)"
+fi
+
 
 
 ## stuff from bob
@@ -69,3 +72,4 @@ eval "$(rbenv init -)"
 ## go
 # export GOPATH=/usr/local/go
 # export PATH=$PATH:/usr/local/go/bin
+
