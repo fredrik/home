@@ -5,7 +5,7 @@
 [user]
     name = Fredrik Möllerstrand
     email = fredrik@mollerstrand.se
-    signingkey = 70FC54D9
+    signingkey = 65FB4976
 [color]
     diff = auto
     status = auto
