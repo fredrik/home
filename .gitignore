@@ -13,6 +13,7 @@ data/
 hack/
 src/
 
+Dropbox/
 virtual-machines/
 VirtualBox VMs/
 
@@ -86,6 +87,11 @@ VirtualBox VMs/
 
 .cups/
 
+# apps etc
+.anyconnect
+.dropbox
+.hex
+.mix
 .berkshelf/
 .boot2docker/
 .deis/
