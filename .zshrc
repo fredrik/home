@@ -18,8 +18,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.rben
 
 source ~/.functions
 source ~/.aliases
-source ~/.zsh-gpg
-
 
 # git completion.
 autoload -U compinit && compinit
