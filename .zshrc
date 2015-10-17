@@ -12,15 +12,14 @@ prompt walters
 # legacy prompt:
 # PROMPT='[%~]> ⚡  '
 
+# path
+# TODO: paths in their own file
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.rbenv/bin
+
 source ~/.functions
 source ~/.aliases
 source ~/.zsh-gpg
 
-
-# TODO: paths in their own file
-
-# path
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.rbenv/bin
 
 # git completion.
 autoload -U compinit && compinit
