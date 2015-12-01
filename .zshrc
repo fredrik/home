@@ -33,6 +33,7 @@ setopt interactivecomments
 # ssh: bring in all keys.
 ssh-add ~/.ssh/id_[rd]sa* &> /dev/null
 
+# python
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
 
