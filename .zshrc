@@ -68,12 +68,7 @@ if (( $+commands[rbenv] )) ; then
   eval "$(rbenv init -)"
 fi
 
-
-
-## stuff from bob
-#
-#
-## go
-# export GOPATH=/usr/local/go
-# export PATH=$PATH:/usr/local/go/bin
+# go
+export GOPATH=/usr/local/go
+export PATH=$PATH:/usr/local/go/bin
 
