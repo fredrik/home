@@ -17,6 +17,8 @@ source ~/.aliases
 source ~/.zsh-gpg
 
 
+HISTSIZE=1000000
+
 # TODO: paths in their own file
 
 # path
