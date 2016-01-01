@@ -41,12 +41,6 @@ if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
   source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
 
-# aws auths
-if [[ -f ~/.aws ]]; then
-  source ~/.aws
-fi
-
-
 # this is python specific and worse.
 # TODO: make not python specific.
 workwork() {
