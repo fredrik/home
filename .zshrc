@@ -15,6 +15,9 @@ prompt walters
 source ~/.functions
 source ~/.aliases
 source ~/.zsh-gpg
+source ~/.zsh-python
+source ~/.zsh-ruby
+source ~/.zsh-go
 
 
 HISTSIZE=1000000
@@ -30,39 +33,8 @@ autoload -U compinit && compinit
 # comments are okay.
 setopt interactivecomments
 
-# ssh: bring in all keys.
-ssh-add ~/.ssh/id_[rd]sa* &> /dev/null
-
-# python
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export WORKON_HOME=$HOME/.virtualenvs
-
-if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
-  source /usr/local/bin/virtualenvwrapper_lazy.sh
-fi
-
-# this is python specific and worse.
-# TODO: make not python specific.
-workwork() {
-  project=$1
-  if [[ -z $project ]]; then echo "work on what, sire?"; return; fi
-  if [[ ! -d ~/hack/${project} ]]; then echo "don't know that one, sire."; return; fi
-  cd ~/hack/${project} && workon $project
-  export PYTHONPATH=~/hack/${project}:$PYTHONPATH
-  if [[ -f ~/hack/.${project}.rc ]]; then source ~/hack/.${project}.rc; fi
-}
-alias ww=workwork
-
 # default editor
 export EDITOR=vim
 
-# rbenv
-if (( $+commands[rbenv] )) ; then
-  export RBENV_ROOT=/usr/local/var/rbenv
-  eval "$(rbenv init -)"
-fi
-
-# go
-export GOPATH=/usr/local/go
-export PATH=$PATH:/usr/local/go/bin
-
+# ssh: bring in all keys.
+ssh-add ~/.ssh/id_[rd]sa* &> /dev/null

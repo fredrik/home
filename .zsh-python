@@ -1,0 +1,19 @@
+# python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export WORKON_HOME=$HOME/.virtualenvs
+
+if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
+  source /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
+
+# this is python specific and worse.
+# TODO: make not python specific.
+workwork() {
+  project=$1
+  if [[ -z $project ]]; then echo "work on what, sire?"; return; fi
+  if [[ ! -d ~/hack/${project} ]]; then echo "don't know that one, sire."; return; fi
+  cd ~/hack/${project} && workon $project
+  export PYTHONPATH=~/hack/${project}:$PYTHONPATH
+  if [[ -f ~/hack/.${project}.rc ]]; then source ~/hack/.${project}.rc; fi
+}
+alias ww=workwork
