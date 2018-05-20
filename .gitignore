@@ -1,3 +1,4 @@
+# MacOS stuff
 Applications/
 Desktop/
 Documents/
@@ -8,14 +9,21 @@ Music/
 Pictures/
 Public/
 .Trash/
-
+# &
 .CFUserTextEncoding
 .DS_Store
 
+# my stuff
+bin/
+hack/
+notes/
+
+# secrets
 .aws/
 .config/
 .ssh/
 
+# random stuff
 .android/
 .bundle/
 .cups/
@@ -37,3 +45,5 @@ Public/
 .viminfo
 .zcompdump*
 .zsh_history
+
+VirtualBox VMs/
