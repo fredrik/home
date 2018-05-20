@@ -11,3 +11,19 @@ Public/
 
 .CFUserTextEncoding
 .DS_Store
+
+.android/
+.bundle/
+.cups/
+.docker/
+.gem/
+.gsutil/
+.hex/
+.httpie/
+.kube/
+.meteor/
+.mitmproxy/
+.mix/
+.npm/
+.oh-my-zsh/
+.rbenv/
