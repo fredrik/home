@@ -1,0 +1,13 @@
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+.Trash/
+
+.CFUserTextEncoding
+.DS_Store
