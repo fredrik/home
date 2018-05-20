@@ -32,5 +32,8 @@ Public/
 .oh-my-zsh/
 .rbenv/
 
+.pry_history
+.psql_history
+.viminfo
 .zcompdump*
 .zsh_history
