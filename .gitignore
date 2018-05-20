@@ -12,6 +12,10 @@ Public/
 .CFUserTextEncoding
 .DS_Store
 
+.aws/
+.config/
+.ssh/
+
 .android/
 .bundle/
 .cups/
@@ -27,3 +31,6 @@ Public/
 .npm/
 .oh-my-zsh/
 .rbenv/
+
+.zcompdump*
+.zsh_history
