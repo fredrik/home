@@ -1,0 +1,7 @@
+[user]
+	email = fredrik@forza.football
+	name = Fredrik Möllerstrand
+[push]
+	default = current
+[pull]
+	rebase = true
