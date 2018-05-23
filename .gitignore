@@ -40,6 +40,10 @@ notes/
 .oh-my-zsh/
 .rbenv/
 
+.erlang.cookie
+.lesshst
+.mysql_history
+.oracle_jre_usage/
 .pry_history
 .psql_history
 .viminfo
