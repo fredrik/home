@@ -26,6 +26,7 @@ notes/
 # random stuff
 .android/
 .bundle/
+.cache/
 .cups/
 .docker/
 .gem/
