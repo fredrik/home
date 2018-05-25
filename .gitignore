@@ -13,6 +13,8 @@ Public/
 .CFUserTextEncoding
 .DS_Store
 
+*~
+
 # my stuff
 bin/
 hack/
@@ -41,6 +43,7 @@ notes/
 .oh-my-zsh/
 .rbenv/
 
+.emacs.d
 .erlang.cookie
 .lesshst
 .mysql_history
