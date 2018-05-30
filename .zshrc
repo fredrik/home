@@ -7,6 +7,10 @@ export EDITOR=vim
 export PATH=$PATH:/usr/local/sbin
 eval "$(rbenv init -)"
 
+# åäö
+export LESSCHARSET=UTF-8
+
+
 ### --- oh my zsh
 
 # If you come from bash you might have to change your $PATH.
