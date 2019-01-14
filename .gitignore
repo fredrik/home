@@ -54,4 +54,5 @@ notes/
 .zcompdump*
 .zsh_history
 
+go/
 VirtualBox VMs/
