@@ -1,0 +1,14 @@
+*.swp
+
+.CFUserTextEncoding
+.DS_Store
+
+.cache
+
+Desktop/
+Documents/
+Downloads/
+Library/
+Music/
+Pictures/
+
