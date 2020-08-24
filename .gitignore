@@ -1,10 +1,12 @@
 *.swp
+.viminfo
 
 .CFUserTextEncoding
 .DS_Store
 .zsh_history
 
 .cache/
+.config/
 
 Desktop/
 Documents/
