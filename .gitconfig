@@ -5,4 +5,6 @@
     editor = vim
     pager = less
     excludesfile = /Users/fredrik/.gitignore-global
+[push]
+    default = current
 
