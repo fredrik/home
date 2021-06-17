@@ -6,3 +6,5 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+" Backspace won't work without 'start' here.
+set backspace=indent,eol,start
