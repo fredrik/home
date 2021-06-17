@@ -8,6 +8,8 @@ Music
 Pictures
 Public
 
+.config/
+
 # secrets
 .aws/
 .gnupg/
@@ -19,6 +21,9 @@ Public
 
 # vim
 .viminfo
+
+# vscode
+.vscode/
 
 # zsh
 .zcompdump
