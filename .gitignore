@@ -8,6 +8,11 @@ Music
 Pictures
 Public
 
+# secrets
+.aws/
+.gnupg/
+.ssh/
+
 # nvm, node, npm
 .nvm/
 .node_repl_history
