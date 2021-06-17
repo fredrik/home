@@ -8,6 +8,10 @@ Music
 Pictures
 Public
 
+# nvm, node, npm
+.nvm/
+.node_repl_history
+
 # vim
 .viminfo
 

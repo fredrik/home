@@ -24,3 +24,8 @@ alias l='git log --stat --abbrev-commit'
 alias s='git status'
 alias t='git log --oneline --decorate --graph'
 
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
