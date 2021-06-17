@@ -1,0 +1,8 @@
+[user]
+    name = Fredrik Möllerstrand
+    email = fredrik@mollerstrand.se
+[core]
+    editor = vim
+    pager = less
+    excludesfile = /Users/fredrik/.gitignore-global
+
