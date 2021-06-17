@@ -7,3 +7,9 @@ Movies
 Music
 Pictures
 Public
+
+# zsh
+.zcompdump
+.zsh_history
+.zsh_sessions/
+
