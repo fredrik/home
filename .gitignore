@@ -8,6 +8,9 @@ Music
 Pictures
 Public
 
+# vim
+.viminfo
+
 # zsh
 .zcompdump
 .zsh_history
