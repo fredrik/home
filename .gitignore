@@ -17,6 +17,7 @@ Public
 
 # nvm, node, npm
 .nvm/
+.npm/
 .node_repl_history
 
 # vim
@@ -27,6 +28,12 @@ Public
 
 # zsh
 .zcompdump
+.zcompdump*
 .zsh_history
 .zsh_sessions/
+
+# &c.
+.docker/
+.serverless/
+.serverlessrc
 
