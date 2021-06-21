@@ -13,7 +13,7 @@ alias ll='ls -lo'
 alias lla='ls -loa'
 
 # git shorties
-alias a='git add'
+alias a='git add .'
 alias b='git branch'
 alias c='git commit'
 alias cc='git commit -a'
