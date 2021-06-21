@@ -8,6 +8,7 @@ Music
 Pictures
 Public
 
+.cache/
 .config/
 
 # secrets
@@ -31,6 +32,7 @@ Public
 .zcompdump*
 .zsh_history
 .zsh_sessions/
+.oh-my-zsh/
 
 # &c.
 .docker/
