@@ -145,7 +145,13 @@ alias l='git log --stat --abbrev-commit'
 alias s='git status'
 alias t='git log --oneline --decorate --graph'
 
+
+# configure less to show diffs inline without paging
+# if output is less than one page.
+export LESS="-FXR"
+
 # load nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
