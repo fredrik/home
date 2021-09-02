@@ -159,3 +159,7 @@ export NVM_DIR="$HOME/.nvm"
 setopt no_share_history
 unsetopt share_history
 
+# locale, because perl complains.
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
