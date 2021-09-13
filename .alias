@@ -1,0 +1,22 @@
+# git 
+alias add='git add .'
+alias c='git commit'
+alias cc='git commit .'
+alias d='git diff'
+alias dd='git diff --cached'
+alias ddd='git diff HEAD^ HEAD'
+alias l='git log --stat'
+alias s='git status'
+alias t='git log --graph --oneline --all'
+
+# grep in a node project
+alias gn='grep -i --exclude-dir=node_modules -R'
+
+# browsing files
+alias ll='exa -l --group-directories-first'
+alias hat='highlight -O ansi'
+alias lat='f() { hat $1 | less -R }; f'
+
+# knodd
+alias ck='cd ~/Code/Knodd'
+
