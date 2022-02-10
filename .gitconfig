@@ -7,9 +7,7 @@
     excludesfile = /Users/fredrik/.gitignore-global
 [push]
     default = current
-
 [init]
     defaultBranch = main
-
 [pull]
-	rebase = true
+    rebase = true
