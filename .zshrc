@@ -124,6 +124,9 @@ source $ZSH/oh-my-zsh.sh
 # https://unix.stackexchange.com/a/487889
 
 
+# prepend coreutils to path in order to use gnu versions of common utilities
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
 # configure `ls`.
 # list with colour (-G)
 # and symbols that indicate type (-F)
