@@ -1,7 +1,9 @@
+Applications
 Code
 Desktop
 Documents
 Downloads
+Hack
 Library
 Movies
 Music
@@ -11,6 +13,17 @@ Public
 .cache/
 .config/
 
+# apps etc
+.beets
+.cargo
+.colima
+.gem
+.irssi
+.lima
+.minikube
+.rustup
+
+
 # secrets
 .aws/
 .gnupg/
@@ -19,6 +32,7 @@ Public
 # nvm, node, npm
 .nvm/
 .npm/
+.npmrc
 .node_repl_history
 
 # vim
@@ -33,6 +47,7 @@ Public
 .zsh_history
 .zsh_sessions/
 .oh-my-zsh/
+.z
 
 # &c.
 .docker/
