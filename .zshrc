@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions z)
 
 # syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -158,13 +158,53 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-# zsh history sharing (don't!)
-setopt no_share_history
-unsetopt share_history
+# also, make history local.
+# via https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
+function up-line-or-history() {
+    zle set-local-history 1
+    zle .up-line-or-history
+    zle set-local-history 0
+}
+
+function down-line-or-history() {
+    zle set-local-history 1
+    zle .down-line-or-history
+    zle set-local-history 0
+}
+zle -N up-line-or-history
+zle -N down-line-or-history
+
 
 # locale, because perl complains.
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-
+# fzf
+# https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# autojump
+# https://github.com/wting/autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# fzf + autojump
+# via https://github.com/junegunn/fzf/wiki/Examples#autojump
+j() {
+    local preview_cmd="ls {2..}"
+    if command -v exa &> /dev/null; then
+        preview_cmd="exa -l {2}"
+    fi
+
+    if [[ $# -eq 0 ]]; then
+                 cd "$(autojump -s | sort -k1gr | awk -F : '$1 ~ /[0-9]/ && $2 ~ /^\s*\// {print $1 $2}' | fzf --height 40% --reverse --inline-info --preview "$preview_cmd" --preview-window down:50% | cut -d$'\t' -f2- | sed 's/^\s*//')"
+    else
+        cd $(autojump $@)
+    fi
+}
+
+# fzf + z
+unalias z 2> /dev/null
+z() {
+    [ $# -gt 0 ] && zshz "$*" && return
+    cd "$(zshz -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
