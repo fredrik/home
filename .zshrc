@@ -158,23 +158,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-# also, make history local.
-# via https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
-function up-line-or-history() {
-    zle set-local-history 1
-    zle .up-line-or-history
-    zle set-local-history 0
-}
-
-function down-line-or-history() {
-    zle set-local-history 1
-    zle .down-line-or-history
-    zle set-local-history 0
-}
-zle -N up-line-or-history
-zle -N down-line-or-history
-
-
 # locale, because perl complains.
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -208,3 +191,24 @@ z() {
     [ $# -gt 0 ] && zshz "$*" && return
     cd "$(zshz -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
+
+# also, make history local.
+# via https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
+up-line-or-local-history() {
+    zle set-local-history 1
+    zle up-line-or-history
+    zle set-local-history 0
+}
+down-line-or-local-history() {
+    zle set-local-history 1
+    zle down-line-or-history
+    zle set-local-history 0
+}
+
+zle -N up-line-or-local-history
+zle -N down-line-or-local-history
+
+bindkey "${key[Up]}" up-line-or-local-history
+bindkey "${key[Down]}" down-line-or-local-history
+
+
