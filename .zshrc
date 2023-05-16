@@ -166,6 +166,9 @@ export LC_ALL=en_US.UTF-8
 # https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export FZF_DEFAULT_OPTS='--height 7 --border'
+
+
 # autojump
 # https://github.com/wting/autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
