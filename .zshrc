@@ -168,32 +168,13 @@ export LC_ALL=en_US.UTF-8
 
 export FZF_DEFAULT_OPTS='--height 7 --border'
 
-
-# autojump
-# https://github.com/wting/autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-# fzf + autojump
-# via https://github.com/junegunn/fzf/wiki/Examples#autojump
-j() {
-    local preview_cmd="ls {2..}"
-    if command -v exa &> /dev/null; then
-        preview_cmd="exa -l {2}"
-    fi
-
-    if [[ $# -eq 0 ]]; then
-                 cd "$(autojump -s | sort -k1gr | awk -F : '$1 ~ /[0-9]/ && $2 ~ /^\s*\// {print $1 $2}' | fzf --height 40% --reverse --inline-info --preview "$preview_cmd" --preview-window down:50% | cut -d$'\t' -f2- | sed 's/^\s*//')"
-    else
-        cd $(autojump $@)
-    fi
-}
-
 # fzf + z
 unalias z 2> /dev/null
 z() {
     [ $# -gt 0 ] && zshz "$*" && return
     cd "$(zshz -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
+alias j=z # easier to reach 'j' than 'z'
 
 # also, make history local.
 # via https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
