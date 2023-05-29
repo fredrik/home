@@ -85,6 +85,9 @@ plugins=(git zsh-autosuggestions fzf-tab z)
 # syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# make the autosuggest colour fade into the background a bit more.
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
+
 
 source $ZSH/oh-my-zsh.sh
 
