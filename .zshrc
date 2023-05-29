@@ -209,3 +209,8 @@ fsw() {
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Make sure the caret (in "HEAD^" for example) works as I'm used to.
+# For some reason, using rvm changes this behaviour and it's somehow related to extendedglob.
+# via https://github.com/ohmyzsh/ohmyzsh/issues/449
+setopt NO_NOMATCH
