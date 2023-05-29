@@ -198,7 +198,14 @@ zle -N down-line-or-local-history
 bindkey "${key[Up]}" up-line-or-local-history
 bindkey "${key[Down]}" down-line-or-local-history
 
-
+# git: switching to a recent branch
+# via https://github.com/jbranchaud/til/blob/master/git/switch-to-a-recent-branch-with-fzf.md
+fsw() {
+  local branches branch
+  branches=$(git for-each-ref --count=16 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" | fzf -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git switch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
