@@ -1,7 +1,7 @@
 echo work hard and be nice to people
 
 # zsh plugins
-plugins=(git zsh-autosuggestions fzf-tab z)
+plugins=(zsh-autosuggestions fzf-tab z)
 
 export ZSH="/Users/fredrik/.oh-my-zsh"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
