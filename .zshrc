@@ -80,6 +80,7 @@ alias ddd='git diff HEAD^ HEAD'
 alias l='git log --stat --abbrev-commit'
 alias s='git status'
 alias t='git log --oneline --decorate --graph'
+alias sw='git switch'
 
 
 ## managers of various kinds.
