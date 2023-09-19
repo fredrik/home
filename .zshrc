@@ -29,7 +29,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
 # Show date stamp of commands in history.
 export HIST_STAMPS="yyyy-mm-dd"
-
+# save a million lines of history!
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 # OH MY!
 source $ZSH/oh-my-zsh.sh
