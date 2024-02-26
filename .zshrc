@@ -94,7 +94,7 @@ export NVM_DIR="$HOME/.nvm"
 # https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_OPTS='--height 8 --border'
+export FZF_DEFAULT_OPTS='--height 10 --border'
 
 # fzf + z
 unalias z 2> /dev/null
