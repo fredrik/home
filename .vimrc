@@ -8,3 +8,7 @@ set shiftwidth=2
 
 " Backspace won't work without 'start' here.
 set backspace=indent,eol,start
+
+" Disable q: which would open up the command line.
+" I often mistype this when quitting.
+:nnoremap q: <Nop>
