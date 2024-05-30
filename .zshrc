@@ -24,6 +24,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # change the autosuggest colour to yellow. the default is not visible on dark solarized.
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
+# zsh-syntax-highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pyenv shims etc
 # https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
