@@ -17,11 +17,11 @@ source ~/.p10k.init.zsh
 eval "$(fzf --zsh)"
 
 # fzf-tab plugin
-source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
+source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # z plugin
 # https://github.com/agkozak/zsh-z
-source ~/.zsh/zsh-z/zsh-z.plugin.zsh
+source ~/.zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
 # fzf + z = j
 j() {
@@ -30,12 +30,12 @@ j() {
 }
 
 # zsh-autosuggestions plugin
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # change the autosuggest colour to yellow. the default is not visible on dark solarized.
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 # zsh-syntax-highlighting
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pyenv shims etc
 # https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
