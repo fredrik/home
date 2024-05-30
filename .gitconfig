@@ -1,0 +1,37 @@
+[user]
+    name = Fredrik Möllerstrand
+    email = fredrik.mollerstrand@volvocars.com
+
+[core]
+    editor = vim
+    pager = less
+    excludesfile = /Users/FMOLLERS/.gitignore-global
+
+[init]
+    defaultBranch = main
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+[pull]
+    rebase = true
+    default = current
+
+[rebase]
+    autosquash = true
+
+[diff]
+    algorithm = patience
+
+[fetch]
+    prune = true
