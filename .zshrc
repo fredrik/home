@@ -16,3 +16,4 @@ eval "$(pyenv init -)"
 # zsh
 setopt share_history
 setopt hist_ignore_space
+setopt extended_history
