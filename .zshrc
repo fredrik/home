@@ -2,8 +2,8 @@
 #
 # see also ~/.zshenv
 
-
-autoload -U compinit; compinit
+autoload -U compinit
+compinit -d ~/.cache/zcompdump
 
 # zsh
 setopt share_history
