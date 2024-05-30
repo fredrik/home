@@ -19,6 +19,16 @@ eval "$(fzf --zsh)"
 # fzf-tab plugin
 source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
 
+# z plugin
+# https://github.com/agkozak/zsh-z
+source ~/.zsh/zsh-z/zsh-z.plugin.zsh
+
+# fzf + z = j
+j() {
+    [ $# -gt 0 ] && zshz "$*" && return
+    cd "$(zshz -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
+
 # zsh-autosuggestions plugin
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # change the autosuggest colour to yellow. the default is not visible on dark solarized.
