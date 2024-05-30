@@ -11,6 +11,7 @@ Public
 .aws/
 .azure/
 .cache/
+.config/
 .local/
 .ssh/
 
@@ -19,5 +20,6 @@ Public
 .powerlevel10k/
 .pyenv/
 
+.viminfo
 .zsh_history
 .zsh_sessions/
