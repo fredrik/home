@@ -17,6 +17,7 @@ Public
 .docker/
 .vscode/
 .powerlevel10k/
+.pyenv/
 
 .zsh_history
 .zsh_sessions/
