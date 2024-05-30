@@ -22,6 +22,7 @@ source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 # z plugin
 # https://github.com/agkozak/zsh-z
 source ~/.zsh/plugins/zsh-z/zsh-z.plugin.zsh
+export ZSHZ_DATA=~/.zsh/zsh-z-data
 
 # fzf + z = j
 j() {
