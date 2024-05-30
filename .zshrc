@@ -1,6 +1,6 @@
 # ~/.zshrc @ vcc
 #
-# see also ~/.zshenv
+# see also ~/.zshenv and ~/.zsh-alias
 
 autoload -U compinit
 compinit -d ~/.cache/zcompdump
@@ -31,3 +31,4 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
 eval "$(pyenv init -)"
 
+source ~/.zsh-alias
