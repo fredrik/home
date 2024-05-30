@@ -13,3 +13,6 @@ export DOCKER_CLI_HINTS=false
 
 # p10k
 source ~/.p10k.init.zsh
+
+# fzf
+eval "$(fzf --zsh)"
