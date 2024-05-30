@@ -11,10 +11,12 @@ Public
 .aws/
 .azure/
 .cache/
-.docker/
 .local/
 .ssh/
+
+.docker/
 .vscode/
+.powerlevel10k/
 
 .zsh_history
 .zsh_sessions/

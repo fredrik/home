@@ -10,3 +10,6 @@ export HOMEBREW_NO_AUTO_UPDATE=true
 
 # docker
 export DOCKER_CLI_HINTS=false
+
+# p10k
+source ~/.p10k.init.zsh
