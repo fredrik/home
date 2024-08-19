@@ -13,6 +13,15 @@ setopt extended_history
 # p10k
 source ~/.p10k.init.zsh
 
+# aliases
+source ~/.zsh-alias
+
+# pyenv shims etc
+# https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
+eval "$(pyenv init -)"
+
+
+
 # fzf
 eval "$(fzf --zsh)"
 
@@ -30,16 +39,12 @@ j() {
     cd "$(zshz -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
+# zsh-syntax-highlighting
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # zsh-autosuggestions plugin
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # change the autosuggest colour to yellow. the default is not visible on dark solarized.
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
-# zsh-syntax-highlighting
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# pyenv shims etc
-# https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
-eval "$(pyenv init -)"
-
-source ~/.zsh-alias
