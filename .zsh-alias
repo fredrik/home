@@ -25,3 +25,6 @@ alias sw='git switch'
 
 # history with timestamps
 alias history='fc -t "%Y-%m-%d %T:" -il '
+
+# k8s
+alias kc=kubectl
