@@ -11,7 +11,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-plugins=(git python zsh-autosuggestions fzf-tab z)
+plugins=(git python zsh-autosuggestions fzf-tab)
 
 # oh my zsh
 source $ZSH/oh-my-zsh.sh
@@ -24,3 +24,4 @@ source ~/.zshenv.local
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh)"
