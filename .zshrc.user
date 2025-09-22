@@ -5,14 +5,23 @@
 export LESS="-FXR"
 
 ## Aliases etc.
-# configure `ls`.
-# list with colour (-G)
-# and symbols that indicate type (-F)
-alias ls='ls -FG'
-# simple aliases.
-# ('-o' omits group name from list)
-alias ll='ls -lo'
-alias lla='ls -loa'
+
+# eza instead of ls
+alias ls=eza
+alias ll='ls -l'
+alias lla='ls -la'
+
+# bat instead of cat
+alias cat='bat --paging=never'
+
+# ripgrep instead of grep
+alias grep='rg'
+
+# fd for find
+alias find='fd'
+
+# dust for du
+alias du='dust'
 
 # git shorties
 alias add='git add .'
