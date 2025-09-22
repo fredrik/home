@@ -5,6 +5,10 @@
 [init]
 	defaultBranch = main
 
+[core]
+	autocrlf = input
+	pager = delta
+
 [color]
 	diff = auto
 	status = auto
@@ -12,6 +16,12 @@
 
 [diff]
 	algorithm = patience
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
 
 [branch]
 	autosetuprebase = always
