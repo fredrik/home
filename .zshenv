@@ -7,3 +7,4 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export HOMEBREW_NO_ENV_HINTS=true
+export DOCKER_CLI_HINTS=false
