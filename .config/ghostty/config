@@ -1,7 +1,10 @@
 # hello! this is fredrik's ghostty config.
 
 font-family = "MesloLGS NF"
-font-size = 14
+font-size = 16
 font-thicken = true
 
 theme = "Catppuccin Mocha"
+
+# global hotkey
+keybind = global:§=toggle_visibility
