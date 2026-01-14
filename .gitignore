@@ -10,6 +10,7 @@ Movies/
 Music/
 Pictures/
 Public/
+.Trash/
 
 # ~/.local is the user-level equivalent of /usr/local
 .local/
