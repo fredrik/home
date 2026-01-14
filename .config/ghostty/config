@@ -1,0 +1,7 @@
+# hello! this is fredrik's ghostty config.
+
+font-family = "MesloLGS NF"
+font-size = 14
+font-thicken = true
+
+theme = "Catppuccin Mocha"
