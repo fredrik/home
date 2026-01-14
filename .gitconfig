@@ -1,3 +1,6 @@
 [user]
     name = Fredrik Möllerstrand
     email = fredrik@mollerstrand.se
+
+[core]
+    excludesfile = /Users/fredrik/.gitignore-global

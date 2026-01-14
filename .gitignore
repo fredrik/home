@@ -1,0 +1,12 @@
+# what are we ignoring today?
+# see also .gitignore-global
+
+# all the macos directories.
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
