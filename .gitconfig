@@ -1,6 +1,7 @@
 [user]
     name = Fredrik Möllerstrand
     email = fredrik@mollerstrand.se
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8sVoIlfQGVnI+YaeZv74I5oKAVzR1RBl0zfHnsp0hk
 
 [core]
     excludesfile = /Users/fredrik/.gitignore-global
@@ -38,3 +39,13 @@
 
 [rebase]
     autosquash = true
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+    allowedSignersFile = /Users/fredrik/.ssh/allowed_signers
