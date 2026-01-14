@@ -10,3 +10,7 @@ Movies/
 Music/
 Pictures/
 Public/
+
+# apps
+.vscode/
+
