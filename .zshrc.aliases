@@ -1,0 +1,31 @@
+## Aliases etc.
+
+# eza instead of ls
+alias ls=eza
+alias ll='ls -l'
+alias lla='ls -la'
+
+# bat instead of cat
+alias cat='bat --paging=never'
+
+# ripgrep instead of grep
+alias grep='rg'
+
+# fd for find
+alias find='fd'
+
+# dust for du
+alias du='dust'
+
+# git shorties
+alias add='git add .'
+alias b='git branch'
+alias c='git commit'
+alias cc='git commit -a'
+alias d='git diff'
+alias dd='git diff --cached'
+alias ddd='git diff HEAD^ HEAD'
+alias l='git log --stat --abbrev-commit'
+alias s='git status'
+alias t='git log --oneline --decorate --graph'
+alias sw='git switch'
