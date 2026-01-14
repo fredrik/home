@@ -11,6 +11,18 @@ Music/
 Pictures/
 Public/
 
-# apps
+# ~/.local is the user-level equivalent of /usr/local
+.local/
+
+# secrets, etc
+.ssh/
+
+# apps, etc
+.lesshst
+.viminfo
 .vscode/
+.zsh_history
+
+# worktrees for https://github.com/fredrik/home/, possibly temporary
+worktrees/
 
