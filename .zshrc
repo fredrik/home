@@ -5,6 +5,13 @@ echo work hard and be nice to people
 # starship
 eval "$(starship init zsh)"
 
+# fzf
+source <(fzf --zsh)
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+
 # history forever
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000000
@@ -15,6 +22,3 @@ setopt INC_APPEND_HISTORY    # Write immediately (global search works)
 setopt HIST_IGNORE_DUPS      # Skip consecutive duplicates
 unsetopt HIST_IGNORE_SPACE   # Skip commands starting with space
 setopt HIST_VERIFY           # Show before executing from history
-
-# Aliases
-source ~/.zshrc.aliases
