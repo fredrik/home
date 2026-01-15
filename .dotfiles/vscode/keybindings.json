@@ -1,8 +1,21 @@
 [
+    // duplicate line(s) works just like cut (shift+cmd+k)
     {
         "key": "shift+cmd+d",
         "command": "editor.action.copyLinesDownAction"
     },
+
+    // normal tab switching behaviour
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+
+    // I think this is for Claude Code in the buildin terminal
     {
         "key": "shift+enter",
         "command": "workbench.action.terminal.sendSequence",
