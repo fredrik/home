@@ -1,7 +1,6 @@
 # ~/.zshrc
 echo work hard and be nice to people
 
-
 #
 # Here's the sourcing order for zsh configurations:
 #   Login interactive:     .zshenv → .zprofile → .zshrc → .zlogin (→ .zlogout)
@@ -20,10 +19,10 @@ echo work hard and be nice to people
 #
 
 
-# starship
+# starship for prompt
 eval "$(starship init zsh)"
 
-# fzf
+# fzf for fuzzy searching
 source <(fzf --zsh)
 # fzf keybindings:
 # Ctrl-R: fuzzy history search
@@ -34,15 +33,18 @@ source <(fzf --zsh)
 # cd **<tab>: fuzzy directory search
 # ssh **<tab>: fuzzy host completion
 
-# zoxide
+# zoxide for directory jumping
 eval "$(zoxide init zsh)"
 
-# syntax highlighting and autosuggestions.
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# sheldon for plugins
+eval "$(sheldon source)"
+# see ~/.config/sheldon/plugins.toml
+# I'm using zsh-autosuggestions, zsh-syntax-highlighting, fzf-tab.
+#
 # zsh-autosuggestions:
 # Ctrl-F: accept full suggestion
 # Option-→: accept one word
+
 
 # history forever
 HISTFILE=~/.zsh_history
