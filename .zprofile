@@ -7,7 +7,7 @@
 source ~/.zshrc.aliases
 
 # Path
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/.local/bin
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
