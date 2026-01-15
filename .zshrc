@@ -67,3 +67,6 @@ setopt HIST_VERIFY           # Show before executing from history
 
 # comments are welcome.
 setopt INTERACTIVE_COMMENTS
+
+# Change into newly created directory.
+take() { mkdir -p "$1" && cd "$1" }
