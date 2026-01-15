@@ -13,7 +13,7 @@ Tracked configuration files:
 - `.config/ghostty/config` - Ghostty terminal
 - `.config/brew/Brewfile` - Homebrew packages
 - `.config/uv/uv.toml` - uv (Python package manager)
-- `.dotfiles/vscode/` - VS Code settings (symlinked)
+- `.config/vscode/` - VS Code settings (symlinked to ~/Library/Application Support/Code/User/)
 
 ## Shell Setup
 
@@ -27,4 +27,4 @@ The shell uses zsh with:
 ## Conventions
 
 - Configuration lives in `~/.config/` following XDG conventions where possible
-- VS Code settings are in `.dotfiles/vscode/` and symlinked to the actual location
+- VS Code settings are symlinked from `~/.config/vscode/` to `~/Library/Application Support/Code/User/`
