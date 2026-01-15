@@ -25,10 +25,24 @@ eval "$(starship init zsh)"
 
 # fzf
 source <(fzf --zsh)
+# fzf keybindings:
+# Ctrl-R: fuzzy history search
+# Ctrl-T: fuzzy file picker, inserts path
+# Alt-C: fuzzy cd into directory
+# fzf completion (trigger with **<tab>):
+# vim **<tab>: fuzzy file search
+# cd **<tab>: fuzzy directory search
+# ssh **<tab>: fuzzy host completion
 
 # zoxide
 eval "$(zoxide init zsh)"
 
+# syntax highlighting and autosuggestions.
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh-autosuggestions:
+# Ctrl-F: accept full suggestion
+# Option-→: accept one word
 
 # history forever
 HISTFILE=~/.zsh_history

@@ -8,3 +8,6 @@ theme = "Catppuccin Mocha"
 
 # global hotkey
 keybind = global:§=toggle_visibility
+
+# pass Option as Alt
+macos-option-as-alt = true
