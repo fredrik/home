@@ -1,6 +1,24 @@
 # ~/.zshrc
-
 echo work hard and be nice to people
+
+
+#
+# Here's the sourcing order for zsh configurations:
+#   Login interactive:     .zshenv → .zprofile → .zshrc → .zlogin (→ .zlogout)
+#   Non-login interactive: .zshenv → .zshrc
+#   Non-interactive:       .zshenv
+#
+# .zshenv  = always, all shells (PATH, env vars needed by scripts)
+# .zprofile = login only, before .zshrc (env setup)
+# .zshrc   = interactive (prompt, aliases, keybindings, completions)
+# .zlogin  = login only, after .zshrc (rarely used)
+#
+# Login: first shell of session
+# Non-login: child shell (new tab, `zsh`, tmux pane)
+# Interactive = human at prompt
+# Non-interactive = scripts, cron, `zsh -c "..."`
+#
+
 
 # starship
 eval "$(starship init zsh)"
