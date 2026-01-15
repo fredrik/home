@@ -18,6 +18,7 @@ Public/
 
 # secrets, etc
 .ssh/
+.gnupg/
 
 # apps, etc
 .lesshst
