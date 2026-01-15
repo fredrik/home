@@ -1,0 +1,12 @@
+# Use uv-managed Python installations
+python-preference = "managed"
+
+# Aggressive concurrency
+concurrent-downloads = 100
+concurrent-builds = 100
+
+# Use reflinks where supported (fastest on btrfs/APFS/xfs)
+link-mode = "clone"
+
+# Compile bytecode for faster startup
+compile-bytecode = true
