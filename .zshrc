@@ -64,3 +64,6 @@ unsetopt SHARE_HISTORY       # Don't import other sessions' history (up arrow do
 setopt INC_APPEND_HISTORY    # Write immediately (global search works)
 setopt HIST_IGNORE_DUPS      # Skip consecutive duplicates
 setopt HIST_VERIFY           # Show before executing from history
+
+# comments are welcome.
+setopt INTERACTIVE_COMMENTS
