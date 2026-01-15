@@ -70,15 +70,24 @@ setopt INTERACTIVE_COMMENTS
 # Change into newly created directory.
 take() { mkdir -p "$1" && cd "$1" }
 
+# reload this configuration.
+rehash() { source ~/.zshrc }
+
+# disable flow control and free up ctrl-s and ctrl-q
+stty -ixon
+
 # use vim mode, but restore the essential emacs-like ctrl-based commands.
 # note that 'bindkey -v' needs to be the first bindkey call.
 bindkey -v
 KEYTIMEOUT=1
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
-bindkey '^U' backward-kill-line
 bindkey '^K' kill-line
+bindkey '^U' backward-kill-line
+bindkey '^Y' yank
+bindkey '^Q' kill-word
 bindkey '^W' backward-kill-word
+bindkey '^D' delete-char
 
 # re-bind keys after vi mode did it's thing.
 # restore ctrl-f for autocompletion
