@@ -25,7 +25,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case-insensitive
 # edit command line with Ctrl-X Ctrl-E
 autoload -Uz edit-command-line
 zle -N edit-command-line
-bindkey '^X^E' edit-command-line
 
 # fzf for fuzzy searching
 source <(fzf --zsh)
@@ -70,3 +69,18 @@ setopt INTERACTIVE_COMMENTS
 
 # Change into newly created directory.
 take() { mkdir -p "$1" && cd "$1" }
+
+# use vim mode, but restore the essential emacs-like ctrl-based commands.
+# note that 'bindkey -v' needs to be the first bindkey call.
+bindkey -v
+KEYTIMEOUT=1
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^U' backward-kill-line
+bindkey '^K' kill-line
+bindkey '^W' backward-kill-word
+
+# re-bind keys after vi mode did it's thing.
+# restore ctrl-f for autocompletion
+bindkey '^F' autosuggest-accept
+bindkey '^X^E' edit-command-line
