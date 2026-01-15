@@ -2,6 +2,10 @@
 #
 # .zshenv is sourced first and always for every zsh instance.
 
+# neovim
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 # locale, etc
 export LANG=en_SE.UTF-8
 export LC_CTYPE=en_US.UTF-8

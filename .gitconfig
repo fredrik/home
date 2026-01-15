@@ -7,6 +7,7 @@
     excludesfile = /Users/fredrik/.gitignore-global
     autocrlf = input
     pager = delta
+    editor = nvim
 
 [init]
     defaultBranch = main
