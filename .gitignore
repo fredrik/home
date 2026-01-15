@@ -21,7 +21,11 @@ Public/
 .gnupg/
 
 # apps, etc
+.claude.json
+.claude.json.backup
+.claude/
 .lesshst
+.npm/
 .viminfo
 .vscode/
 .zsh_history
