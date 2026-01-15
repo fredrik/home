@@ -22,6 +22,11 @@ echo work hard and be nice to people
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case-insensitive
 
+# edit command line with Ctrl-X Ctrl-E
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 # fzf for fuzzy searching
 source <(fzf --zsh)
 # fzf keybindings:
@@ -48,7 +53,6 @@ eval "$(sheldon source)"
 # starship for prompt
 # should go last
 eval "$(starship init zsh)"
-
 
 
 # history forever
