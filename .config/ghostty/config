@@ -1,7 +1,9 @@
 # hello! this is fredrik's ghostty config.
 
-font-family = "MesloLGS NF"
-font-size = 16
+font-size = 18
+font-family = FiraCode Nerd Font Mono
+font-feature = calt
+font-feature = liga
 font-thicken = true
 
 theme = "Catppuccin Mocha"
