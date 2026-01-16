@@ -16,3 +16,8 @@ brew-install:
 # Regenerate starship.toml from config and themes
 starship-build:
     cat ~/.config/starship/config.toml ~/.config/starship/themes/*.toml > ~/.config/starship/starship.toml
+
+# Symlink VS Code settings to Application Support
+vscode-link:
+    ln -sf ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+    ln -sf ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
