@@ -25,6 +25,9 @@ Public/
 gh/
 sops/
 
+# generated files
+.config/starship/starship.toml
+
 # apps, etc
 .claude.json
 .claude.json.backup
