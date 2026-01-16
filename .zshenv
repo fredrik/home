@@ -16,6 +16,9 @@ export LANG=en_SE.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# starship
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+
 # feature flags, etc
 export HOMEBREW_NO_ENV_HINTS=true
 export DOCKER_CLI_HINTS=false
