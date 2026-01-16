@@ -5,7 +5,11 @@
 # neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
+
+# moor
 export PAGER='moor'
+# moor doesn't have a config file and is instead configured via the $MOOR variable.
+export MOOR='--quit-if-one-screen --statusbar=bold'
 
 # locale, etc
 export LANG=en_SE.UTF-8
