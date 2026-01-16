@@ -1,0 +1,20 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "editor.minimap.enabled": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.parameterHints.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "visible",
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    // "github.copilot.nextEditSuggestions.enabled": true,
+    // "claudeCode.preferredLocation": "panel",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/.venv": true
+    }
+}

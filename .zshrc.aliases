@@ -1,0 +1,52 @@
+## Aliases etc.
+
+# eza instead of ls
+alias ls=eza
+alias ll='ls -l'
+alias lla='ls -la'
+
+# bat instead of cat
+alias cat='bat --paging=never'
+
+# moor for less
+alias less=moor
+
+# also, remember that you have these:
+#  - rg (ripgrep) for searching
+#  - fd for finding
+#  -
+
+# git shorties
+alias add='git add .'
+alias b='git branch'
+alias c='git commit'
+alias cc='git commit -a'
+alias d='git diff'
+alias dd='git diff --cached'
+alias ddd='git diff HEAD^ HEAD'
+alias l='git log --stat --abbrev-commit'
+alias s='git status'
+alias t='git log --oneline --decorate --graph'
+alias sw='git switch'
+
+# starship theme switcher
+starship-theme() {
+  local config="$HOME/.config/starship/config.toml"
+  local output="$HOME/.config/starship/starship.toml"
+  local themes_dir="$HOME/.config/starship/themes"
+
+  if [[ -z "$1" ]]; then
+    echo "Current:" $(/usr/bin/grep "^palette = " "$config" | cut -d"'" -f2)
+    echo "Available:"
+    /usr/bin/grep "^\[palettes\." "$themes_dir"/*.toml | sed "s/.*\[palettes\.\(.*\)\]/  \1/"
+    return
+  fi
+
+  # Update palette in config.toml
+  sed -i '' "s/^palette = .*/palette = '$1'/" "$config"
+
+  # Concatenate config + all theme files
+  cat "$config" "$themes_dir"/*.toml > "$output"
+
+  echo "Switched to palette: $1"
+}

@@ -1,0 +1,53 @@
+[user]
+    name = Fredrik Möllerstrand
+    email = fredrik@mollerstrand.se
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8sVoIlfQGVnI+YaeZv74I5oKAVzR1RBl0zfHnsp0hk
+
+[core]
+    excludesfile = /Users/fredrik/.gitignore-global
+    autocrlf = input
+    pager = delta
+    editor = nvim
+
+[init]
+    defaultBranch = main
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[diff]
+    algorithm = patience
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    pager = moor
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = current
+
+[pull]
+    rebase = true
+
+[fetch]
+    prune = true
+
+[rebase]
+    autosquash = true
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+    allowedSignersFile = /Users/fredrik/.ssh/allowed_signers
