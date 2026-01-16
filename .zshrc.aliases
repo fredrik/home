@@ -8,17 +8,13 @@ alias lla='ls -la'
 # bat instead of cat
 alias cat='bat --paging=never'
 
-# ripgrep instead of grep
-alias grep='rg'
-
-# fd for find
-alias find='fd'
-
-# dust for du
-alias du='dust'
-
 # moor for less
 alias less=moor
+
+# also, remember that you have these:
+#  - rg (ripgrep) for searching
+#  - fd for finding
+#  -
 
 # git shorties
 alias add='git add .'
