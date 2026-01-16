@@ -28,6 +28,19 @@ The shell uses zsh with:
 - fzf for fuzzy searching
 - zoxide for directory jumping
 
+## CLI Tools
+
+Modern replacements and utilities:
+- bat - cat with syntax highlighting
+- eza - modern ls replacement
+- fd - fast find alternative
+- ripgrep (rg) - fast grep alternative
+- git-delta - better git diffs
+- glow - terminal markdown viewer
+- dust - disk usage analyzer
+- btop - system monitor
+- jq/yq - JSON/YAML processors
+
 ## Starship Prompt
 
 Starship configuration uses a custom theme system:
