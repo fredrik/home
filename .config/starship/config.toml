@@ -28,7 +28,7 @@ $cmd_duration\
 $line_break\
 $character"""
 
-palette = 'gruvbox_dark'
+palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
