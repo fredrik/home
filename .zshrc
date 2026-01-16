@@ -78,6 +78,12 @@ setopt HIST_VERIFY           # Show before executing from history
 # comments are welcome.
 setopt INTERACTIVE_COMMENTS
 
+# directory handling with stacks etc
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
+
 # --------
 
 # Change into newly created directory.
