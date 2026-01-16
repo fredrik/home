@@ -22,3 +22,8 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 # feature flags, etc
 export HOMEBREW_NO_ENV_HINTS=true
 export DOCKER_CLI_HINTS=false
+
+# git
+# Prevents git from finding ~/.git when in subdirectories like ~/Library
+# This means I can only interact with the ~/ git repo from ~/
+export GIT_CEILING_DIRECTORIES="$HOME"
