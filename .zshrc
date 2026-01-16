@@ -49,10 +49,17 @@ eval "$(sheldon source)"
 # Ctrl-F: accept full suggestion
 # Option-→: accept one word
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Mise
+eval "$(mise activate zsh)"
+
 # starship for prompt
 # should go last
 eval "$(starship init zsh)"
 
+# --------
 
 # history forever
 HISTFILE=~/.zsh_history
@@ -93,3 +100,11 @@ bindkey '^D' delete-char
 # restore ctrl-f for autocompletion
 bindkey '^F' autosuggest-accept
 bindkey '^X^E' edit-command-line
+
+# Path
+export PATH=$PATH:~/.local/bin
+
+# --------
+
+# Aliases
+source ~/.zshrc.aliases
