@@ -4,7 +4,7 @@ font-size = 18
 font-family = FiraCode Nerd Font Mono
 font-feature = calt
 font-feature = liga
-font-thicken = true
+# font-thicken = true
 
 theme = "Catppuccin Mocha"
 
