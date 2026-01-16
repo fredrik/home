@@ -7,15 +7,17 @@ This is Fredrik's dotfiles repository, rooted at `~/`.
 Tracked configuration files:
 - `.zshrc`, `.zshenv`, `.zshrc.aliases` - Zsh configuration
 - `.gitconfig`, `.gitignore-global`, `.config/git/ignore` - Git configuration
+- `.config/bat/config` - Bat (cat replacement)
+- `.config/brew/Brewfile` - Homebrew packages
+- `.config/ghostty/config` - Ghostty terminal
 - `.config/mise/config.toml` - Mise (version manager for node, pnpm, etc.)
 - `.config/sheldon/plugins.toml` - Sheldon (zsh plugin manager)
 - `.config/starship/` - Starship prompt (config and themes)
-- `.config/ghostty/config` - Ghostty terminal
-- `.config/zellij/config.kdl` - Zellij terminal multiplexer
-- `.config/brew/Brewfile` - Homebrew packages
 - `.config/uv/uv.toml` - uv (Python package manager)
-- `.config/vscode/` - VS Code settings (symlinked to ~/Library/Application Support/Code/User/)
+- `.config/vscode/` - VS Code settings (symlinked via `just vscode-link`)
+- `.config/zellij/config.kdl` - Zellij terminal multiplexer
 - `.claude/` - Claude Code configuration
+- `Justfile` - Common tasks (brew-dump, brew-install, starship-build, vscode-link)
 
 ## Shell Setup
 
@@ -31,13 +33,11 @@ The shell uses zsh with:
 Starship configuration uses a custom theme system:
 - `config.toml` - Base prompt configuration with `palette = 'theme_name'` setting
 - `themes/*.toml` - Palette definitions (catppuccin, gruvbox variants)
-- `starship.toml` - Generated output (concatenation of config + themes)
+- `starship.toml` - Generated on shell startup, gitignored
 
 The `starship-theme` function in `.zshrc.aliases` switches themes:
 - `starship-theme` - Show current theme and available palettes
 - `starship-theme <palette>` - Switch to a palette (e.g., `starship-theme gruvbox_dark`)
-
-When changing themes, edit `config.toml` and run `starship-theme <palette>` to regenerate `starship.toml`.
 
 ## Conventions
 
