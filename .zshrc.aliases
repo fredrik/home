@@ -17,6 +17,9 @@ alias find='fd'
 # dust for du
 alias du='dust'
 
+# moor for less
+alias less=moor
+
 # git shorties
 alias add='git add .'
 alias b='git branch'

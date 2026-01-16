@@ -25,6 +25,7 @@
 
 [delta]
     navigate = true
+    pager = moor
 
 [branch]
     autosetuprebase = always

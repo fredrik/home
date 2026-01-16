@@ -5,6 +5,7 @@
 # neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
+export PAGER='moor'
 
 # locale, etc
 export LANG=en_SE.UTF-8
@@ -14,7 +15,3 @@ export LC_ALL=en_US.UTF-8
 # feature flags, etc
 export HOMEBREW_NO_ENV_HINTS=true
 export DOCKER_CLI_HINTS=false
-
-# less
-export LESSCHARSET=UTF-8
-export LESSHISTFILE=/dev/null
