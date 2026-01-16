@@ -35,6 +35,7 @@ sops/
 .vscode/
 .zsh_history
 .zcompdump
+.zcompcache/
 
 # worktrees for https://github.com/fredrik/home/, possibly temporary
 worktrees/
