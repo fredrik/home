@@ -28,6 +28,9 @@ sops/
 # generated files
 .config/starship/starship.toml
 
+# ignore the defaults
+.config/neofetch
+
 # apps, etc
 .claude.json
 .claude.json.backup
