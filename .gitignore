@@ -12,6 +12,9 @@ Pictures/
 Public/
 .Trash/
 
+# my stuff
+code/
+
 # ~/.local is the user-level equivalent of /usr/local
 .local/
 .cache/
