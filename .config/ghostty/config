@@ -1,6 +1,6 @@
 # hello! this is fredrik's ghostty config.
 
-font-size = 18
+font-size = 16
 font-family = FiraCode Nerd Font Mono
 font-feature = calt
 font-feature = liga
@@ -13,3 +13,7 @@ keybind = global:§=toggle_visibility
 
 # pass Option as Alt
 macos-option-as-alt = true
+
+# don't ask to close tab
+confirm-close-surface = false
+
