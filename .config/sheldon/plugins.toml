@@ -8,3 +8,8 @@ github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
+
+[plugins.dotenv]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/dotenv"
+use = ["dotenv.plugin.zsh"]
