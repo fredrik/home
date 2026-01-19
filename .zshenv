@@ -8,6 +8,12 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 
+# to make some zsh specific things like dotenv work
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+
+# automatically load .env
+export ZSH_DOTENV_PROMPT=false
+
 # neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
