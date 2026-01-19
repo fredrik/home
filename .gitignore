@@ -40,6 +40,7 @@ sops/
 .claude/
 .lesshst
 .npm/
+.terraform.d/
 .viminfo
 .vscode/
 .zsh_history
