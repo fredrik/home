@@ -24,9 +24,8 @@ export PAGER='moor'
 export MOOR='--quit-if-one-screen --no-statusbar'
 
 # locale, etc
+export LC_ALL=en_SE.UTF-8
 export LANG=en_SE.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 
 # starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
