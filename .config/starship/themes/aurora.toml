@@ -1,0 +1,126 @@
+# 🌌 Aurora Borealis Theme
+# Deep ocean blues flowing into ethereal forest greens
+
+[palettes.aurora_dark]
+# 💚 Greens - Forest to Mint
+green = "#50fa7b"        # Electric mint
+teal = "#8be9fd"         # Cyan ice
+# 💙 Blues - Deep ocean spectrum
+blue = "#6272a4"         # Twilight blue
+sapphire = "#61afef"     # Arctic sapphire
+sky = "#89ddff"          # Northern sky
+# 🌈 Accent colors
+lavender = "#a9b1d6"     # Misty lavender
+pink = "#ff79c6"         # Aurora pink flash
+mauve = "#bd93f9"        # Violet glow
+# 🔥 Warm accents (for contrast)
+red = "#ff6e6e"          # Soft coral
+maroon = "#e06c75"       # Dusty rose
+peach = "#ffb86c"        # Sunset peach
+yellow = "#f1fa8c"       # Pale aurora
+# ☁️ Atmosphere layers
+rosewater = "#c0caf5"
+flamingo = "#c0caf5"
+text = "#c0caf5"         # Starlight text
+subtext1 = "#a9b1d6"
+subtext0 = "#9aa5ce"
+overlay2 = "#787c99"
+overlay1 = "#565f89"
+overlay0 = "#414868"
+surface2 = "#3b4261"
+surface1 = "#292e42"
+surface0 = "#232433"
+base = "#1a1b26"         # Deep night sky
+mantle = "#16161e"       # Darker depths
+crust = "#13131a"        # Abyss black
+
+[palettes.aurora_light]
+# 💚 Greens - Vibrant forest
+green = "#2e7d32"        # Forest green
+teal = "#00897b"         # Ocean teal
+# 💙 Blues - Clear sky spectrum
+blue = "#1565c0"         # Deep sky blue
+sapphire = "#0288d1"     # Lake sapphire
+sky = "#03a9f4"          # Bright sky
+# 🌈 Accent colors
+lavender = "#7c4dff"     # Bright lavender
+pink = "#ec407a"         # Rose pink
+mauve = "#9c27b0"        # Orchid purple
+# 🔥 Warm accents
+red = "#e53935"
+maroon = "#c62828"
+peach = "#ff7043"
+yellow = "#fbc02d"
+# ☁️ Atmosphere layers
+rosewater = "#37474f"
+flamingo = "#37474f"
+text = "#1a1a2e"
+subtext1 = "#2d3748"
+subtext0 = "#4a5568"
+overlay2 = "#718096"
+overlay1 = "#a0aec0"
+overlay0 = "#cbd5e0"
+surface2 = "#e2e8f0"
+surface1 = "#edf2f7"
+surface0 = "#f7fafc"
+base = "#ffffff"
+mantle = "#f8fafc"
+crust = "#f1f5f9"
+
+[palettes.ocean_depths]
+# 🌊 A deep oceanic theme - blues and aquatic greens
+green = "#00d9a0"        # Bioluminescent green
+teal = "#64ffda"         # Sea foam
+blue = "#0d7377"         # Deep ocean
+sapphire = "#14a3c7"     # Tropical waters
+sky = "#7fdbff"          # Surface shimmer
+lavender = "#b8c0ff"     # Jellyfish glow
+pink = "#ff6b9d"         # Coral pink
+mauve = "#957fef"        # Sea urchin purple
+red = "#ff6b6b"          # Anemone red
+maroon = "#ee5a5a"
+peach = "#ffa07a"        # Light salmon
+yellow = "#fffacd"       # Sandy yellow
+rosewater = "#e0ffff"
+flamingo = "#e0ffff"
+text = "#e0ffff"         # Moonlit water
+subtext1 = "#b4d4d4"
+subtext0 = "#8ab4b4"
+overlay2 = "#5f9ea0"
+overlay1 = "#4a8080"
+overlay0 = "#3d6b6b"
+surface2 = "#2d5454"
+surface1 = "#1e3d3d"
+surface0 = "#152c2c"
+base = "#0a1a1a"         # Midnight ocean floor
+mantle = "#071414"
+crust = "#050f0f"        # Abyssal depths
+
+[palettes.nordic_forest]
+# 🌲 Scandinavian forest at twilight
+green = "#a3be8c"        # Pine needle
+teal = "#8fbcbb"         # Frozen lake
+blue = "#5e81ac"         # Nordic sky
+sapphire = "#81a1c1"     # Glacier blue
+sky = "#88c0d0"          # Ice cave
+lavender = "#b48ead"     # Heather
+pink = "#d08770"         # Autumn berry
+mauve = "#b48ead"
+red = "#bf616a"          # Lingonberry
+maroon = "#a54242"
+peach = "#d08770"        # Cloudberry
+yellow = "#ebcb8b"       # Amber sunset
+rosewater = "#e5e9f0"
+flamingo = "#e5e9f0"
+text = "#eceff4"         # Fresh snow
+subtext1 = "#d8dee9"
+subtext0 = "#c0c8d8"
+overlay2 = "#9aa5b9"
+overlay1 = "#7b88a1"
+overlay0 = "#616e88"
+surface2 = "#4c566a"
+surface1 = "#434c5e"
+surface0 = "#3b4252"
+base = "#2e3440"         # Night forest
+mantle = "#272d38"
+crust = "#21262e"        # Deep shadow
