@@ -4,9 +4,8 @@ font-size = 16
 font-family = FiraCode Nerd Font Mono
 font-feature = calt
 font-feature = liga
-# font-thicken = true
 
-theme = "Catppuccin Mocha"
+theme = "Gruvbox Dark"
 
 # global hotkey
 keybind = global:§=toggle_visibility
@@ -16,4 +15,3 @@ macos-option-as-alt = true
 
 # don't ask to close tab
 confirm-close-surface = false
-

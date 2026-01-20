@@ -138,3 +138,6 @@ export PATH=~/.local/bin:$PATH
 
 # Aliases
 source ~/.zshrc.aliases
+
+# nice ls colours
+export LS_COLORS="$(vivid generate solarized-dark)"
