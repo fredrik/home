@@ -23,13 +23,13 @@ echo work hard and be nice to people
 source <(fzf --zsh)
 # fzf keybindings:
 # Ctrl-R: fuzzy history search
+# Ctrl-O: fuzzy history search + execute immediately
 # Ctrl-T: fuzzy file picker, inserts path
 # Alt-C: fuzzy cd into directory
 # fzf completion (trigger with **<tab>):
 # vim **<tab>: fuzzy file search
 # cd **<tab>: fuzzy directory search
 # ssh **<tab>: fuzzy host completion
-
 # zoxide for directory jumping
 eval "$(zoxide init zsh)"
 
@@ -120,6 +120,16 @@ bindkey '^D' delete-char
 # restore ctrl-f for autocompletion
 bindkey '^F' autosuggest-accept
 bindkey '^X^E' edit-command-line
+
+# fzf history: Ctrl-O to select and execute immediately
+fzf-history-execute() {
+  zle fzf-history-widget
+  if [[ $? -eq 0 && -n "$BUFFER" ]]; then
+    zle accept-line
+  fi
+}
+zle -N fzf-history-execute
+bindkey '^O' fzf-history-execute
 
 # --------
 
