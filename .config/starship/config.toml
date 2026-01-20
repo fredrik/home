@@ -6,10 +6,12 @@ $os\
 $username\
 [](bg:sapphire fg:blue)\
 $directory\
-[](bg:teal fg:sapphire)\
+[](bg:green fg:sapphire)\
 $git_branch\
 $git_status\
-[](fg:teal bg:green)\
+[](fg:green bg:blue)\
+$kubernetes\
+[](fg:blue bg:green)\
 $c\
 $rust\
 $golang\
@@ -73,12 +75,18 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol $branch ](fg:crust bg:teal)]($style)'
+style = "bg:green"
+format = '[[ $symbol $branch ](fg:crust bg:green)]($style)'
 
 [git_status]
-style = "bg:teal"
-format = '[[($all_status$ahead_behind )](fg:crust bg:teal)]($style)'
+style = "bg:green"
+format = '[[($all_status$ahead_behind )](fg:crust bg:green)]($style)'
+
+[kubernetes]
+disabled = false
+symbol = "☸"
+style = "bg:yellow"
+format = '[[ $symbol $context ](fg:crust bg:blue)]($style)'
 
 [nodejs]
 symbol = ""
