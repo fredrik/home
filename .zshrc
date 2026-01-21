@@ -132,6 +132,11 @@ fzf-history-execute() {
 zle -N fzf-history-execute
 bindkey '^O' fzf-history-execute
 
+# Option+Left/Right for word movement, Option+Backspace to delete word
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+bindkey '^[^?' backward-kill-word
+
 # --------
 
 # Path for interactive use.
