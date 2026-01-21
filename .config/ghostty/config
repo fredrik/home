@@ -15,3 +15,6 @@ macos-option-as-alt = true
 
 # don't ask to close tab
 confirm-close-surface = false
+
+# new windows and tabs start at home
+working-directory = home
