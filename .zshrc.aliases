@@ -1,7 +1,7 @@
 ## Aliases etc.
 
 # eza instead of ls
-alias ls=eza
+alias ls='eza --icons'
 alias ll='ls -l'
 alias lla='ls -la'
 
