@@ -1,7 +1,7 @@
 ## Aliases etc.
 
 # eza instead of ls
-alias ls=eza
+alias ls='eza --git'
 alias ll='ls -l'
 alias lla='ls -la'
 
