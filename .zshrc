@@ -51,6 +51,7 @@ eval "$(mise activate zsh)"
 # starship for prompt
 # generate config from base + themes if missing (starship.toml is gitignored)
 [[ -f ~/.config/starship/starship.toml ]] || cat ~/.config/starship/config.toml ~/.config/starship/themes/*.toml > ~/.config/starship/starship.toml
+
 # should go last
 eval "$(starship init zsh)"
 
