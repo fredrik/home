@@ -18,6 +18,9 @@ export ZSH_DOTENV_PROMPT=false
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# eza
+export EZA_ICONS_AUTO=true
+
 # moor
 export PAGER='moor'
 # moor doesn't have a config file and is instead configured via the $MOOR variable.
