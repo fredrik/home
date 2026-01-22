@@ -27,13 +27,19 @@ code/
 .kube/
 gh/
 sops/
+notes/
 
 # generated files
 .config/starship/starship.toml
 
 # ignore the defaults
+.config/btop/
 .config/neofetch/
 .config/helm/
+
+# containers, etc
+.lima/
+.config/containers/
 
 # apps, etc
 .claude.json
