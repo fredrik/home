@@ -16,5 +16,6 @@
         "**/.pytest_cache": true,
         "**/.ruff_cache": true,
         "**/.venv": true
-    }
+    },
+    "dev.containers.dockerPath": "podman"
 }
