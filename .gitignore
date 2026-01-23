@@ -14,20 +14,20 @@ Public/
 
 # my stuff
 code/
+notes/
 
 # ~/.local is the user-level equivalent of /usr/local
 .local/
 .cache/
 
 # secrets, etc
-.ssh/
-.gnupg/
 .aws/
 .azure/
+.config/gh/hosts.yml
+.config/sops
+.gnupg/
 .kube/
-gh/
-sops/
-notes/
+.ssh/
 
 # generated files
 .config/starship/starship.toml

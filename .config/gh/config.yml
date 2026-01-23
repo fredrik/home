@@ -1,0 +1,7 @@
+version: 1
+git_protocol: ssh
+
+color_labels: enabled
+spinner: enabled
+prompt: disabled
+prefer_editor_prompt: disabled
