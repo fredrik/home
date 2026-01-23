@@ -51,3 +51,6 @@ starship-theme() {
 
   echo "Switched to palette: $1"
 }
+
+# claude history
+alias ch='claude-history'
