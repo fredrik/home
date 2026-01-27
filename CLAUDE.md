@@ -50,3 +50,18 @@ All source code lives in `~/code/` with this structure:
 | `others/{owner}/{project}` | Third-party code | `github.com/{owner}/{project}` |
 
 When cloning, place repos according to this convention. See `~/code/CLAUDE.md` for details.
+
+## Lima (Linux VMs)
+
+Lima runs Linux VMs on macOS. A pre-configured devenv VM is available for running Nix/devenv in Linux.
+
+**Files:**
+- `~/.lima/_images/` - Baked VM images and yaml configs
+- `~/.lima/_scripts/bootstrap-devenv/` - Scripts and documentation
+
+**Quick start:**
+```bash
+~/.lima/_scripts/bootstrap-devenv/lima-devenv.sh
+```
+
+**Documentation:** `~/.lima/_scripts/bootstrap-devenv/lima-devenv-setup.md`
