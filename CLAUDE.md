@@ -1,6 +1,10 @@
-# Dotfiles
+# CLAUDE.md
 
-Repository root: `~/`
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Overview
+
+Dotfiles repository. Root: `~/`
 
 ## Key Files
 
@@ -10,6 +14,15 @@ Repository root: `~/`
 - `.config/starship/` - Prompt (config.toml + themes/*.toml)
 - `.config/vscode/` - VS Code settings
 - `Justfile` - Task runner
+
+## Commands
+
+```bash
+just brew-dump      # Dump Homebrew packages to Brewfile
+just brew-install   # Install from Brewfile
+just starship-build # Regenerate starship.toml from config + themes
+just vscode-link    # Symlink VS Code settings
+```
 
 ## Instructions
 
