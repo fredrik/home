@@ -45,6 +45,7 @@ notes/
 .claude.json
 .claude.json.backup
 .claude/
+.cargo/
 .lesshst
 .npm/
 .terraform.d/
