@@ -43,7 +43,7 @@ notes/
 
 # apps, etc
 .claude.json
-.claude.json.backup
+.claude.json.backup*
 .claude/
 .cargo/
 .lesshst
