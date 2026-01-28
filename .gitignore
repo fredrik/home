@@ -15,6 +15,7 @@ Public/
 # my stuff
 code/
 notes/
+research/
 
 # ~/.local is the user-level equivalent of /usr/local
 .local/
