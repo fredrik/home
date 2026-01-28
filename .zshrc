@@ -1,6 +1,23 @@
 # ~/.zshrc
 echo work hard and be nice to people
 
+# ========================================
+# Performance optimizations
+# ========================================
+# This config uses several techniques to minimize startup time:
+#
+# 1. Cached eval outputs (sheldon, brew) - regenerated automatically when config changes
+# 2. Deferred compinit - loads completions after first prompt appears
+# 3. compinit -C - skips security check (run 'compinit' manually if fpath changes)
+#
+# Additional optimization (not enabled):
+# - mise: use 'mise activate zsh --shims' instead for faster startup (~25ms saved)
+#   Trade-off: no automatic version switching when cd'ing between projects
+#
+# To measure startup time: time zsh -i -c exit
+# To profile: add 'zmodload zsh/zprof' at top and 'zprof' at bottom
+# ========================================
+
 #
 # Here's the sourcing order for zsh configurations:
 #   Login interactive:     .zshenv → .zprofile → .zshrc → .zlogin (→ .zlogout)
@@ -34,7 +51,14 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # sheldon for plugins
-eval "$(sheldon source)"
+# Cache sheldon output for faster startup
+# Run 'sheldon lock --update' to regenerate after changing plugins.toml
+SHELDON_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/sheldon/sheldon.zsh"
+if [[ ! -r "$SHELDON_CACHE" || "${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml" -nt "$SHELDON_CACHE" ]]; then
+  mkdir -p "$(dirname "$SHELDON_CACHE")"
+  sheldon source > "$SHELDON_CACHE"
+fi
+source "$SHELDON_CACHE"
 # see ~/.config/sheldon/plugins.toml
 # I'm using zsh-autosuggestions, zsh-syntax-highlighting, fzf-tab.
 #
@@ -43,7 +67,12 @@ eval "$(sheldon source)"
 # Option-→: accept one word
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Cache brew shellenv for faster startup (regenerate if homebrew path changes)
+BREW_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/brew-shellenv.zsh"
+if [[ ! -r "$BREW_CACHE" || /opt/homebrew/bin/brew -nt "$BREW_CACHE" ]]; then
+  /opt/homebrew/bin/brew shellenv > "$BREW_CACHE"
+fi
+source "$BREW_CACHE"
 
 # Mise
 eval "$(mise activate zsh)"
@@ -58,7 +87,15 @@ eval "$(starship init zsh)"
 # --------
 
 # completion system
-autoload -Uz compinit && compinit
+# Defer compinit to after shell startup for faster initial load
+# Completions won't work until after first prompt, but shell appears instantly
+autoload -Uz compinit
+_deferred_compinit() {
+  compinit -C  # -C skips security check
+  # Remove this hook after first run
+  add-zsh-hook -d precmd _deferred_compinit
+}
+add-zsh-hook precmd _deferred_compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case-insensitive
 
 # fzf-preview
