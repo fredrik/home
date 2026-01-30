@@ -30,6 +30,7 @@ stuff/
 .gnupg/
 .kube/
 .ssh/
+.vault-token
 
 # generated files
 .config/starship/starship.toml
