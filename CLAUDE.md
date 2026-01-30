@@ -51,6 +51,9 @@ All source code lives in `~/code/` with this structure:
 
 When cloning, place repos according to this convention. See `~/code/CLAUDE.md` for details.
 
+When Claude generates one-off scripts, put them in ~/code/sandbox/scripts-by-claude.
+
+
 ## Lima (Linux VMs)
 
 Lima runs Linux VMs on macOS. A pre-configured devenv VM is available for running Nix/devenv in Linux.
