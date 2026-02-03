@@ -41,6 +41,9 @@
 [rebase]
     autosquash = true
 
+[log]
+    mailmap = true
+
 [commit]
     gpgsign = true
 
@@ -50,3 +53,5 @@
 [gpg "ssh"]
     program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
     allowedSignersFile = /Users/fredrik/.ssh/allowed_signers
+[blame]
+	usemailmap = true
