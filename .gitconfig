@@ -1,6 +1,5 @@
 [user]
     name = Fredrik Möllerstrand
-    email = fredrik@mollerstrand.se
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8sVoIlfQGVnI+YaeZv74I5oKAVzR1RBl0zfHnsp0hk
 
 [core]
