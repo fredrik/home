@@ -17,5 +17,6 @@
         "**/.ruff_cache": true,
         "**/.venv": true
     },
-    "dev.containers.dockerPath": "podman"
+    "dev.containers.dockerPath": "podman",
+    "dev.containers.showLog": "always"
 }
