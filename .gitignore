@@ -26,9 +26,11 @@ stuff/
 .aws/
 .azure/
 .config/gh/hosts.yml
-.config/sops
+.config/rclone/
+.config/sops/
 .gnupg/
 .kube/
+.mc/
 .ssh/
 .vault-token
 
@@ -45,12 +47,16 @@ stuff/
 .config/containers/
 
 # apps, etc
+.azurite/
 .claude.json
 .claude.json.backup*
 .claude/
 .cargo/
+.config/zellij/layouts
 .lesshst
 .npm/
+.psql_history
+.python_history
 .terraform.d/
 .viminfo
 .vscode/
