@@ -8,5 +8,8 @@
   },
   "model": "opus",
   "teammateMode": "tmux",
-  "promptSuggestionEnabled": false
+  "promptSuggestionEnabled": false,
+  "enabledPlugins": {
+    "superpowers@superpowers-marketplace": true
+  }
 }
