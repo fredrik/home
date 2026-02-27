@@ -18,3 +18,5 @@ confirm-close-surface = false
 
 # new windows and tabs start at home
 working-directory = home
+
+clipboard-paste-protection = false
