@@ -32,9 +32,9 @@ export MOOR='--quit-if-one-screen --no-statusbar'
 
 # locale: English language with Swedish regional formatting
 export LANG=en_US.UTF-8
-export LC_TIME=sv_SE.UTF-8
-export LC_NUMERIC=sv_SE.UTF-8
-export LC_MONETARY=sv_SE.UTF-8
+# export LC_TIME=sv_SE.UTF-8
+# export LC_NUMERIC=sv_SE.UTF-8
+# export LC_MONETARY=sv_SE.UTF-8
 
 # starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
