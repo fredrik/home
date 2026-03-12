@@ -14,10 +14,10 @@ Public/
 
 # my stuff
 code/
-infra/
 notes/
 research/
 stuff/
+sync/
 
 # ~/.local is the user-level equivalent of /usr/local
 .local/
@@ -32,6 +32,7 @@ stuff/
 .gnupg/
 .kube/
 .mc/
+.pulumi/
 .ssh/
 .vault-token
 
