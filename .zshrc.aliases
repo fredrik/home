@@ -54,3 +54,8 @@ starship-theme() {
 
 # claude history
 alias ch='claude-history'
+
+# Usage: httpstatus https://example.com
+# The "$@" passes through any extra curl flags too (e.g. -X POST, -H ...).
+httpstatus() { curl -o /dev/null -s -w "%{http_code}\n" "$@"; }
+
