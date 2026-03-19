@@ -13,7 +13,7 @@ All source code lives in `~/code/` with this structure:
 | `knowit/{project}` | Work projects | `github.com/knowit-solutions-cocreate/{project}` |
 | `fredrik/{project}` | Personal projects | `github.com/fredrik/{project}` |
 | `sandbox/{project}` | Experiments, POC, scratch | Local (may graduate to `fredrik/` or `knowit/`) |
-| `others/` | Third-party code. Typically flat. | |
+| `upstream/{owner}/{project}` | Third-party code | `github.com/{owner}/{project}` |
 
 When cloning, place repos according to this convention. Read `~/code/CLAUDE.md` for details.
 
