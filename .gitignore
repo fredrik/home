@@ -26,6 +26,7 @@ sync/
 # secrets, etc
 .aws/
 .azure/
+.config/claude-isolated/home
 .config/gh/hosts.yml
 .config/rclone/
 .config/sops/
