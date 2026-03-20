@@ -52,8 +52,15 @@ starship-theme() {
   echo "Switched to palette: $1"
 }
 
+## my local tools
 # claude history
-alias ch='claude-history'
+alias ch=claude-history
+# worktree-keeper
+alias wk=worktree-keeper
+# claude-isolated
+alias iso=claude-isolated
+
+
 
 # Usage: httpstatus https://example.com
 # The "$@" passes through any extra curl flags too (e.g. -X POST, -H ...).
