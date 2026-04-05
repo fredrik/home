@@ -18,5 +18,8 @@
         "**/.venv": true
     },
     "dev.containers.dockerPath": "podman",
-    "dev.containers.showLog": "always"
+    "claudeCode.preferredLocation": "panel",
+    "chat.agentsControl.enabled": false,
+    "window.commandCenter": false,
+    "chat.disableAIFeatures": true
 }
