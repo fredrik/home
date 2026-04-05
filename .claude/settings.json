@@ -15,5 +15,6 @@
     "superpowers@superpowers-marketplace": true
   },
   "promptSuggestionEnabled": false,
-  "teammateMode": "tmux"
+  "teammateMode": "tmux",
+  "model": "opus"
 }
