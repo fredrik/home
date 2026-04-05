@@ -55,3 +55,5 @@
     allowedSignersFile = /Users/fredrik/.ssh/allowed_signers
 [blame]
 	usemailmap = true
+[alias]
+	prune-merged = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
