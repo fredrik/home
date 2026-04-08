@@ -1,5 +1,5 @@
 # what are we ignoring today?
-# see also .gitignore-global
+# see also ~/.config/git/ignore
 
 # all the macos directories.
 Desktop/
@@ -48,6 +48,7 @@ sync/
 
 # containers, etc
 .lima/
+.config/colima/
 .config/containers/
 
 # apps, etc
@@ -58,6 +59,7 @@ sync/
 .claude/
 .codex/
 .config/zellij/layouts
+.docker/
 .lesshst
 .npm/
 .psql_history
@@ -67,6 +69,7 @@ sync/
 .viminfo
 .vscode/
 .zsh_history
+.zsh_sessions/
 .zcompdump
 .zcompcache/
 .wget-hsts

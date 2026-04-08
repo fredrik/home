@@ -1,5 +1,6 @@
 .CFUserTextEncoding
 .DS_Store
 .localized
+*.swp
 **/.claude/settings.local.json
 **/worktrees/
