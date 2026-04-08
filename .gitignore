@@ -2,6 +2,7 @@
 # see also ~/.config/git/ignore
 
 # all the macos directories.
+Applications/
 Desktop/
 Documents/
 Downloads/
