@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Bahaaio/pomo/main/config/schema.json
+# pomo config file
+# https://github.com/Bahaaio/pomo
+
+onSessionEnd: start
+
+longBreak:
+  enabled: false
+
+asciiArt:
+  enabled: true
+  font: rebel
+  color: "#5A56E0"
+
+work:
+  duration: 25m
+  title: work work
+  notification:
+    enabled: true
+    urgent: true
+    title: pomodoro finished 🎉
+    # message: time to take a break
+    # icon: ~/path/to/icon.png
+
+break:
+  duration: 5m
+  title: break
+  notification:
+    enabled: true
+    urgent: false
+    title: break over
+    message: back to work!
+
