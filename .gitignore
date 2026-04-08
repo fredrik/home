@@ -52,10 +52,11 @@ sync/
 
 # apps, etc
 .azurite/
+.cargo/
 .claude.json
 .claude.json.backup*
 .claude/
-.cargo/
+.codex/
 .config/zellij/layouts
 .lesshst
 .npm/
@@ -72,3 +73,4 @@ sync/
 
 # worktrees for https://github.com/fredrik/home/, possibly temporary
 worktrees/
+
