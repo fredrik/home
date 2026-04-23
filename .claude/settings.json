@@ -6,7 +6,7 @@
     "allow": [
       "Bash(kubectl:*)"
     ],
-    "defaultMode": "plan"
+    "defaultMode": "auto"
   },
   "model": "opus",
   "statusLine": {
@@ -17,5 +17,6 @@
     "superpowers@superpowers-marketplace": true
   },
   "promptSuggestionEnabled": false,
-  "teammateMode": "tmux"
+  "teammateMode": "tmux",
+  "skipAutoPermissionPrompt": true
 }
