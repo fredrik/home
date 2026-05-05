@@ -46,6 +46,7 @@ sync/
 .config/neofetch/
 .config/helm/
 .config/pypoetry/
+.config/zed/
 
 # containers, etc
 .lima/
