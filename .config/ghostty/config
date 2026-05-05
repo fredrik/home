@@ -20,3 +20,5 @@ confirm-close-surface = false
 working-directory = home
 
 clipboard-paste-protection = false
+
+notify-on-command-finish = never
