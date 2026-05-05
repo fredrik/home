@@ -18,5 +18,6 @@
   },
   "promptSuggestionEnabled": false,
   "teammateMode": "tmux",
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "autoCompactEnabled": false
 }
