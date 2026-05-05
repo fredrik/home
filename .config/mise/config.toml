@@ -1,4 +1,5 @@
 [tools]
+flux2 = "2.8.5"
 node = "24"
 npm = "11.12.0"
 "npm:typescript" = "latest"
