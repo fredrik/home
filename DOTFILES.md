@@ -7,10 +7,17 @@ Dotfiles repository. Root: `~/`
 ## Key Files
 
 - `.zshrc`, `.zshenv`, `.zshrc.aliases` - Shell config
-- `.gitconfig`, `.gitignore-global`, `.config/git/ignore` - Git config
+- `.gitconfig`, `.config/git/ignore` - Git config (global excludesfile)
 - `.config/brew/Brewfile` - Homebrew packages
+- `.config/mise/config.toml` - Dev tool version manager
 - `.config/starship/` - Prompt (config.toml + themes/*.toml)
+- `.config/ghostty/config` - Ghostty terminal
+- `.config/zed/settings.json` - Zed editor
 - `.config/vscode/` - VS Code settings
+- `.config/nvim/` - Neovim config
+- `.config/lazygit/config.yml` - lazygit
+- `.config/zellij/config.kdl` - Zellij multiplexer
+- `.config/pomo/pomo.yaml` - Pomodoro timer
 - `Justfile` - Task runner
 - `.local/bin/wakeup` - Podman VM time sync on wake
 
