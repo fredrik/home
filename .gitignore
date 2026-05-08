@@ -61,6 +61,7 @@ sync/
 .claude/
 .codex/
 .config/zellij/layouts
+.cups/
 .docker/
 .lesshst
 .npm/
