@@ -19,5 +19,6 @@
   "promptSuggestionEnabled": false,
   "autoCompactEnabled": false,
   "teammateMode": "tmux",
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "model": "opus"
 }
