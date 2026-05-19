@@ -132,6 +132,13 @@ take() { mkdir -p "$1" && cd "$1" }
 # reload this configuration.
 rehash() { source ~/.zshrc }
 
+# init-project: wraps the script so we cd into the new repo.
+init-project() {
+  local dir
+  dir=$(command init-project "$@") || return
+  cd "$dir"
+}
+
 # disable flow control and free up ctrl-s and ctrl-q
 stty -ixon
 
