@@ -132,6 +132,18 @@ take() { mkdir -p "$1" && cd "$1" }
 # reload this configuration.
 rehash() { source ~/.zshrc }
 
+# Simple prompt for clean copy-paste. Usage: psx [label]
+# Without a label, shows the current path. With a label, shows the label.
+psx() {
+  precmd_functions=(${precmd_functions:#_starship_precmd})
+  preexec_functions=(${preexec_functions:#_starship_preexec})
+  if [[ -n "$1" ]]; then
+    PROMPT="[$1]: \$ "
+  else
+    PROMPT='[%~]: $ '
+  fi
+}
+
 # init-project: wraps the script so we cd into the new repo.
 init-project() {
   local dir

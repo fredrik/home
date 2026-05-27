@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Solarized Light",
     "editor.minimap.enabled": false,
     "files.trimTrailingWhitespace": true,
     "editor.parameterHints.enabled": false,
@@ -21,5 +20,6 @@
     "claudeCode.preferredLocation": "panel",
     "chat.agentsControl.enabled": false,
     "window.commandCenter": false,
-    "chat.disableAIFeatures": true
+    "chat.disableAIFeatures": true,
+    "workbench.colorTheme": "Monokai Dimmed"
 }
