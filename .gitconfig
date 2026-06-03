@@ -1,6 +1,8 @@
-[user]
-    name = Fredrik Möllerstrand
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8sVoIlfQGVnI+YaeZv74I5oKAVzR1RBl0zfHnsp0hk
+[include]
+    path = ~/.config/git/identity.inc
+
+[includeIf "gitdir:~/code/knowit/"]
+	path = ~/.config/git/work.inc
 
 [core]
     autocrlf = input
@@ -53,7 +55,9 @@
 [gpg "ssh"]
     program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
     allowedSignersFile = /Users/fredrik/.ssh/allowed_signers
+
 [blame]
 	usemailmap = true
+
 [alias]
 	prune-merged = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D

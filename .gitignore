@@ -29,6 +29,7 @@ sync/
 .azure/
 .config/claude-isolated/home
 .config/gh/hosts.yml
+.config/git/*.inc
 .config/rclone/
 .config/sops/
 .gnupg/
