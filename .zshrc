@@ -135,6 +135,10 @@ rehash() { source ~/.zshrc }
 # Simple prompt for clean copy-paste. Usage: psx [label]
 # Without a label, shows the current path. With a label, shows the label.
 psx() {
+  if [[ "$1" == "off" ]]; then
+    eval "$(starship init zsh)"
+    return
+  fi
   precmd_functions=(${precmd_functions:#_starship_precmd})
   preexec_functions=(${preexec_functions:#_starship_preexec})
   if [[ -n "$1" ]]; then
