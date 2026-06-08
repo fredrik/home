@@ -25,7 +25,7 @@ alias cc='git commit -a'
 alias d='git diff'
 alias dd='git diff --cached'
 alias ddd='git diff HEAD^ HEAD'
-alias l='git log --stat --abbrev-commit'
+alias l='git log --stat --abbrev-commit --show-signature'
 alias s='git status'
 alias t='git log --oneline --decorate --graph'
 alias sw='git switch'
@@ -60,9 +60,6 @@ alias wk=worktree-keeper
 # claude-isolated
 alias iso=claude-isolated
 
-
-
 # Usage: httpstatus https://example.com
 # The "$@" passes through any extra curl flags too (e.g. -X POST, -H ...).
 httpstatus() { curl -o /dev/null -s -w "%{http_code}\n" "$@"; }
-
