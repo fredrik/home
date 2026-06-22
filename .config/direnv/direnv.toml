@@ -1,0 +1,7 @@
+[global]
+# Quiet the routine "loading .envrc" / "export ~PATH" chatter on every cd.
+# log_filter is a WHITELIST regex (only matching lines are printed), and
+# direnv 2.37 ignores an empty log_format — so we keep the messages worth
+# seeing (errors, blocked dirs needing `direnv allow`, warnings) and let the
+# rest fall away.
+log_filter = "error|denied|blocked|warn|timed out"
