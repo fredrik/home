@@ -32,12 +32,21 @@ sync/
 .config/git/*.inc
 .config/rclone/
 .config/sops/
+.config/op/
 .gnupg/
 .kube/
 .mc/
 .pulumi/
 .ssh/
 .vault-token
+
+# email
+Mail/
+.mbsyncrc
+.notmuch-config
+.config/aerc
+.config/notmuch/
+.config/neomutt/
 
 # generated files
 .config/starship/starship.toml
@@ -48,6 +57,19 @@ sync/
 .config/helm/
 .config/pypoetry/
 .config/zed/
+
+# tooling state / caches / generated
+.aspnet/
+.azure-devops/
+.azure-functions-core-tools/
+.azurefunctions/
+.bundle/
+.config/homebrew/
+.config/swiftpm/
+.config/zsh/completions/
+.dagster/
+.matplotlib/
+.vscode-shared/
 
 # containers, etc
 .lima/
@@ -77,7 +99,3 @@ sync/
 .zcompdump
 .zcompcache/
 .wget-hsts
-
-# worktrees for https://github.com/fredrik/home/, possibly temporary
-worktrees/
-
