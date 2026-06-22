@@ -1,7 +1,11 @@
 [tools]
+direnv = "latest"
 flux2 = "2.7.5"
 node = "24"
 npm = "11.12.0"
 "npm:@fission-ai/openspec" = "latest"
 "npm:typescript" = "latest"
 pnpm = "latest"
+
+[settings]
+trusted_config_paths = ["/Users/fredrik/code/fredrik/leeks"]
