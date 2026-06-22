@@ -60,6 +60,9 @@ alias wk=worktree-keeper
 # claude-isolated
 alias iso=claude-isolated
 
-# Usage: httpstatus https://example.com
-# The "$@" passes through any extra curl flags too (e.g. -X POST, -H ...).
+# mount whatbox seedbox over sshfs (fuse-t)
+alias mount-whatbox='mkdir -p ~/whatbox && sshfs whatbox: ~/whatbox -o volname=whatbox,reconnect,follow_symlinks'
+alias umount-whatbox='diskutil unmount ~/whatbox'
+
+# httpstatus
 httpstatus() { curl -o /dev/null -s -w "%{http_code}\n" "$@"; }
