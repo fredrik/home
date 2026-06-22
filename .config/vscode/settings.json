@@ -21,6 +21,6 @@
     "chat.agentsControl.enabled": false,
     "window.commandCenter": false,
     "chat.disableAIFeatures": true,
-    "workbench.colorTheme": "Monokai Dimmed",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Solarized Light"
 }
