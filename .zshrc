@@ -92,6 +92,7 @@ eval "$(starship init zsh)"
 # completion system
 # Defer compinit to after shell startup for faster initial load
 # Completions won't work until after first prompt, but shell appears instantly
+fpath=(~/.config/zsh/completions $fpath)  # personal completions (land, rebase, ...)
 autoload -Uz compinit
 _deferred_compinit() {
   compinit -C  # -C skips security check
