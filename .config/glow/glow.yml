@@ -5,6 +5,6 @@ mouse: true
 # use pager to display markdown
 pager: true
 # word-wrap at width
-width: 90
+width: 120
 # show all files, including hidden and ignored.
 all: false
