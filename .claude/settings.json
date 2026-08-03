@@ -6,10 +6,13 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5[1m]",
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": false
   },
   "promptSuggestionEnabled": false,
+  "tui": "fullscreen",
+  "theme": "dark",
   "autoCompactEnabled": false,
   "teammateMode": "tmux",
   "skipAutoPermissionPrompt": true
