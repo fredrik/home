@@ -203,7 +203,16 @@ bindkey '^[^?' backward-kill-word
 # --------
 
 # Path for interactive use.
+# Set here rather than .zshenv or .zprofile:
+#  - .zshenv runs before macOS's path_helper (/etc/zprofile), which would
+#    reorder anything set there on login shells.
+#  - .zprofile only runs for login shells, and Zellij panes aren't login
+#    shells (see commit c0b810e).
+# .zshrc is the only file that covers both Terminal tabs and Zellij panes.
 export PATH=~/.local/bin:$PATH
+
+# dedupe PATH entries (keeps first occurrence)
+typeset -U path
 
 # Aliases
 source ~/.zshrc.aliases
