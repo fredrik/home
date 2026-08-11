@@ -11,6 +11,9 @@
 #   Helpers   take, rehash, psx, init-project
 #
 # Startup is kept fast: sheldon and brew shellenv are cached, compinit deferred.
+#
+# Package responsibilities: Homebrew owns the machine, mise owns the work. See `DOTFILES.md`.
+
 
 echo work hard and be nice to people
 
