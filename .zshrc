@@ -33,6 +33,30 @@ echo work hard and be nice to people
 # Non-interactive = scripts, cron, `zsh -c "..."`
 #
 
+# --------
+
+# Homebrew
+# First in the file: almost everything below (fzf, zoxide, sheldon, ...)
+# lives in /opt/homebrew/bin and should resolve to brew's version.
+# Cache brew shellenv for faster startup (regenerate if homebrew path changes)
+BREW_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/brew-shellenv.zsh"
+if [[ ! -r "$BREW_CACHE" || /opt/homebrew/bin/brew -nt "$BREW_CACHE" ]]; then
+  /opt/homebrew/bin/brew shellenv > "$BREW_CACHE"
+fi
+source "$BREW_CACHE"
+
+# Path for interactive use. ~/.local/bin goes in front of everything,
+# including homebrew.
+# Set here rather than .zshenv or .zprofile:
+#  - .zshenv runs before macOS's path_helper (/etc/zprofile), which would
+#    reorder anything set there on login shells.
+#  - .zprofile only runs for login shells, and Zellij panes aren't login
+#    shells (see commit c0b810e).
+# .zshrc is the only file that covers both Terminal tabs and Zellij panes.
+typeset -U path  # dedupe PATH entries (keeps first occurrence)
+export PATH=~/.local/bin:$PATH
+
+# --------
 
 # fzf for fuzzy searching
 source <(fzf --zsh)
@@ -48,14 +72,6 @@ source <(fzf --zsh)
 
 # zoxide for directory jumping
 eval "$(zoxide init zsh)"
-
-# Homebrew
-# Cache brew shellenv for faster startup (regenerate if homebrew path changes)
-BREW_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/brew-shellenv.zsh"
-if [[ ! -r "$BREW_CACHE" || /opt/homebrew/bin/brew -nt "$BREW_CACHE" ]]; then
-  /opt/homebrew/bin/brew shellenv > "$BREW_CACHE"
-fi
-source "$BREW_CACHE"
 
 # Mise
 eval "$(mise activate zsh)"
@@ -144,13 +160,10 @@ init-project() {
   cd "$dir"
 }
 
+# --------
+
 # disable flow control and free up ctrl-s and ctrl-q
 stty -ixon
-
-# edit command line with Ctrl-X Ctrl-E
-autoload -Uz edit-command-line
-zle -N edit-command-line
-
 
 # use vim mode, but restore the essential emacs-like ctrl-based commands.
 # note that 'bindkey -v' needs to be the first bindkey call.
@@ -168,6 +181,10 @@ bindkey '^D' delete-char
 # re-bind keys after vi mode did its thing.
 # restore ctrl-f for autocompletion
 bindkey '^F' autosuggest-accept
+
+# edit command line with Ctrl-X Ctrl-E
+autoload -Uz edit-command-line
+zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
 # fzf history: Ctrl-O to select and execute immediately
@@ -208,18 +225,6 @@ source "$SHELDON_CACHE"
 # Option-→: accept one word
 
 # --------
-
-# Path for interactive use.
-# Set here rather than .zshenv or .zprofile:
-#  - .zshenv runs before macOS's path_helper (/etc/zprofile), which would
-#    reorder anything set there on login shells.
-#  - .zprofile only runs for login shells, and Zellij panes aren't login
-#    shells (see commit c0b810e).
-# .zshrc is the only file that covers both Terminal tabs and Zellij panes.
-export PATH=~/.local/bin:$PATH
-
-# dedupe PATH entries (keeps first occurrence)
-typeset -U path
 
 # Aliases
 source ~/.zshrc.aliases
