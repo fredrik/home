@@ -208,5 +208,11 @@ export PATH=~/.local/bin:$PATH
 # Aliases
 source ~/.zshrc.aliases
 
-# nice ls colours
-export LS_COLORS="$(vivid generate solarized-dark)"
+# Nice ls colours using vivid.
+VIVID_THEME="solarized-dark"
+# Cache vivid output for faster startup (regenerates when vivid is updated)
+VIVID_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/vivid-$VIVID_THEME"
+if [[ ! -r "$VIVID_CACHE" || /opt/homebrew/bin/vivid -nt "$VIVID_CACHE" ]]; then
+  vivid generate "$VIVID_THEME" > "$VIVID_CACHE"
+fi
+export LS_COLORS="$(<"$VIVID_CACHE")"
