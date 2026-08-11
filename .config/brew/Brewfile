@@ -1,56 +1,209 @@
+tap "azure/functions", trusted: true
+tap "bahaaio/pomo"
+tap "cloudflare/cloudflare"
 tap "fluxcd/tap"
-brew "age"
-brew "awscli"
-brew "azure-cli"
-brew "bat"
-brew "btop"
-brew "dust"
-brew "eza"
-brew "fd"
-brew "fzf"
-brew "gh"
-brew "git"
-brew "git-delta"
-brew "glow"
+tap "hashicorp/tap"
+tap "kubero-dev/kubero"
+tap "macos-fuse-t/cask"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
-brew "go"
-brew "helm"
-brew "ifstat"
-brew "irssi"
-brew "jq"
-brew "just"
-brew "k9s"
-brew "kubeconform"
-brew "kubectx"
-brew "kubent"
-brew "kubeseal"
-brew "kustomize"
-brew "lazygit"
-brew "lima"
-brew "lima-additional-guestagents"
-brew "macchina"
-brew "mise"
-brew "moor"
-brew "neofetch"
-brew "neovim"
-brew "nmap"
-brew "pluto"
-brew "podman"
-brew "ripgrep"
-brew "rust"
-brew "sheldon"
-brew "sops"
-brew "starship"
-brew "terraform"
-brew "the_silver_searcher"
-brew "tig"
+# Thread-based email index, search, and tagging
+brew "notmuch"
+# Email client that runs in your terminal
+brew "aerc"
+# Simple, modern, secure file encryption
+brew "age"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Vector graphics library with cross-device output support
+brew "cairo"
+# Linux virtual machines
+brew "lima"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Passphrases to remember
+brew "diceware"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
+# Isolated development environments using Docker
+brew "docker-compose"
+# More intuitive version of du in rust
+brew "dust"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# CLI application for interacting with a Cloudflare account
+brew "flarectl"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU awk utility
+brew "gawk"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Render markdown on the CLI
+brew "glow"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Kubernetes package manager
+brew "helm"
+# Tool to report network interface bandwidth
+brew "ifstat"
+# Command-line tool to export and inspect local iMessage database
+brew "imessage-exporter"
+# Modular IRC client
+brew "irssi"
+# Synchronize a maildir with an IMAP server
+brew "isync"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Additional guest agents for Lima
+brew "lima-additional-guestagents"
+# System information fetcher, with an emphasis on performance and minimalism
+brew "macchina"
+# Replacement for ls, cp and other commands for object storage
+brew "minio-mc"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
+# Nice to use pager for humans
+brew "moor"
+# Mongrel of mail user agents (part elm, pine, mush, mh, etc.)
+brew "mutt"
+# Fast, highly customisable system info script
+brew "neofetch"
+# E-mail reader with support for Notmuch, NNTP and much more
+brew "neomutt"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Libraries for security-enabled client and server applications
+brew "nss"
+# Drop-in replacement for Terraform. Infrastructure as Code Tool
+brew "opentofu"
+# CLI tool to help discover deprecated apiVersions in Kubernetes
+brew "pluto"
+# Tool for managing OCI containers and pods
+brew "podman"
+# Alternative to docker-compose using podman
+brew "podman-compose"
+# Object-relational database system
+brew "postgresql@18", link: true
+# Rsync for cloud storage
+brew "rclone"
+# Fast, efficient and secure backup program
+brew "restic"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# Fast, configurable, shell plugin manager
+brew "sheldon"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
+# Monitors sleep, wakeup, and idleness of a Mac
+brew "sleepwatcher", restart_service: :changed
+# Editor of encrypted files
+brew "sops"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Open source continuous file synchronization application
+brew "syncthing", restart_service: :changed
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Text interface for Git repositories
+brew "tig"
+# Terminal multiplexer
+brew "tmux"
+# ODBC 3 connectivity for UNIX
+brew "unixodbc"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Generator for LS_COLORS with support for multiple color themes
 brew "vivid"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
+# Internet file retriever
+brew "wget"
+# Tools for the WireGuard secure network tunnel
+brew "wireguard-tools"
+# Fast CSV toolkit written in Rust
 brew "xsv"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
-brew "fluxcd/tap/flux"
+# Azure Functions Core Tools 4.0
+brew "azure/functions/azure-functions-core-tools@4"
+# Command-line interface for 1Password
+cask "1password-cli"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
+# Kext-less implementation of FUSE
+cask "fuse-t"
+# SSHFS implementation based on FUSE-T
+cask "macos-fuse-t/cask/fuse-t-sshfs", trusted: true
+# Tool to reverse the direction of scrolling
+cask "scroll-reverser"
+# Native GUI tool for relational databases
+cask "tableplus"
+vscode "anthropic.claude-code"
+vscode "davidanson.vscode-markdownlint"
+vscode "donjayamanne.githistory"
+vscode "marvhen.reflow-markdown"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
+vscode "opentofu.vscode-opentofu"
+vscode "rust-lang.rust-analyzer"
+go "golang.org/x/tools/cmd/goimports"
+go "project-manager-4000"
+go "github.com/user/randname"
+go "github.com/caddyserver/xcaddy/cmd/xcaddy"
+uv "claude-isolated"
+uv "poethepoet"
+uv "poetry"
+uv "worktree-keeper"
+npm "corepack"
