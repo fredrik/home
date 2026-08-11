@@ -45,10 +45,14 @@ source <(fzf --zsh)
 # vim **<tab>: fuzzy file search
 # cd **<tab>: fuzzy directory search
 # ssh **<tab>: fuzzy host completion
+
 # zoxide for directory jumping
 eval "$(zoxide init zsh)"
 
 # sheldon for plugins
+# see ~/.config/sheldon/plugins.toml
+# I'm using zsh-autosuggestions, zsh-syntax-highlighting, fzf-tab.
+#
 # Cache sheldon output for faster startup
 # Run 'sheldon lock --update' to regenerate after changing plugins.toml
 SHELDON_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/sheldon/sheldon.zsh"
@@ -57,9 +61,7 @@ if [[ ! -r "$SHELDON_CACHE" || "${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugin
   sheldon source > "$SHELDON_CACHE"
 fi
 source "$SHELDON_CACHE"
-# see ~/.config/sheldon/plugins.toml
-# I'm using zsh-autosuggestions, zsh-syntax-highlighting, fzf-tab.
-#
+
 # zsh-autosuggestions:
 # Ctrl-F: accept full suggestion
 # Option-→: accept one word
@@ -128,7 +130,6 @@ setopt AUTO_CD
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 
-
 # --------
 
 # Change into newly created directory.
@@ -166,7 +167,6 @@ stty -ixon
 # edit command line with Ctrl-X Ctrl-E
 autoload -Uz edit-command-line
 zle -N edit-command-line
-
 
 
 # use vim mode, but restore the essential emacs-like ctrl-based commands.
