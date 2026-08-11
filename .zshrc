@@ -1,22 +1,20 @@
 # ~/.zshrc
+#
+# My interactive shell, in broad strokes:
+#
+#   Looks     starship prompt (psx to simplify it), vivid ls colours
+#   Finds     fzf everywhere (Ctrl-R/O/T, Alt-C, **<tab>), zoxide for jumping
+#   Plugins   sheldon (autosuggestions, syntax highlighting, fzf-tab), cached
+#   Tools     homebrew, mise, direnv
+#   Editing   vim mode with the emacs ctrl-keys I can't live without
+#   History   effectively infinite, timestamped, per-session up-arrow
+#   Helpers   take, rehash, psx, init-project
+#
+# Startup is kept fast: sheldon and brew shellenv are cached, compinit deferred.
+
 echo work hard and be nice to people
 
-# ========================================
-# Performance optimizations
-# ========================================
-# This config uses several techniques to minimize startup time:
-#
-# 1. Cached eval outputs (sheldon, brew) - regenerated automatically when config changes
-# 2. Deferred compinit - loads completions after first prompt appears
-# 3. compinit -C - skips security check (run 'compinit' manually if fpath changes)
-#
-# Additional optimization (not enabled):
-# - mise: use 'mise activate zsh --shims' instead for faster startup (~25ms saved)
-#   Trade-off: no automatic version switching when cd'ing between projects
-#
-# To measure startup time: time zsh -i -c exit
-# To profile: add 'zmodload zsh/zprof' at top and 'zprof' at bottom
-# ========================================
+
 
 #
 # Here's the sourcing order for zsh configurations:
