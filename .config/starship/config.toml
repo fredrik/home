@@ -26,7 +26,7 @@ $cmd_duration\
 $line_break\
 $character"""
 
-palette = 'aurora_light'
+palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
