@@ -182,7 +182,7 @@ bindkey '^Q' kill-word
 bindkey '^W' backward-kill-word
 bindkey '^D' delete-char
 
-# re-bind keys after vi mode did it's thing.
+# re-bind keys after vi mode did its thing.
 # restore ctrl-f for autocompletion
 bindkey '^F' autosuggest-accept
 bindkey '^X^E' edit-command-line
