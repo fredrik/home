@@ -95,6 +95,9 @@ autoload -Uz compinit
 autoload -Uz add-zsh-hook
 _deferred_compinit() {
   compinit -C  # -C skips security check
+  # fzf-tab is sourced (by sheldon) before compinit runs, but wants to load
+  # after it — re-enable now that the completion system exists.
+  (( $+functions[enable-fzf-tab] )) && enable-fzf-tab
   # Remove this hook after first run
   add-zsh-hook -d precmd _deferred_compinit
 }
