@@ -92,6 +92,7 @@ eval "$(starship init zsh)"
 # Completions won't work until after first prompt, but shell appears instantly
 fpath=(~/.config/zsh/completions $fpath)  # personal completions (land, rebase, ...)
 autoload -Uz compinit
+autoload -Uz add-zsh-hook
 _deferred_compinit() {
   compinit -C  # -C skips security check
   # Remove this hook after first run
