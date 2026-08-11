@@ -12,12 +12,10 @@
 #
 # Startup is kept fast: sheldon and brew shellenv are cached, compinit deferred.
 #
-# Package responsibilities: Homebrew owns the machine, mise owns the work. See `DOTFILES.md`.
-
+# Package responsibilities: Homebrew owns the machine, mise owns the work.
+# See DOTFILES.md.
 
 echo work hard and be nice to people
-
-
 
 #
 # Here's the sourcing order for zsh configurations:
@@ -76,7 +74,7 @@ source <(fzf --zsh)
 # zoxide for directory jumping
 eval "$(zoxide init zsh)"
 
-# Mise
+# mise
 eval "$(mise activate zsh)"
 
 # direnv
@@ -84,7 +82,10 @@ eval "$(direnv hook zsh)"
 
 # starship for prompt
 # generate config from base + themes if missing (starship.toml is gitignored)
-[[ -f ~/.config/starship/starship.toml ]] || cat ~/.config/starship/config.toml ~/.config/starship/themes/*.toml > ~/.config/starship/starship.toml
+if [[ ! -f ~/.config/starship/starship.toml ]]; then
+  cat ~/.config/starship/config.toml ~/.config/starship/themes/*.toml \
+    > ~/.config/starship/starship.toml
+fi
 
 eval "$(starship init zsh)"
 
@@ -93,7 +94,8 @@ eval "$(starship init zsh)"
 # completion system
 # Defer compinit to after shell startup for faster initial load
 # Completions won't work until after first prompt, but shell appears instantly
-fpath=(~/.config/zsh/completions $fpath)  # personal completions (land, rebase, ...)
+# personal completions (land, rebase, ...)
+fpath=(~/.config/zsh/completions $fpath)
 autoload -Uz compinit
 autoload -Uz add-zsh-hook
 _deferred_compinit() {
@@ -105,7 +107,7 @@ _deferred_compinit() {
   add-zsh-hook -d precmd _deferred_compinit
 }
 add-zsh-hook precmd _deferred_compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case-insensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'  # case-insensitive
 
 # fzf-preview
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
@@ -119,7 +121,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 setopt EXTENDED_HISTORY      # Timestamp entries
-unsetopt SHARE_HISTORY       # Don't import other sessions' history (up arrow doesn't include other sessions' history)
+unsetopt SHARE_HISTORY       # Keep other sessions' history out of up-arrow
 setopt INC_APPEND_HISTORY    # Write immediately (global search works)
 setopt HIST_IGNORE_DUPS      # Skip consecutive duplicates
 setopt HIST_VERIFY           # Show before executing from history
@@ -217,7 +219,8 @@ bindkey '^[^?' backward-kill-word
 # Cache sheldon output for faster startup
 # Run 'sheldon lock --update' to regenerate after changing plugins.toml
 SHELDON_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/sheldon/sheldon.zsh"
-if [[ ! -r "$SHELDON_CACHE" || "${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml" -nt "$SHELDON_CACHE" ]]; then
+SHELDON_PLUGINS="${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml"
+if [[ ! -r "$SHELDON_CACHE" || "$SHELDON_PLUGINS" -nt "$SHELDON_CACHE" ]]; then
   mkdir -p "$(dirname "$SHELDON_CACHE")"
   sheldon source > "$SHELDON_CACHE"
 fi

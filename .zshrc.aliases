@@ -1,4 +1,6 @@
-## Aliases etc.
+# ~/.zshrc.aliases
+#
+# Aliases and small helper functions, sourced from ~/.zshrc.
 
 # eza instead of ls
 alias ls='eza --git'
@@ -15,7 +17,6 @@ alias less=moor
 # also, remember that you have these:
 #  - rg (ripgrep) for searching
 #  - fd for finding
-#  -
 
 # git shorties
 alias add='git add .'
@@ -39,7 +40,8 @@ starship-theme() {
   if [[ -z "$1" ]]; then
     echo "Current:" $(/usr/bin/grep "^palette = " "$config" | cut -d"'" -f2)
     echo "Available:"
-    /usr/bin/grep "^\[palettes\." "$themes_dir"/*.toml | sed "s/.*\[palettes\.\(.*\)\]/  \1/"
+    /usr/bin/grep "^\[palettes\." "$themes_dir"/*.toml |
+      sed "s/.*\[palettes\.\(.*\)\]/  \1/"
     return
   fi
 
@@ -52,7 +54,7 @@ starship-theme() {
   echo "Switched to palette: $1"
 }
 
-## my local tools
+# my local tools
 # claude history
 alias ch=claude-history
 # worktree-keeper
