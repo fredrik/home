@@ -132,7 +132,7 @@ setopt PUSHD_IGNORE_DUPS
 take() { mkdir -p "$1" && cd "$1" }
 
 # reload this configuration.
-rehash() { source ~/.zshrc }
+reload() { source ~/.zshrc }
 
 # Simple prompt for clean copy-paste. Usage: psx [label]
 # Without a label, shows the current path. With a label, shows the label.
