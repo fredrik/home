@@ -49,23 +49,6 @@ source <(fzf --zsh)
 # zoxide for directory jumping
 eval "$(zoxide init zsh)"
 
-# sheldon for plugins
-# see ~/.config/sheldon/plugins.toml
-# I'm using zsh-autosuggestions, zsh-syntax-highlighting, fzf-tab.
-#
-# Cache sheldon output for faster startup
-# Run 'sheldon lock --update' to regenerate after changing plugins.toml
-SHELDON_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/sheldon/sheldon.zsh"
-if [[ ! -r "$SHELDON_CACHE" || "${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml" -nt "$SHELDON_CACHE" ]]; then
-  mkdir -p "$(dirname "$SHELDON_CACHE")"
-  sheldon source > "$SHELDON_CACHE"
-fi
-source "$SHELDON_CACHE"
-
-# zsh-autosuggestions:
-# Ctrl-F: accept full suggestion
-# Option-→: accept one word
-
 # Homebrew
 # Cache brew shellenv for faster startup (regenerate if homebrew path changes)
 BREW_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/brew-shellenv.zsh"
@@ -201,6 +184,28 @@ bindkey '^O' fzf-history-execute
 bindkey '^[b' backward-word
 bindkey '^[f' forward-word
 bindkey '^[^?' backward-kill-word
+
+# --------
+
+# sheldon for plugins
+# see ~/.config/sheldon/plugins.toml
+# I'm using zsh-autosuggestions, zsh-syntax-highlighting, fzf-tab.
+#
+# Loaded after the keybindings on purpose: zsh-syntax-highlighting wants to
+# be sourced last, once all widgets and bindings exist.
+#
+# Cache sheldon output for faster startup
+# Run 'sheldon lock --update' to regenerate after changing plugins.toml
+SHELDON_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/sheldon/sheldon.zsh"
+if [[ ! -r "$SHELDON_CACHE" || "${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml" -nt "$SHELDON_CACHE" ]]; then
+  mkdir -p "$(dirname "$SHELDON_CACHE")"
+  sheldon source > "$SHELDON_CACHE"
+fi
+source "$SHELDON_CACHE"
+
+# zsh-autosuggestions:
+# Ctrl-F: accept full suggestion
+# Option-→: accept one word
 
 # --------
 
