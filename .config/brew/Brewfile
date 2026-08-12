@@ -4,7 +4,7 @@ tap "cloudflare/cloudflare"
 tap "fluxcd/tap"
 tap "hashicorp/tap"
 tap "kubero-dev/kubero"
-tap "macos-fuse-t/cask"
+tap "macos-fuse-t/cask", trusted: { casks: ["fuse-t"] }
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Thread-based email index, search, and tagging
@@ -183,6 +183,7 @@ cask "db-browser-for-sqlite"
 cask "fuse-t"
 # SSHFS implementation based on FUSE-T
 cask "macos-fuse-t/cask/fuse-t-sshfs", trusted: true
+cask "pomo"
 # Tool to reverse the direction of scrolling
 cask "scroll-reverser"
 # Native GUI tool for relational databases
@@ -202,8 +203,8 @@ go "golang.org/x/tools/cmd/goimports"
 go "project-manager-4000"
 go "github.com/user/randname"
 go "github.com/caddyserver/xcaddy/cmd/xcaddy"
-uv "claude-isolated"
+uv "claude-isolated", source: "file:///Users/fredrik/code/fredrik/claude-isolated"
 uv "poethepoet"
 uv "poetry"
-uv "worktree-keeper"
+uv "worktree-keeper", source: "file:///Users/fredrik/code/fredrik/worktree-keeper"
 npm "corepack"
