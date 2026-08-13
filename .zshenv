@@ -48,4 +48,3 @@ export DOCKER_CLI_HINTS=false
 # Prevents git from finding ~/.git when in subdirectories like ~/Library
 # This means I can only interact with the ~/ git repo from ~/
 export GIT_CEILING_DIRECTORIES="$HOME"
-
