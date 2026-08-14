@@ -172,7 +172,7 @@ brew "zellij"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Azure Functions Core Tools 4.0
-brew "azure/functions/azure-functions-core-tools@4"
+brew "azure/functions/azure-functions-core-tools@4", trusted: true
 # Command-line interface for 1Password
 cask "1password-cli"
 # OpenAI's coding agent that runs in your terminal
