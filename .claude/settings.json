@@ -10,6 +10,7 @@
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": false
   },
+  "effortLevel": "xhigh",
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "theme": "dark",
