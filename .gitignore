@@ -27,6 +27,7 @@ sync/
 # secrets, etc
 .aws/
 .azure/
+.config/caddy
 .config/claude-isolated/home
 .config/gh/hosts.yml
 .config/git/*.inc
