@@ -89,6 +89,7 @@ Mail/
 .docker/
 .lesshst
 .npm/
+.pi/
 .psql_history
 .python_history
 .sqlite_history
