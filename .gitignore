@@ -87,6 +87,7 @@ Mail/
 .config/zellij/layouts
 .cups/
 .docker/
+.duckdb_history
 .llama-app/
 .lesshst
 .npm/
