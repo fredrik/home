@@ -87,6 +87,7 @@ Mail/
 .config/zellij/layouts
 .cups/
 .docker/
+.llama-app/
 .lesshst
 .npm/
 .pi/
