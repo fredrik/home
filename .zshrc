@@ -72,7 +72,7 @@ source <(fzf --zsh)
 # ssh **<tab>: fuzzy host completion
 
 # zoxide for directory jumping
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd j)"
 
 # mise
 eval "$(mise activate zsh)"
