@@ -86,6 +86,7 @@ Mail/
 .claude.json.backup*
 .claude/
 .codex/
+.config/.wrangler/
 .config/zellij/layouts
 .cups/
 .docker/
