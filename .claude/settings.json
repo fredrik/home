@@ -1,6 +1,5 @@
 {
   "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
   "permissions": {
@@ -21,6 +20,5 @@
   "tui": "fullscreen",
   "theme": "dark",
   "autoCompactEnabled": false,
-  "teammateMode": "tmux",
   "skipAutoPermissionPrompt": true
 }
