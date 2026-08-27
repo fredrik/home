@@ -22,6 +22,8 @@ sync/
 
 # ~/.local is the user-level equivalent of /usr/local
 .local/
+
+# cache, etc
 .cache/
 
 # secrets, etc
@@ -31,9 +33,9 @@ sync/
 .config/claude-isolated/home
 .config/gh/hosts.yml
 .config/git/*.inc
+.config/op/
 .config/rclone/
 .config/sops/
-.config/op/
 .gnupg/
 .kube/
 .mc/
@@ -42,20 +44,20 @@ sync/
 .vault-token
 
 # email
-Mail/
+.config/aerc
+.config/neomutt/
+.config/notmuch/
 .mbsyncrc
 .notmuch-config
-.config/aerc
-.config/notmuch/
-.config/neomutt/
+Mail/
 
 # generated files
 .config/starship/starship.toml
 
 # ignore the defaults
 .config/btop/
-.config/neofetch/
 .config/helm/
+.config/neofetch/
 .config/pypoetry/
 .config/zed/
 
@@ -73,9 +75,9 @@ Mail/
 .vscode-shared/
 
 # containers, etc
-.lima/
 .config/colima/
 .config/containers/
+.lima/
 
 # apps, etc
 .azurite/
@@ -90,8 +92,8 @@ Mail/
 .duckdb/
 .duckdb_history
 .fly/
-.llama-app/
 .lesshst
+.llama-app/
 .npm/
 .pi/
 .psql_history
@@ -101,8 +103,8 @@ Mail/
 .terraform.d/
 .viminfo
 .vscode/
+.wget-hsts
+.zcompcache/
+.zcompdump
 .zsh_history
 .zsh_sessions/
-.zcompdump
-.zcompcache/
-.wget-hsts
