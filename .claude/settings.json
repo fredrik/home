@@ -2,9 +2,6 @@
   "env": {
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
-  "permissions": {
-    "defaultMode": "auto"
-  },
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   },
