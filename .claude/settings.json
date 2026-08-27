@@ -1,12 +1,10 @@
 {
-  "env": {
-    "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
-  },
-  "permissions": {
-    "defaultMode": "auto"
-  },
+  "autoCompactEnabled": false,
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": false
+  },
+  "env": {
+    "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
   "modelSettings": {
     "claude-fable-5": {
@@ -16,9 +14,11 @@
       "effortLevel": "medium"
     }
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "promptSuggestionEnabled": false,
-  "tui": "fullscreen",
+  "skipAutoPermissionPrompt": true,
   "theme": "dark",
-  "autoCompactEnabled": false,
-  "skipAutoPermissionPrompt": true
+  "tui": "fullscreen"
 }
