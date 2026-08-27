@@ -1,8 +1,4 @@
 {
-  "autoCompactEnabled": false,
-  "enabledPlugins": {
-    "superpowers@superpowers-marketplace": false
-  },
   "env": {
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
@@ -17,6 +13,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "autoCompactEnabled": false,
   "promptSuggestionEnabled": false,
   "skipAutoPermissionPrompt": true,
   "theme": "dark",
