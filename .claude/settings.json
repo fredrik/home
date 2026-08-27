@@ -2,6 +2,12 @@
   "env": {
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  },
   "modelSettings": {
     "claude-fable-5": {
       "effortLevel": "low"
@@ -10,12 +16,9 @@
       "effortLevel": "medium"
     }
   },
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "autoCompactEnabled": false,
   "promptSuggestionEnabled": false,
-  "skipAutoPermissionPrompt": true,
+  "tui": "fullscreen",
   "theme": "dark",
-  "tui": "fullscreen"
+  "autoCompactEnabled": false,
+  "skipAutoPermissionPrompt": true
 }
