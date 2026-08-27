@@ -6,11 +6,19 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "opus",
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": false
   },
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-fable-5": {
+      "effortLevel": "low"
+    },
+    "claude-opus-5": {
+      "effortLevel": "medium"
+    }
+  },
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "theme": "dark",
