@@ -87,7 +87,9 @@ Mail/
 .config/zellij/layouts
 .cups/
 .docker/
+.duckdb/
 .duckdb_history
+.fly/
 .llama-app/
 .lesshst
 .npm/
@@ -95,6 +97,7 @@ Mail/
 .psql_history
 .python_history
 .sqlite_history
+.streamlit/
 .terraform.d/
 .viminfo
 .vscode/
