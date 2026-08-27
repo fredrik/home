@@ -2,7 +2,6 @@
 
 Global instructions for Claude.
 
-
 ## Names
 
 It's "directory", not "folder".

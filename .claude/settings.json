@@ -6,11 +6,9 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "opus",
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": false
   },
-  "effortLevel": "xhigh",
   "modelSettings": {
     "claude-fable-5": {
       "effortLevel": "low"
