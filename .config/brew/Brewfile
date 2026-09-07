@@ -25,6 +25,8 @@ brew "azure-cli"
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Powerful, enterprise-ready, open source web server with automatic HTTPS
+brew "caddy"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # Linux virtual machines
@@ -43,6 +45,8 @@ brew "docker-buildx"
 brew "docker-compose"
 # More intuitive version of du in rust
 brew "dust"
+# Utilities for the ext2, ext3, and ext4 file systems
+brew "e2fsprogs"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -51,6 +55,8 @@ brew "fd"
 brew "ffmpeg"
 # CLI application for interacting with a Cloudflare account
 brew "flarectl"
+# Command-line tools for fly.io services
+brew "flyctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -67,6 +73,8 @@ brew "glow"
 brew "go"
 # Kubernetes package manager
 brew "helm"
+# Library for communicating with USB and Bluetooth HID devices
+brew "hidapi"
 # Tool to report network interface bandwidth
 brew "ifstat"
 # Command-line tool to export and inspect local iMessage database
@@ -83,10 +91,20 @@ brew "just"
 brew "k3d"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# FAST Kubernetes manifests validator, with support for Custom Resources!
+brew "kubeconform"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Kubernetes controller and tool for one-way encrypted Secrets
+brew "kubeseal"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Implementation of the file(1) command
+brew "libmagic"
 # Additional guest agents for Lima
 brew "lima-additional-guestagents"
 # System information fetcher, with an emphasis on performance and minimalism
@@ -183,6 +201,10 @@ cask "db-browser-for-sqlite"
 cask "fuse-t"
 # SSHFS implementation based on FUSE-T
 cask "macos-fuse-t/cask/fuse-t-sshfs", trusted: true
+# Menu bar manager
+cask "jordanbaird-ice"
+# Menu bar app for running local LLMs
+cask "llama-app"
 cask "pomo"
 # Tool to reverse the direction of scrolling
 cask "scroll-reverser"
@@ -200,11 +222,14 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "opentofu.vscode-opentofu"
 vscode "rust-lang.rust-analyzer"
 go "golang.org/x/tools/cmd/goimports"
+go "meat.dev/cmd/meat"
 go "project-manager-4000"
 go "github.com/user/randname"
 go "github.com/caddyserver/xcaddy/cmd/xcaddy"
-uv "claude-isolated", source: "file:///Users/fredrik/code/fredrik/claude-isolated"
+uv "claude-isolated"
+uv "duckdb-cli"
 uv "poethepoet"
 uv "poetry"
-uv "worktree-keeper", source: "file:///Users/fredrik/code/fredrik/worktree-keeper"
+uv "worktree-keeper"
+npm "@earendil-works/pi-coding-agent"
 npm "corepack"
