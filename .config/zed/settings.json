@@ -23,6 +23,10 @@
   },
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "model": "claude-fable-5[1m]",
+        "mode": "auto"
+      },
       "type": "registry"
     }
   },
