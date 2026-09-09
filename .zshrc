@@ -243,3 +243,64 @@ if [[ ! -r "$VIVID_CACHE" || /opt/homebrew/bin/vivid -nt "$VIVID_CACHE" ]]; then
   vivid generate "$VIVID_THEME" > "$VIVID_CACHE"
 fi
 export LS_COLORS="$(<"$VIVID_CACHE")"
+
+# --------
+
+# Tab/window titles: "<command> — <dir>" while running, "<dir>" when idle.
+# Makes Ghostty's Window menu list distinguishable when many tabs share a cwd.
+_title_set() { printf '\e]2;%s\a' "$1" }
+_title_dir() { print -P '%1~' }
+_title_precmd() { _title_set "$(_title_dir)" }
+_title_preexec() {
+  local cmd=${2%% *}                     # first word of the expanded command
+  [[ $cmd == (sudo|env|time|nohup) ]] && cmd=${${2#* }%% *}
+  _title_set "$cmd — $(_title_dir)"
+}
+add-zsh-hook precmd _title_precmd
+add-zsh-hook preexec _title_preexec
+
+
+# Background tint per surface (window/tab/split) via OSC 11.
+# Eight hues 45° apart in OKLCH, lightness matched to Gruvbox Dark Hard
+# (#1d2021) so contrast stays ~12:1 and the gruvbox palette reads the same.
+# Regenerate with ~/code/sandbox/scripts-by-claude/tint-palette.py.
+# `tint` lists swatches; `tint <name|N|#hex>` pins this shell; `tint reset`
+# returns to the directory-based default. Theme default = work.
+typeset -ga TINT_ORDER=(red orange yellow green teal blue violet magenta)
+typeset -gA TINTS=(
+  red      '#2c1a19'
+  orange   '#281d10'
+  yellow   '#1f2111'
+  green    '#13241b'
+  teal     '#0e2326'
+  blue     '#15212c'
+  violet   '#201d2b'
+  magenta  '#291a24'
+)
+_tint_set() { printf '\e]11;%s\a' "$1" }
+_tint_auto() {
+  [[ $TERM_PROGRAM == ghostty && -z $TMUX && -z $_TINT_OVERRIDE ]] || return 0
+  case $PWD in
+    $HOME/code/fredrik(|/*))                          _tint_set $TINTS[blue] ;;
+    $HOME/code/sandbox(|/*)|$HOME/code/upstream(|/*)) _tint_set $TINTS[green] ;;
+    *)                                                printf '\e]111\a' ;;   # theme default (work)
+  esac
+}
+tint() {
+  local name hex i=0
+  case "$1" in
+    '')
+      for name in $TINT_ORDER; do
+        hex=$TINTS[$name]
+        printf '%d  \e[48;2;%d;%d;%dm\e[38;2;235;219;178m %-8s \e[0m  %s\n' \
+          $((++i)) 0x${hex[2,3]} 0x${hex[4,5]} 0x${hex[6,7]} $name $hex
+      done ;;
+    reset|auto) unset _TINT_OVERRIDE; _tint_auto ;;
+    '#'*)       _TINT_OVERRIDE=1; _tint_set "$1" ;;
+    <1-8>)      _TINT_OVERRIDE=1; _tint_set $TINTS[$TINT_ORDER[$1]] ;;
+    *)          [[ -n $TINTS[$1] ]] || { print -u2 "tint: unknown tint '$1' (try: tint)"; return 1 }
+                _TINT_OVERRIDE=1; _tint_set $TINTS[$1] ;;
+  esac
+}
+add-zsh-hook chpwd _tint_auto
+_tint_auto
