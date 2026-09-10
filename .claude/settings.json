@@ -2,20 +2,25 @@
   "env": {
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
+  "model": "claude-fable-5-1[1m]",
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   },
   "modelSettings": {
     "claude-fable-5": {
-      "effortLevel": "low"
+      "effortLevel": "medium"
     },
     "claude-opus-5": {
       "effortLevel": "medium"
+    },
+    "qwen/qwen3.8-27b": {
+      "effortLevel": "xhigh"
     }
   },
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "theme": "dark",
   "autoCompactEnabled": false,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "cleanupPeriodDays": 40150
 }
