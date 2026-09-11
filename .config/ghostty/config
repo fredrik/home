@@ -22,3 +22,10 @@ working-directory = home
 clipboard-paste-protection = false
 
 notify-on-command-finish = never
+
+# titles are set by hooks in ~/.zshrc ("<cmd> — <dir>") instead.
+# ssh-env gives remote sessions TERM=xterm-256color and forwards COLORTERM.
+# ssh-terminfo stays off: its tic-over-ssh probe is noisy against non-shell
+# endpoints (shed's control plane) and its per-host cache goes stale when a
+# VM is recreated; sheduntu ships the xterm-ghostty terminfo itself.
+shell-integration-features = no-title,ssh-env
