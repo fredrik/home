@@ -1,4 +1,5 @@
 {
+  "cleanupPeriodDays": 40150,
   "env": {
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
@@ -19,8 +20,12 @@
   },
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
   "theme": "dark",
   "autoCompactEnabled": false,
   "skipAutoPermissionPrompt": true,
-  "cleanupPeriodDays": 40150
+  "voiceEnabled": true
 }
