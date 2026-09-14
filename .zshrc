@@ -268,14 +268,14 @@ add-zsh-hook preexec _title_preexec
 # returns to the directory-based default. Theme default = work.
 typeset -ga TINT_ORDER=(red orange yellow green teal blue violet magenta)
 typeset -gA TINTS=(
-  red      '#2c1a19'
-  orange   '#281d10'
-  yellow   '#1f2111'
-  green    '#13241b'
-  teal     '#0e2326'
-  blue     '#15212c'
-  violet   '#201d2b'
-  magenta  '#291a24'
+  red      '#301716'
+  orange   '#2c1c08'
+  yellow   '#1f220a'
+  green    '#0c2519'
+  teal     '#012528'
+  blue     '#102132'
+  violet   '#211b30'
+  magenta  '#2c1825'
 )
 _tint_set() { printf '\e]11;%s\a' "$1" }
 _tint_auto() {
