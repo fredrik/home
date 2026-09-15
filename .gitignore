@@ -33,6 +33,7 @@ sync/
 .config/claude-isolated/home
 .config/gh/hosts.yml
 .config/git/*.inc
+.config/llama/
 .config/op/
 .config/rclone/
 .config/sops/
@@ -57,8 +58,10 @@ Mail/
 # ignore the defaults
 .config/btop/
 .config/helm/
+.config/marimo/
 .config/neofetch/
 .config/pypoetry/
+.config/race/
 .config/zed/
 
 # tooling state / caches / generated
@@ -71,6 +74,7 @@ Mail/
 .config/swiftpm/
 .config/zsh/completions/
 .dagster/
+.krew/
 .matplotlib/
 .vscode-shared/
 
@@ -92,6 +96,7 @@ Mail/
 .docker/
 .duckdb/
 .duckdb_history
+.irssi/
 .fly/
 .lesshst
 .llama-app/
