@@ -33,6 +33,9 @@
   "icon_theme": "Zed (Default)",
   "ui_font_size": 16,
   "buffer_font_size": 15,
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono"
+  },
   "theme": {
     "mode": "light",
     "light": "Gruvbox Light",
