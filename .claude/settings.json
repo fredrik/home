@@ -3,15 +3,17 @@
   "env": {
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
   },
-  "model": "claude-fable-5-1[1m]",
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   },
   "modelSettings": {
-    "claude-fable-5": {
+    "fable": {
       "effortLevel": "medium"
     },
-    "claude-opus-5": {
+    "opus": {
+      "effortLevel": "medium"
+    },
+    "sonnet": {
       "effortLevel": "medium"
     },
     "qwen/qwen3.8-27b": {

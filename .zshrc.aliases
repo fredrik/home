@@ -62,6 +62,11 @@ alias wk=worktree-keeper
 # claude-isolated
 alias iso=claude-isolated
 
+# claude with a pinned model.
+alias fable='claude --model=fable'
+alias opus='claude --model=opus'
+alias sonnet='claude --model=sonnet'
+
 # mount whatbox seedbox over sshfs (fuse-t)
 alias mount-whatbox='mkdir -p ~/whatbox && sshfs whatbox: ~/whatbox -o volname=whatbox,reconnect,follow_symlinks'
 alias umount-whatbox='diskutil unmount ~/whatbox'
