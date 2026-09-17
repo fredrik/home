@@ -17,6 +17,7 @@ Dotfiles repository. Root: `~/`
 - `.config/nvim/` - Neovim config
 - `.config/lazygit/config.yml` - lazygit
 - `.config/zellij/config.kdl` - Zellij multiplexer
+- `.config/tmux/tmux.conf` - tmux multiplexer
 - `.config/pomo/pomo.yaml` - Pomodoro timer
 - `Justfile` - Task runner
 - `.local/bin/wakeup` - Podman VM time sync on wake
