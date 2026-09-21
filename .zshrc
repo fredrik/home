@@ -261,21 +261,33 @@ add-zsh-hook preexec _title_preexec
 
 
 # Background tint per surface (window/tab/split) via OSC 11.
-# Eight hues 45° apart in OKLCH, lightness matched to Gruvbox Dark Hard
-# (#1d2021) so contrast stays ~12:1 and the gruvbox palette reads the same.
+# Six hues picked for perceptual separation (not even spacing), each at 78% of
+# its OWN chroma ceiling in OKLCH -- a flat chroma is capped by cyan and leaves
+# red/blue/magenta washed out. Yellow gets lightness instead of chroma, which it
+# cannot hold here. The `*max` twins push to 95% for surfaces that must shout.
+# Lightness tracks Gruvbox Dark Hard (#1d2021) so contrast stays ~11:1 and the
+# gruvbox palette reads the same.
 # Regenerate with ~/code/sandbox/scripts-by-claude/tint-palette.py.
-# `tint` lists swatches; `tint <name|N|#hex>` pins this shell; `tint reset`
-# returns to the directory-based default. Theme default = work.
-typeset -ga TINT_ORDER=(red orange yellow green teal blue violet magenta)
+# `tint` lists swatches; `tint <name|N|#hex>` pins this shell; `tint default`
+# (or 0) pins the untinted theme background; `tint reset` returns to the
+# directory-based default. Theme default = work.
+typeset -ga TINT_ORDER=(
+  red yellow green cyan blue magenta
+  redmax yellowmax greenmax cyanmax bluemax magentamax
+)
 typeset -gA TINTS=(
-  red      '#301716'
-  orange   '#2c1c08'
-  yellow   '#1f220a'
-  green    '#0c2519'
-  teal     '#012528'
-  blue     '#102132'
-  violet   '#211b30'
-  magenta  '#2c1825'
+  red        '#3d0a0b'
+  yellow     '#2d260a'
+  green      '#08270b'
+  cyan       '#082427'
+  blue       '#031947'
+  magenta    '#350a33'
+  redmax     '#420105'
+  yellowmax  '#2f2601'
+  greenmax   '#012805'
+  cyanmax    '#012529'
+  bluemax    '#001550'
+  magentamax '#390137'
 )
 _tint_set() { printf '\e]11;%s\a' "$1" }
 _tint_auto() {
@@ -290,14 +302,16 @@ tint() {
   local name hex i=0
   case "$1" in
     '')
+      printf '%-2d \e[48;2;29;32;33m\e[38;2;235;219;178m %-10s \e[0m  %s\n' 0 default '(theme)'
       for name in $TINT_ORDER; do
         hex=$TINTS[$name]
-        printf '%d  \e[48;2;%d;%d;%dm\e[38;2;235;219;178m %-8s \e[0m  %s\n' \
+        printf '%-2d \e[48;2;%d;%d;%dm\e[38;2;235;219;178m %-10s \e[0m  %s\n' \
           $((++i)) 0x${hex[2,3]} 0x${hex[4,5]} 0x${hex[6,7]} $name $hex
       done ;;
     reset|auto) unset _TINT_OVERRIDE; _tint_auto ;;
+    default|0)  _TINT_OVERRIDE=1; printf '\e]111\a' ;;   # pin theme default
     '#'*)       _TINT_OVERRIDE=1; _tint_set "$1" ;;
-    <1-8>)      _TINT_OVERRIDE=1; _tint_set $TINTS[$TINT_ORDER[$1]] ;;
+    <1-12>)     _TINT_OVERRIDE=1; _tint_set $TINTS[$TINT_ORDER[$1]] ;;
     *)          [[ -n $TINTS[$1] ]] || { print -u2 "tint: unknown tint '$1' (try: tint)"; return 1 }
                 _TINT_OVERRIDE=1; _tint_set $TINTS[$1] ;;
   esac
