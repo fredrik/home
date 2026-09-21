@@ -8,7 +8,7 @@
 #   Tools     homebrew, mise, direnv
 #   Editing   vim mode with the emacs ctrl-keys I can't live without
 #   History   effectively infinite, timestamped, with per-session up-arrow
-#   Helpers   take, psx, tint, init-project (autoloaded from .config/zsh/functions)
+#   Helpers   take, psx, tint, init-project, brew-*, starship-* (autoloaded from .config/zsh/functions)
 #
 # Startup is kept fast: sheldon, brew shellenv and vivid are cached, compinit deferred.
 # Config lives in ~/.config/zsh/rc.d, loaded below in numeric order.

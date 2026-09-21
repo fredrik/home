@@ -19,7 +19,6 @@ Dotfiles repository. Root: `~/`
 - `.config/zellij/config.kdl` - Zellij multiplexer
 - `.config/tmux/tmux.conf` - tmux multiplexer
 - `.config/pomo/pomo.yaml` - Pomodoro timer
-- `Justfile` - Task runner
 - `.local/bin/wakeup` - Podman VM time sync on wake
 
 ## Zsh Layout
@@ -72,17 +71,19 @@ reorder it on login shells, and `.zprofile` never runs for multiplexer panes.
 
 ## Commands
 
+Autoloaded zsh functions from `.config/zsh/functions/`:
+
 ```bash
-just brew-dump      # Dump Homebrew packages to Brewfile
-just brew-install   # Install from Brewfile
-just starship-build # Regenerate starship.toml from config + themes
+brew-dump       # Dump Homebrew packages to Brewfile
+brew-install    # Install from Brewfile
+starship-build  # Regenerate starship.toml from config + themes
 ```
 
 ## Instructions
 
 - Follow XDG conventions: config goes in `~/.config/`
 - After adding/removing tracked files, update this file
-- Run `just brew-dump` after modifying Brewfile dependencies
+- Run `brew-dump` after modifying Brewfile dependencies
 
 ## Homebrew vs mise
 
@@ -106,7 +107,7 @@ shadows it with a pinned version inside project directories. That shadowing is
 the system working as designed. The question to ask per tool: "do I run this
 outside a pinning project?"
 
-- Kept in brew as global fallbacks: az, k9s, yq, just, uv, helm.
+- Kept in brew as global fallbacks: az, k9s, yq, uv, helm.
 - Removed from brew 2026-08-11, now mise-only: kubeseal, kubeconform,
   kustomize, hugo, pulumi. Projects that need these must pin them in their
   `mise.toml` (e.g. local-dev-blog pins hugo).

@@ -46,4 +46,4 @@ alias sonnet='claude --model=sonnet'
 alias mount-whatbox='mkdir -p ~/whatbox && sshfs whatbox: ~/whatbox -o volname=whatbox,reconnect,follow_symlinks'
 alias umount-whatbox='diskutil unmount ~/whatbox'
 
-# Also autoloaded: starship-theme, httpstatus (functions/).
+# Also autoloaded: starship-theme, starship-build, brew-dump, brew-install, httpstatus (functions/).

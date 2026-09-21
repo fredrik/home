@@ -1,0 +1,2 @@
+# Dump current Homebrew packages to Brewfile.
+brew bundle dump -f --file ~/.config/brew/Brewfile

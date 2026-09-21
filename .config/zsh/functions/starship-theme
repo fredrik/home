@@ -1,6 +1,5 @@
 # Switch starship palette, or list palettes without an argument.
 local config="$HOME/.config/starship/config.toml"
-local output="$HOME/.config/starship/starship.toml"
 local themes_dir="$HOME/.config/starship/themes"
 
 if [[ -z "$1" ]]; then
@@ -14,7 +13,6 @@ fi
 # Update palette in config.toml
 sed -i '' "s/^palette = .*/palette = '$1'/" "$config"
 
-# Concatenate config + all theme files
-cat "$config" "$themes_dir"/*.toml > "$output"
+starship-build
 
 echo "Switched to palette: $1"

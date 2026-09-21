@@ -1,0 +1,2 @@
+# Regenerate starship.toml from config.toml and themes/*.toml.
+cat ~/.config/starship/config.toml ~/.config/starship/themes/*.toml > ~/.config/starship/starship.toml
