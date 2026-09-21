@@ -31,61 +31,6 @@ for _f in $ZSH_CONFIG/rc.d/*.zsh(N); do source $_f; done; unset _f
 
 # --------
 
-# Homebrew
-# First in the file: almost everything below (fzf, zoxide, sheldon, ...)
-# lives in /opt/homebrew/bin and should resolve to brew's version.
-# Cache brew shellenv for faster startup (regenerate if homebrew path changes)
-BREW_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/brew-shellenv.zsh"
-if [[ ! -r "$BREW_CACHE" || /opt/homebrew/bin/brew -nt "$BREW_CACHE" ]]; then
-  /opt/homebrew/bin/brew shellenv > "$BREW_CACHE"
-fi
-source "$BREW_CACHE"
-
-# Path for interactive use. ~/.local/bin goes in front of everything,
-# including homebrew.
-# Set here rather than .zshenv or .zprofile:
-#  - .zshenv runs before macOS's path_helper (/etc/zprofile), which would
-#    reorder anything set there on login shells.
-#  - .zprofile only runs for login shells, and Zellij panes aren't login
-#    shells (see commit c0b810e).
-# .zshrc is the only file that covers both Terminal tabs and Zellij panes.
-typeset -U path  # dedupe PATH entries (keeps first occurrence)
-export PATH=~/.local/bin:$PATH
-
-# --------
-
-# fzf for fuzzy searching
-source <(fzf --zsh)
-# fzf keybindings:
-# Ctrl-R: fuzzy history search
-# Ctrl-O: fuzzy history search + execute immediately
-# Ctrl-T: fuzzy file picker, inserts path
-# Alt-C: fuzzy cd into directory
-# fzf completion (trigger with **<tab>):
-# vim **<tab>: fuzzy file search
-# cd **<tab>: fuzzy directory search
-# ssh **<tab>: fuzzy host completion
-
-# zoxide for directory jumping
-eval "$(zoxide init zsh --cmd j)"
-
-# mise
-eval "$(mise activate zsh)"
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# starship for prompt
-# generate config from base + themes if missing (starship.toml is gitignored)
-if [[ ! -f ~/.config/starship/starship.toml ]]; then
-  cat ~/.config/starship/config.toml ~/.config/starship/themes/*.toml \
-    > ~/.config/starship/starship.toml
-fi
-
-eval "$(starship init zsh)"
-
-# --------
-
 # completion system
 # Defer compinit to after shell startup for faster initial load
 # Completions won't work until after first prompt, but shell appears instantly
