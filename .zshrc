@@ -31,20 +31,6 @@ for _f in $ZSH_CONFIG/rc.d/*.zsh(N); do source $_f; done; unset _f
 
 # --------
 
-# Aliases
-source ~/.zshrc.aliases
-
-# Nice ls colours using vivid.
-VIVID_THEME="solarized-dark"
-# Cache vivid output for faster startup (regenerates when vivid is updated)
-VIVID_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/vivid-$VIVID_THEME"
-if [[ ! -r "$VIVID_CACHE" || /opt/homebrew/bin/vivid -nt "$VIVID_CACHE" ]]; then
-  vivid generate "$VIVID_THEME" > "$VIVID_CACHE"
-fi
-export LS_COLORS="$(<"$VIVID_CACHE")"
-
-# --------
-
 # Tab/window titles: "<command> — <dir>" while running, "<dir>" when idle.
 # Makes Ghostty's Window menu list distinguishable when many tabs share a cwd.
 _title_set() { printf '\e]2;%s\a' "$1" }

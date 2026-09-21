@@ -1,0 +1,2 @@
+# Print only the HTTP status code for a URL.
+curl -o /dev/null -s -w "%{http_code}\n" "$@"

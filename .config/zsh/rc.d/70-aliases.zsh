@@ -1,6 +1,4 @@
-# ~/.zshrc.aliases
-#
-# Aliases and small helper functions, sourced from ~/.zshrc.
+# Aliases. Helper functions live in ../functions/.
 
 # eza instead of ls
 alias ls='eza --git'
@@ -31,29 +29,6 @@ alias s='git status'
 alias t='git log --oneline --decorate --graph'
 alias sw='git switch'
 
-# starship theme switcher
-starship-theme() {
-  local config="$HOME/.config/starship/config.toml"
-  local output="$HOME/.config/starship/starship.toml"
-  local themes_dir="$HOME/.config/starship/themes"
-
-  if [[ -z "$1" ]]; then
-    echo "Current:" $(/usr/bin/grep "^palette = " "$config" | cut -d"'" -f2)
-    echo "Available:"
-    /usr/bin/grep "^\[palettes\." "$themes_dir"/*.toml |
-      sed "s/.*\[palettes\.\(.*\)\]/  \1/"
-    return
-  fi
-
-  # Update palette in config.toml
-  sed -i '' "s/^palette = .*/palette = '$1'/" "$config"
-
-  # Concatenate config + all theme files
-  cat "$config" "$themes_dir"/*.toml > "$output"
-
-  echo "Switched to palette: $1"
-}
-
 # my local tools
 # claude history
 alias ch=claude-history
@@ -71,5 +46,4 @@ alias sonnet='claude --model=sonnet'
 alias mount-whatbox='mkdir -p ~/whatbox && sshfs whatbox: ~/whatbox -o volname=whatbox,reconnect,follow_symlinks'
 alias umount-whatbox='diskutil unmount ~/whatbox'
 
-# httpstatus
-httpstatus() { curl -o /dev/null -s -w "%{http_code}\n" "$@"; }
+# Also autoloaded: starship-theme, httpstatus (functions/).
