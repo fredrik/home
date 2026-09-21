@@ -7,7 +7,7 @@
 #   Plugins   sheldon (autosuggestions, syntax highlighting, fzf-tab), cached
 #   Tools     homebrew, mise, direnv
 #   Editing   vim mode with the emacs ctrl-keys I can't live without
-#   History   effectively infinite, timestamped, with per-session up-arrow
+#   History   atuin on Ctrl-R (all sessions), zsh up-arrow kept per-session
 #   Helpers   take, psx, tint, init-project, brew-*, starship-* (autoloaded from .config/zsh/functions)
 #
 # Startup is kept fast: sheldon, brew shellenv and vivid are cached, compinit deferred.

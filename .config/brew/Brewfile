@@ -17,6 +17,8 @@ brew "age"
 brew "tree"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# Improved shell history for zsh, bash, fish and nushell
+brew "atuin"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Microsoft Azure CLI 2.0

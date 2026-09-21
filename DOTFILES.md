@@ -12,6 +12,7 @@ Dotfiles repository. Root: `~/`
 - `.config/brew/Brewfile` - Homebrew packages
 - `.config/mise/config.toml` - Dev tool version manager
 - `.config/starship/` - Prompt (config.toml + themes/*.toml)
+- `.config/atuin/config.toml` - Shell history (local only, no sync)
 - `.config/ghostty/config` - Ghostty terminal
 - `.config/zed/settings.json` - Zed editor
 - `.config/nvim/` - Neovim config
@@ -44,7 +45,7 @@ Non-interactive:       .zshenv
   | File | Contents | Must come... |
   |------|----------|--------------|
   | `00-brew.zsh` | brew shellenv (cached), `~/.local/bin` first in PATH | first, so later tools resolve to brew's binaries |
-  | `10-tools.zsh` | fzf, zoxide (`j`), mise, direnv | after PATH |
+  | `10-tools.zsh` | fzf, atuin (Ctrl-R), zoxide (`j`), mise, direnv | after PATH; atuin after fzf so it owns Ctrl-R |
   | `20-prompt.zsh` | starship, regenerates `starship.toml` if missing | |
   | `30-completion.zsh` | deferred compinit, zstyles, fzf-tab previews | |
   | `40-options.zsh` | history, setopts | |
@@ -88,7 +89,7 @@ starship-build  # Regenerate starship.toml from config + themes
 ## Homebrew vs mise
 
 - **Homebrew owns the machine.** Everything that must exist outside a project
-  or outside an interactive shell: the shell stack (fzf, zoxide, sheldon,
+  or outside an interactive shell: the shell stack (fzf, atuin, zoxide, sheldon,
   starship, zellij, neovim, ...), daemons and services (syncthing,
   sleepwatcher, postgresql, colima), GUI casks, libraries, system utilities.
   Also mise itself.

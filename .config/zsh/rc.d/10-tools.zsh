@@ -2,12 +2,19 @@
 # is not installed.
 
 # fzf for fuzzy searching
-#   Ctrl-R: fuzzy history search
 #   Ctrl-T: fuzzy file picker, inserts path
 #   Alt-C:  fuzzy cd into directory
 #   **<tab> completion: vim **<tab>, cd **<tab>, ssh **<tab>
-# (Ctrl-O, select and execute, is bound in 50-keybindings.zsh.)
+# (fzf also binds Ctrl-R, but atuin takes it over below. Ctrl-O, fzf select
+# and execute, is bound in 50-keybindings.zsh as a fallback.)
 (( $+commands[fzf] )) && source <(fzf --zsh)
+
+# atuin for shell history. Config in ~/.config/atuin/config.toml, local only.
+#   Ctrl-R: search all sessions; Enter runs, Tab inserts for editing,
+#           Ctrl-R again cycles filter (global / directory / session)
+# Must come after fzf so atuin's Ctrl-R wins. Up-arrow is left to zsh so it
+# stays per-session (40-options.zsh).
+(( $+commands[atuin] )) && eval "$(atuin init zsh --disable-up-arrow)"
 
 # zoxide for directory jumping (as `j`)
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh --cmd j)"

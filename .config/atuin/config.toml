@@ -1,0 +1,12 @@
+# atuin: shell history. Local only, no sync, no network.
+# https://docs.atuin.sh/configuration/config/
+
+auto_sync = false
+update_check = false
+
+search_mode = "fuzzy"
+filter_mode = "global"
+style = "compact"
+inline_height = 20
+enter_accept = true
+show_help = false
