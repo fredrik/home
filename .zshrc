@@ -268,9 +268,11 @@ add-zsh-hook preexec _title_preexec
 # Lightness tracks Gruvbox Dark Hard (#1d2021) so contrast stays ~11:1 and the
 # gruvbox palette reads the same.
 # Regenerate with ~/code/sandbox/scripts-by-claude/tint-palette.py.
-# `tint` lists swatches; `tint <name|N|#hex>` pins this shell; `tint default`
+# `tint` lists swatches; `tint <name|N|#hex>` pins this surface; `tint default`
 # (or 0) pins the untinted theme background; `tint reset` returns to the
 # directory-based default. Theme default = work.
+# The pin is exported so a nested or exec'd shell inherits it and leaves the
+# surface alone -- background colour belongs to the surface, not the process.
 typeset -ga TINT_ORDER=(
   red yellow green cyan blue magenta
   redmax yellowmax greenmax cyanmax bluemax magentamax
@@ -309,11 +311,11 @@ tint() {
           $((++i)) 0x${hex[2,3]} 0x${hex[4,5]} 0x${hex[6,7]} $name $hex
       done ;;
     reset|auto) unset _TINT_OVERRIDE; _tint_auto ;;
-    default|0)  _TINT_OVERRIDE=1; printf '\e]111\a' ;;   # pin theme default
-    '#'*)       _TINT_OVERRIDE=1; _tint_set "$1" ;;
-    <1-12>)     _TINT_OVERRIDE=1; _tint_set $TINTS[$TINT_ORDER[$1]] ;;
+    default|0)  export _TINT_OVERRIDE=1; printf '\e]111\a' ;;   # pin theme default
+    '#'*)       export _TINT_OVERRIDE=1; _tint_set "$1" ;;
+    <1-12>)     export _TINT_OVERRIDE=1; _tint_set $TINTS[$TINT_ORDER[$1]] ;;
     *)          [[ -n $TINTS[$1] ]] || { print -u2 "tint: unknown tint '$1' (try: tint)"; return 1 }
-                _TINT_OVERRIDE=1; _tint_set $TINTS[$1] ;;
+                export _TINT_OVERRIDE=1; _tint_set $TINTS[$1] ;;
   esac
 }
 add-zsh-hook chpwd _tint_auto
