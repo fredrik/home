@@ -31,49 +31,6 @@ for _f in $ZSH_CONFIG/rc.d/*.zsh(N); do source $_f; done; unset _f
 
 # --------
 
-# completion system
-# Defer compinit to after shell startup for faster initial load
-# Completions won't work until after first prompt, but shell appears instantly
-autoload -Uz compinit
-autoload -Uz add-zsh-hook
-_deferred_compinit() {
-  compinit -C  # -C skips security check
-  # fzf-tab is sourced (by sheldon) before compinit runs, but wants to load
-  # after it — re-enable now that the completion system exists.
-  (( $+functions[enable-fzf-tab] )) && enable-fzf-tab
-  # Remove this hook after first run
-  add-zsh-hook -d precmd _deferred_compinit
-}
-add-zsh-hook precmd _deferred_compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'  # case-insensitive
-
-# fzf-preview
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-zstyle ':fzf-tab:complete:git-(checkout|switch|merge|rebase):*' fzf-preview \
-    'git log --oneline --graph --color=always $word -- 2>/dev/null | head -20'
-
-# --------
-
-# history forever
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000000
-SAVEHIST=1000000000
-setopt EXTENDED_HISTORY      # Timestamp entries
-unsetopt SHARE_HISTORY       # Keep other sessions' history out of up-arrow
-setopt INC_APPEND_HISTORY    # Write immediately (global search works)
-setopt HIST_IGNORE_DUPS      # Skip consecutive duplicates
-setopt HIST_VERIFY           # Show before executing from history
-
-# comments are welcome.
-setopt INTERACTIVE_COMMENTS
-
-# directory handling with stacks etc
-setopt AUTO_CD
-setopt AUTO_PUSHD
-setopt PUSHD_IGNORE_DUPS
-
-# --------
-
 # Change into newly created directory.
 take() { mkdir -p "$1" && cd "$1" }
 
