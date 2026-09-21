@@ -1,0 +1,4 @@
+# Wraps the init-project script so we cd into the new repo.
+local dir
+dir=$(command init-project "$@") || return
+cd "$dir"

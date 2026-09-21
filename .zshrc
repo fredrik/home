@@ -31,37 +31,6 @@ for _f in $ZSH_CONFIG/rc.d/*.zsh(N); do source $_f; done; unset _f
 
 # --------
 
-# Change into newly created directory.
-take() { mkdir -p "$1" && cd "$1" }
-
-# reload this configuration.
-reload() { source ~/.zshrc }
-
-# Simple prompt for clean copy-paste. Usage: psx [label]
-# Without a label, shows the current path. With a label, shows the label.
-psx() {
-  if [[ "$1" == "off" ]]; then
-    eval "$(starship init zsh)"
-    return
-  fi
-  precmd_functions=(${precmd_functions:#_starship_precmd})
-  preexec_functions=(${preexec_functions:#_starship_preexec})
-  if [[ -n "$1" ]]; then
-    PROMPT="[$1]: \$ "
-  else
-    PROMPT='[%~]: $ '
-  fi
-}
-
-# init-project: wraps the script so we cd into the new repo.
-init-project() {
-  local dir
-  dir=$(command init-project "$@") || return
-  cd "$dir"
-}
-
-# --------
-
 # disable flow control and free up ctrl-s and ctrl-q
 stty -ixon
 

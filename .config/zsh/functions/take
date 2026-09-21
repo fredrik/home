@@ -1,0 +1,2 @@
+# Create a directory and change into it.
+mkdir -p "$1" && cd "$1"
