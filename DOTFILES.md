@@ -6,7 +6,7 @@ Dotfiles repository. Root: `~/`
 
 ## Key Files
 
-- `.zshrc`, `.zshenv`, `.zshrc.aliases` - Shell config
+- `.zshrc`, `.zshenv`, `.config/zsh/` - Shell config (see Zsh Layout)
 - `.gitconfig`, `.config/git/ignore` - Git config (global excludesfile)
 - `.config/brew/Brewfile` - Homebrew packages
 - `.config/mise/config.toml` - Dev tool version manager
@@ -21,6 +21,35 @@ Dotfiles repository. Root: `~/`
 - `.config/pomo/pomo.yaml` - Pomodoro timer
 - `Justfile` - Task runner
 - `.local/bin/wakeup` - Podman VM time sync on wake
+
+## Zsh Layout
+
+Sourcing order, for reference:
+
+```
+Login interactive:     .zshenv -> .zprofile -> .zshrc -> .zlogin (-> .zlogout)
+Non-login interactive: .zshenv -> .zshrc
+Non-interactive:       .zshenv
+```
+
+- `.zshenv` = always, all shells (env vars needed by scripts)
+- `.zprofile` = login only, before `.zshrc` (unused; Zellij/tmux panes are not login shells)
+- `.zshrc` = interactive (prompt, aliases, keybindings, completions)
+
+`.zshrc` is a thin loader. The content lives in `~/.config/zsh/`:
+
+- `rc.d/NN-topic.zsh` - sourced in numeric order. The numbers encode the real
+  constraints: brew first (PATH), `bindkey -v` before other bindings, sheldon
+  (syntax highlighting) after all bindings, aliases and colours after tools.
+  Each fragment guards on its tool (`(( $+commands[fzf] )) || return`) so the
+  same files work on a machine that lacks it.
+- `functions/` - one autoloaded function per file (`take`, `psx`, ...).
+- `completions/` - personal completion functions (gitignored).
+- `local.zsh` - machine-specific overrides, sourced last, gitignored.
+
+PATH for interactive use is set in `rc.d`, not `.zshenv` or `.zprofile`:
+`.zshenv` runs before macOS's `path_helper` (`/etc/zprofile`) which would
+reorder it on login shells, and `.zprofile` never runs for multiplexer panes.
 
 ## Commands
 

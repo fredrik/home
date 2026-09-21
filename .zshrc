@@ -17,22 +17,17 @@
 
 echo work hard and be nice to people
 
-#
-# Here's the sourcing order for zsh configurations:
-#   Login interactive:     .zshenv → .zprofile → .zshrc → .zlogin (→ .zlogout)
-#   Non-login interactive: .zshenv → .zshrc
-#   Non-interactive:       .zshenv
-#
-# .zshenv  = always, all shells (PATH, env vars needed by scripts)
-# .zprofile = login only, before .zshrc (env setup)
-# .zshrc   = interactive (prompt, aliases, keybindings, completions)
-# .zlogin  = login only, after .zshrc (rarely used)
-#
-# Login: first shell of session
-# Non-login: child shell (new tab, `zsh`, tmux pane)
-# Interactive = human at prompt
-# Non-interactive = scripts, cron, `zsh -c "..."`
-#
+ZSH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+
+# Autoloaded helper functions (one file per function) and personal completions.
+fpath=($ZSH_CONFIG/functions $ZSH_CONFIG/completions $fpath)
+autoload -Uz $ZSH_CONFIG/functions/*(.N:t)
+
+# Numbered fragments; the number encodes load order. See DOTFILES.md.
+for _f in $ZSH_CONFIG/rc.d/*.zsh(N); do source $_f; done; unset _f
+
+# Machine-specific overrides, not tracked.
+[[ -r $ZSH_CONFIG/local.zsh ]] && source $ZSH_CONFIG/local.zsh
 
 # --------
 
@@ -94,8 +89,6 @@ eval "$(starship init zsh)"
 # completion system
 # Defer compinit to after shell startup for faster initial load
 # Completions won't work until after first prompt, but shell appears instantly
-# personal completions (land, rebase, ...)
-fpath=(~/.config/zsh/completions $fpath)
 autoload -Uz compinit
 autoload -Uz add-zsh-hook
 _deferred_compinit() {

@@ -114,3 +114,6 @@ Mail/
 .zcompdump
 .zsh_history
 .zsh_sessions/
+
+# machine-specific zsh overrides
+.config/zsh/local.zsh
