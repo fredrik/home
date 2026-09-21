@@ -5,8 +5,8 @@ if [[ "$1" == "off" ]]; then
   eval "$(starship init zsh)"
   return
 fi
-precmd_functions=(${precmd_functions:#_starship_precmd})
-preexec_functions=(${preexec_functions:#_starship_preexec})
+precmd_functions=(${precmd_functions:#prompt_starship_precmd})
+preexec_functions=(${preexec_functions:#prompt_starship_preexec})
 if [[ -n "$1" ]]; then
   PROMPT="[$1]: \$ "
 else
