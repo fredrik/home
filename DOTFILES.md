@@ -14,7 +14,6 @@ Dotfiles repository. Root: `~/`
 - `.config/starship/` - Prompt (config.toml + themes/*.toml)
 - `.config/ghostty/config` - Ghostty terminal
 - `.config/zed/settings.json` - Zed editor
-- `.config/vscode/` - VS Code settings
 - `.config/nvim/` - Neovim config
 - `.config/lazygit/config.yml` - lazygit
 - `.config/zellij/config.kdl` - Zellij multiplexer
@@ -77,13 +76,11 @@ reorder it on login shells, and `.zprofile` never runs for multiplexer panes.
 just brew-dump      # Dump Homebrew packages to Brewfile
 just brew-install   # Install from Brewfile
 just starship-build # Regenerate starship.toml from config + themes
-just vscode-link    # Symlink VS Code settings
 ```
 
 ## Instructions
 
 - Follow XDG conventions: config goes in `~/.config/`
-- VS Code settings symlink from `~/.config/vscode/` to `~/Library/Application Support/Code/User/`
 - After adding/removing tracked files, update this file
 - Run `just brew-dump` after modifying Brewfile dependencies
 

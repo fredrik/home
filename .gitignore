@@ -76,7 +76,6 @@ Mail/
 .dagster/
 .krew/
 .matplotlib/
-.vscode-shared/
 
 # containers, etc
 .config/colima/
@@ -108,7 +107,6 @@ Mail/
 .streamlit/
 .terraform.d/
 .viminfo
-.vscode/
 .wget-hsts
 .zcompcache/
 .zcompdump
