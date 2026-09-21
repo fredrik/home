@@ -85,18 +85,18 @@ brew "irssi"
 brew "isync"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Handy way to save and run project-specific commands
-brew "just"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Package manager for kubectl plugins
+brew "krew"
 # FAST Kubernetes manifests validator, with support for Custom Resources!
 brew "kubeconform"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
-# Kubernetes command-line interface
-brew "kubernetes-cli"
 # Kubernetes controller and tool for one-way encrypted Secrets
 brew "kubeseal"
 # Template-free customization of Kubernetes YAML manifests
@@ -105,10 +105,14 @@ brew "kustomize"
 brew "lazygit"
 # Implementation of the file(1) command
 brew "libmagic"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Additional guest agents for Lima
 brew "lima-additional-guestagents"
 # System information fetcher, with an emphasis on performance and minimalism
 brew "macchina"
+# CLI for Mermaid library
+brew "mermaid-cli"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
 # Polyglot runtime manager (asdf rust clone)
@@ -125,12 +129,16 @@ brew "neofetch"
 brew "neomutt"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Lightweight Internet Relay Chat server
+brew "ngircd"
 # Port scanning utility for large networks
 brew "nmap"
 # Libraries for security-enabled client and server applications
 brew "nss"
 # Drop-in replacement for Terraform. Infrastructure as Code Tool
 brew "opentofu"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # CLI tool to help discover deprecated apiVersions in Kubernetes
 brew "pluto"
 # Tool for managing OCI containers and pods
@@ -211,9 +219,10 @@ cask "scroll-reverser"
 # Native GUI tool for relational databases
 cask "tableplus"
 go "golang.org/x/tools/cmd/goimports"
-go "meat.dev/cmd/meat"
 go "project-manager-4000"
 go "github.com/user/randname"
 go "github.com/caddyserver/xcaddy/cmd/xcaddy"
+cargo "microbin"
+krew "view-secret"
 npm "@earendil-works/pi-coding-agent"
 npm "corepack"
