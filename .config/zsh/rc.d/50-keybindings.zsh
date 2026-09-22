@@ -27,7 +27,8 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
-# fzf history: Ctrl-O to select and execute immediately
+# fzf history: Ctrl-O to select and execute immediately (reads ~/.zsh_history,
+# preferred over atuin's Ctrl-R for its fuzzy ranking)
 fzf-history-execute() {
   zle fzf-history-widget
   if [[ $? -eq 0 && -n "$BUFFER" ]]; then
