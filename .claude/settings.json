@@ -1,7 +1,8 @@
 {
   "cleanupPeriodDays": 40150,
   "env": {
-    "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'"
+    "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'",
+    "GIT_SSH_COMMAND": "ssh -i ~/.ssh/id_claude -o IdentitiesOnly=yes -o IdentityAgent=none"
   },
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true

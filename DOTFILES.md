@@ -21,6 +21,7 @@ Dotfiles repository. Root: `~/`
 - `.config/tmux/tmux.conf` - tmux multiplexer
 - `.config/pomo/pomo.yaml` - Pomodoro timer
 - `.local/bin/wakeup` - Podman VM time sync on wake
+- `.claude/settings.json` - Claude Code global settings (see Claude Code Git Access)
 
 ## Zsh Layout
 
@@ -125,6 +126,21 @@ installed versions no config references.
 - Plist: `~/Library/LaunchAgents/homebrew.mxcl.sleepwatcher.plist` (custom copy, not managed by `brew services`)
 - Log: `~/.local/log/wakeup.log`
 - Do NOT use `brew services start sleepwatcher` — the user LaunchAgent manages it
+
+## Claude Code Git Access
+
+Claude Code talks to GitHub with its own SSH key, so it works when 1Password (which serves the main key via `IdentityAgent` for `Host *`) is locked. Set up 2026-09-23.
+
+- Key: `~/.ssh/id_claude` (ed25519, no passphrase, not in 1Password, not tracked). Registered on the `fredrik` GitHub account as an authentication key only.
+- `env.GIT_SSH_COMMAND` in `.claude/settings.json`: `ssh -i ~/.ssh/id_claude -o IdentitiesOnly=yes -o IdentityAgent=none`. Applies to every git-over-ssh operation Claude runs (all remotes are GitHub today); plain `ssh`/`scp` and your own terminal are unaffected. Overrides `core.sshCommand`.
+- `env.GIT_CONFIG_PARAMETERS` disables commit/tag signing for Claude, since signing goes through `op-ssh-sign` (1Password). Claude's commits show as unverified.
+- `github.com-portgot` remotes authenticate as `fredrik` under Claude, so they fail there. Accepted; portgot is going away.
+
+When it breaks:
+- Changes to `env` only take effect in a new Claude Code session.
+- Test: `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_claude -o IdentitiesOnly=yes -o IdentityAgent=none" git ls-remote git@github.com:fredrik/<repo>.git`
+- `Permission denied (publickey)`: key removed from GitHub, or `~/.ssh/id_claude` missing/wrong permissions (must be 600).
+- Revoke: delete the key on GitHub, remove `GIT_SSH_COMMAND` from settings.
 
 ## Starship Themes
 
