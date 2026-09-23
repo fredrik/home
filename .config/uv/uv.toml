@@ -8,5 +8,5 @@ concurrent-builds = 100
 # Use reflinks where supported (fastest on btrfs/APFS/xfs)
 link-mode = "clone"
 
-# Compile bytecode for faster startup
-compile-bytecode = true
+# Compile bytecode for faster startup?
+# compile-bytecode = true
