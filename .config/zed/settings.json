@@ -41,4 +41,6 @@
     "light": "Gruvbox Light",
     "dark": "Gruvbox Dark",
   },
+  "double_click_in_multibuffer": "open"
+
 }
