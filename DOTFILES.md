@@ -21,6 +21,7 @@ Dotfiles repository. Root: `~/`
 - `.config/tmux/tmux.conf` - tmux multiplexer
 - `.config/pomo/pomo.yaml` - Pomodoro timer
 - `.local/bin/wakeup` - Podman VM time sync on wake
+- `.claude/settings.json` - Claude Code global settings
 
 ## Zsh Layout
 
