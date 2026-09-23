@@ -10,3 +10,7 @@ style = "compact"
 inline_height = 20
 enter_accept = true
 show_help = false
+
+# Default is a hardcoded ~/.atuin/logs, which ignores XDG.
+[logs]
+dir = "~/.local/state/atuin/logs"
