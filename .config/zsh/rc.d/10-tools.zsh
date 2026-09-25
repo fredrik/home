@@ -9,6 +9,22 @@
 # history search, select and execute, over ~/.zsh_history; 50-keybindings.zsh.)
 (( $+commands[fzf] )) && source <(fzf --zsh)
 
+# Ctrl-T/Alt-C list files with fd rather than fzf's own walker, skipping
+# caches and app data (from ~ the walker finds ~3M entries, mostly Library/,
+# .cache/ and .venv/). --no-ignore-vcs because ~/.gitignore (dotfiles repo)
+# ignores almost everything, which would hide code/, .irssi/ and friends.
+if (( $+commands[fzf] && $+commands[fd] )); then
+  _fzf_fd_opts=(--hidden --follow --no-ignore-vcs
+    --exclude .git --exclude node_modules --exclude .venv
+    --exclude Library --exclude Mail --exclude .Trash
+    --exclude .cache --exclude .local/share --exclude .cargo/registry
+    --exclude .npm --exclude .codex/.tmp --exclude .azure/cliextensions
+    --exclude .kube/cache)
+  export FZF_CTRL_T_COMMAND="fd ${_fzf_fd_opts[*]}"
+  export FZF_ALT_C_COMMAND="fd --type d ${_fzf_fd_opts[*]}"
+  unset _fzf_fd_opts
+fi
+
 # atuin for shell history. Config in ~/.config/atuin/config.toml, local only.
 #   Ctrl-R: search all sessions; Enter runs, Tab inserts for editing,
 #           Ctrl-R again cycles filter (global / directory / session)
