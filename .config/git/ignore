@@ -4,3 +4,4 @@
 *.swp
 **/.claude/settings.local.json
 **/worktrees/
+.tintrc
