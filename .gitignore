@@ -31,6 +31,7 @@ sync/
 .aws/
 .azure/
 .config/caddy
+.config/cinode/
 .config/claude-isolated/home
 .config/gh/hosts.yml
 .config/git/*.inc
