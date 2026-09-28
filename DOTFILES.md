@@ -55,7 +55,7 @@ Non-interactive:       .zshenv
   | `70-aliases.zsh` | eza, bat, git shorties, local tools | |
   | `80-colors.zsh` | `LS_COLORS` from vivid (cached) | |
   | `90-title.zsh` | tab/window titles via OSC 2 | |
-  | `95-tint.zsh` | per-surface background tint via OSC 11, `tint` command | |
+  | `95-tint.zsh` | per-surface background tint via OSC 11, `tint` command; directory defaults from the nearest `.tintrc` (untracked: `~/code/fredrik` blue, `~/code/{sandbox,upstream}` green -- recreate on a new machine) | |
 
 - `functions/` - one autoloaded function per file: `take`, `reload`, `psx`,
   `init-project`, `starship-theme`, `httpstatus`.
