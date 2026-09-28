@@ -28,6 +28,7 @@
     "mode": "hold"
   },
   "theme": "dark",
+  "preferredNotifChannel": "notifications_disabled",
   "autoCompactEnabled": false,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true
