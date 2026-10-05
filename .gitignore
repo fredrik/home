@@ -43,6 +43,7 @@ sync/
 .kube/
 .mc/
 .pulumi/
+.snowflake/
 .ssh/
 .vault-token
 
