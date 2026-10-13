@@ -1,6 +1,4 @@
 {
-  "lastChangelogVersion": "0.85.1",
-  "theme": "dark",
-  "defaultProvider": "nebius-vllm",
-  "defaultModel": "Qwen/Qwen3.8-27B"
+  "lastChangelogVersion": "1.1.0",
+  "theme": "dark"
 }
