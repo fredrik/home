@@ -68,6 +68,7 @@ Mail/
 .config/zed/
 
 # tooling state / caches / generated
+.ansible/
 .aspnet/
 .azure-devops/
 .azure-functions-core-tools/
