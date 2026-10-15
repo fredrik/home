@@ -31,6 +31,14 @@ brew "btop"
 brew "caddy"
 # Vector graphics library with cross-device output support
 brew "cairo"
+# Tool to obtain certs from Let's Encrypt and autoenable HTTPS
+brew "certbot"
+# Sexy ANSI fonts for the console
+brew "cfonts"
+# Library to render SVG files using Cairo
+brew "librsvg"
+# Versatile and fast Unicode/ASCII/ANSI graphics renderer
+brew "chafa"
 # Linux virtual machines
 brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -69,6 +77,8 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Audit git repos for secrets
+brew "gitleaks"
 # Render markdown on the CLI
 brew "glow"
 # Open source programming language to build simple/reliable/efficient software
@@ -81,6 +91,8 @@ brew "hidapi"
 brew "ifstat"
 # Command-line tool to export and inspect local iMessage database
 brew "imessage-exporter"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
 # Modular IRC client
 brew "irssi"
 # Synchronize a maildir with an IMAP server
@@ -107,8 +119,6 @@ brew "kustomize"
 brew "lazygit"
 # Implementation of the file(1) command
 brew "libmagic"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Additional guest agents for Lima
 brew "lima-additional-guestagents"
 # System information fetcher, with an emphasis on performance and minimalism
@@ -179,6 +189,8 @@ brew "the_silver_searcher"
 brew "tig"
 # Terminal multiplexer
 brew "tmux"
+# Color-based alternative to figlet (uses libcaca)
+brew "toilet"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -201,6 +213,8 @@ brew "zellij"
 brew "zoxide"
 # Azure Functions Core Tools 4.0
 brew "azure/functions/azure-functions-core-tools@4", trusted: true
+# Terraform
+brew "hashicorp/tap/terraform", trusted: true
 # Command-line interface for 1Password
 cask "1password-cli"
 # OpenAI's coding agent that runs in your terminal
@@ -211,6 +225,8 @@ cask "db-browser-for-sqlite"
 cask "fuse-t"
 # SSHFS implementation based on FUSE-T
 cask "macos-fuse-t/cask/fuse-t-sshfs", trusted: true
+# Desktop automation application
+cask "hammerspoon"
 # Menu bar manager
 cask "jordanbaird-ice"
 # Menu bar app for running local LLMs
