@@ -117,6 +117,25 @@ outside a pinning project?"
 exact pins matched to cluster versions, with comments. `mise prune` removes
 installed versions no config references.
 
+## Launch Agents
+
+Sources live in `.config/launchd/` and are symlinked into
+`~/Library/LaunchAgents/`, which is where launchd reads them. On a new
+machine, link and load each one:
+
+```bash
+ln -s ~/.config/launchd/NAME.plist ~/Library/LaunchAgents/NAME.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/NAME.plist
+```
+
+After editing a plist: `launchctl bootout gui/$(id -u)/NAME` then bootstrap again.
+
+| Agent | Does | Log |
+|-------|------|-----|
+| `com.user.brew-update` | `brew update` daily at 09:00 | `~/Library/Logs/brew-update.log` |
+| `com.user.podman-machine-start` | starts the Podman VM at login. `AbandonProcessGroup` is required: without it launchd kills the VM's `vfkit`/`gvproxy` when the job exits, and the machine reports "started" but is stopped. | `~/.local/log/podman-machine-start.log` |
+| `homebrew.mxcl.sleepwatcher` | runs `~/.local/bin/wakeup` on wake to set the Podman VM clock, which stops while suspended; otherwise OAuth validation in containers fails on clock skew. Custom copy, not managed by `brew services`. | `~/.local/log/wakeup.log` |
+
 ## Starship Themes
 
 Theme switching uses the `starship-theme` function (`.config/zsh/functions/`):
