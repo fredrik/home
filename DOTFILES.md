@@ -118,15 +118,6 @@ outside a pinning project?"
 exact pins matched to cluster versions, with comments. `mise prune` removes
 installed versions no config references.
 
-## Sleepwatcher
-
-`sleepwatcher` (via Homebrew) runs `~/.local/bin/wakeup` on macOS wake to sync the Podman VM clock. The Podman VM drifts during sleep since the `applehv` VM clock stops while suspended. Without this, Claude Code's OAuth token validation fails inside containers due to clock skew.
-
-- Script: `~/.local/bin/wakeup` — sets VM time from host via `podman machine ssh`
-- Plist: `~/Library/LaunchAgents/homebrew.mxcl.sleepwatcher.plist` (custom copy, not managed by `brew services`)
-- Log: `~/.local/log/wakeup.log`
-- Do NOT use `brew services start sleepwatcher` — the user LaunchAgent manages it
-
 ## Starship Themes
 
 Theme switching uses the `starship-theme` function (`.config/zsh/functions/`):
