@@ -20,7 +20,16 @@ Dotfiles repository. Root: `~/`
 - `.config/zellij/config.kdl` - Zellij multiplexer
 - `.config/tmux/tmux.conf` - tmux multiplexer
 - `.config/pomo/pomo.yaml` - Pomodoro timer
-- `.claude/settings.json` - Claude Code global settings
+- `.config/bat/config`, `.config/glow/glow.yml` - bat and glow (cat/markdown rendering)
+- `.config/direnv/direnv.toml` - direnv (quiet logging)
+- `.config/gh/config.yml` - GitHub CLI (ssh protocol; hosts.yml is gitignored)
+- `.config/uv/uv.toml` - uv (managed Python, reflinks, concurrency)
+- `.config/k9s/` - k9s aliases, config and skins
+- `.config/launchd/*.plist` - User launch agents (see Launch Agents)
+- `.hammerspoon/init.lua` - Hammerspoon (toggle desktop icons)
+- `.hushlogin`, `.npmrc` - Silence login banner and npm funding notices
+- `.claude/settings.json`, `.claude/CLAUDE.md` - Claude Code global settings and instructions
+- `.pi/agent/settings.json`, `.codex/AGENTS.md` - pi and Codex coding agents
 
 ## Zsh Layout
 
