@@ -16,9 +16,6 @@
     },
     "sonnet": {
       "effortLevel": "medium"
-    },
-    "qwen/qwen3.8-27b": {
-      "effortLevel": "xhigh"
     }
   },
   "promptSuggestionEnabled": false,
@@ -30,6 +27,5 @@
   "theme": "dark",
   "preferredNotifChannel": "notifications_disabled",
   "autoCompactEnabled": false,
-  "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "skipAutoPermissionPrompt": true
 }
