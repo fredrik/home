@@ -14,3 +14,6 @@ show_help = false
 # Default is a hardcoded ~/.atuin/logs, which ignores XDG.
 [logs]
 dir = "~/.local/state/atuin/logs"
+
+[ai]
+enabled = false
