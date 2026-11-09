@@ -34,6 +34,7 @@ sync/
 .config/cinode/
 .config/claude-isolated/home
 .config/gh/hosts.yml
+.config/hcloud/
 .config/git/*.inc
 .config/llama/
 .config/op/
