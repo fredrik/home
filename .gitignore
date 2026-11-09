@@ -30,6 +30,7 @@ sync/
 # secrets, etc
 .aws/
 .azure/
+.config/argocd/
 .config/caddy
 .config/cinode/
 .config/claude-isolated/home
