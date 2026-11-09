@@ -14,3 +14,7 @@ if [[ ! -r "$SHELDON_CACHE" || "$SHELDON_PLUGINS" -nt "$SHELDON_CACHE" ]]; then
   sheldon source > "$SHELDON_CACHE"
 fi
 source "$SHELDON_CACHE"
+
+# zsh-syntax-highlighting defaults comments to fg=black,bold, which is
+# invisible on a dark background. Use the terminal's bright-black (grey).
+ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
