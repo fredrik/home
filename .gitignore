@@ -102,6 +102,7 @@ Mail/
 .duckdb_history
 .irssi/
 .fly/
+.gemini/
 .lesshst
 .llama-app/
 .npm/
