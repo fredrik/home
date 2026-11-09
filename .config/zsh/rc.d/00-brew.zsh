@@ -19,7 +19,7 @@ if [[ -n $BREW_BIN ]]; then
   source "$BREW_CACHE"
 fi
 
-# ~/.local/bin goes in front of everything, including homebrew.
+# ~/.local/bin and ~/.cargo/bin go in front of everything, including homebrew.
 # Set here rather than .zshenv or .zprofile (see DOTFILES.md, Zsh Layout).
 typeset -U path  # dedupe PATH entries (keeps first occurrence)
-export PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:~/.cargo/bin:$PATH
