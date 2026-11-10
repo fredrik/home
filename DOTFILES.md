@@ -29,6 +29,7 @@ Dotfiles repository. Root: `~/`
 - `.hammerspoon/init.lua` - Hammerspoon (toggle desktop icons)
 - `.hushlogin`, `.npmrc` - Silence login banner and npm funding notices
 - `.claude/settings.json`, `.claude/CLAUDE.md` - Claude Code global settings and instructions
+- `.claude/statusline.sh` - Claude Code status line (cwd, git, model/effort, context %, rate limits)
 - `.pi/agent/settings.json`, `.codex/AGENTS.md` - pi and Codex coding agents
 
 ## Zsh Layout
