@@ -4,6 +4,7 @@
     "GIT_CONFIG_PARAMETERS": "'commit.gpgsign=false' 'tag.gpgsign=false'",
     "GIT_SSH_COMMAND": "ssh -i ~/.ssh/id_claude -o IdentitiesOnly=yes -o IdentityAgent=none"
   },
+  "model": "fable",
   "enabledPlugins": {
     "superpowers@claude-plugins-official": false
   },
@@ -16,6 +17,9 @@
     },
     "sonnet": {
       "effortLevel": "medium"
+    },
+    "claude-fable-5-2": {
+      "effortLevel": "high"
     }
   },
   "promptSuggestionEnabled": false,
