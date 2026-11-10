@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Claude Code status line: reads session JSON on stdin, prints one line.
 #
-#   ~/code/fredrik/docs │ main +1 !2 ?3 ↑1 wt:name #12 │ Fable 5.2 high │ ctx 23%/200k │ 5h 41% fable 32%
+#   ~/code/fredrik/docs → src │ main +1 !2 ?3 ↑1 wt:name #12 │ Fable 5.2 high │ ctx 23%/200k │ 5h 41% fable 32%
 #
 # Input schema: https://code.claude.com/docs/en/statusline
 # Test: echo '{"workspace":{"current_dir":"'$PWD'"},"model":{"display_name":"X"}}' | ~/.claude/statusline.sh
@@ -15,6 +15,7 @@ eval "$(jq -r '
     elif . >= 1000000 then "\(. / 1000000 | floor)M"
     else "\(. / 1000 | floor)k" end;
   @sh "cwd=\(.workspace.current_dir // .cwd // "")",
+  @sh "project=\(.workspace.project_dir // "")",
   @sh "model=\(.model.display_name // .model.id // "")",
   @sh "effort=\(.effort.level // "")",
   @sh "fast=\(.fast_mode // false)",
@@ -42,13 +43,24 @@ level() {
 
 segments=()
 
-# --- directory: ~ for $HOME, keep only the last three components when deep
-dir=$cwd
-[[ $dir == "$HOME"* ]] && dir="~${dir#"$HOME"}"
-IFS=/ read -ra parts <<<"$dir"
-n=${#parts[@]}
-((n > 5)) && dir="…/${parts[n - 3]}/${parts[n - 2]}/${parts[n - 1]}"
-segments+=("${bold}${blue}${dir}${reset}")
+# --- directory: where Claude Code was launched (where to resume from), then
+# where it is working now if it has moved: "~/code/x → src" or "~ → /tmp/y".
+# ~ for $HOME; only the last three components when deep.
+tidy() {
+  local path=$1 parts n
+  [[ $path == "$HOME"* ]] && path="~${path#"$HOME"}"
+  IFS=/ read -ra parts <<<"$path"
+  n=${#parts[@]}
+  ((n > 5)) && path="…/${parts[n - 3]}/${parts[n - 2]}/${parts[n - 1]}"
+  printf %s "$path"
+}
+[[ -z $project ]] && project=$cwd
+dir_seg="${bold}${blue}$(tidy "$project")${reset}"
+if [[ $cwd != "$project" ]]; then
+  if [[ $cwd == "$project"/* ]]; then here=${cwd#"$project"/}; else here=$cwd; fi
+  dir_seg+=" ${dim}→${reset} ${blue}$(tidy "$here")${reset}"
+fi
+segments+=("$dir_seg")
 
 # --- git: branch, in-progress operation, change counts, ahead/behind, worktree, PR
 # --no-optional-locks: never take the index lock, so this cannot collide with
