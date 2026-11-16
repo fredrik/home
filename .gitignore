@@ -30,6 +30,7 @@ sync/
 # secrets, etc
 .aws/
 .azure/
+.config/1Password/
 .config/argocd/
 .config/caddy
 .config/cinode/
