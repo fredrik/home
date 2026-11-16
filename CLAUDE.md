@@ -17,7 +17,12 @@ All source code lives in `~/code/` with this structure:
 
 When cloning, place repos according to this convention. Read `~/code/CLAUDE.md` for details.
 
-When Claude generates one-off scripts, put them in `~/code/sandbox/scripts-by-claude`.
+When Claude generates one-off scripts, put them in `~/code/sandbox/scripts-by-claude`. Two rules apply every time, from whichever project the session runs in:
+
+- Always commit the script there before finishing. Never leave it untracked.
+- Always keep the index up to date: add or update the script's row in that repo's `README.md` in the same commit.
+
+Read `~/code/sandbox/scripts-by-claude/CLAUDE.md` first for where the script goes.
 
 ## Notes Directory
 
