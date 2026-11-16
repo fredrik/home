@@ -21,7 +21,9 @@ When Claude generates one-off scripts, put them in `~/code/sandbox/scripts-by-cl
 
 ## Notes Directory
 
-`~/notes/` is for future-reference material — "how I did it", useful resources, sources found along the way. Markdown files, flat by topic.
+`~/notes/` is for future-reference material — "how I did it", useful resources, sources found along the way. Markdown files, organized per topic as `{topic}/{note}.md`.
+
+Read `~/notes/CLAUDE.md` before adding a note.
 
 ## Research Directory
 
