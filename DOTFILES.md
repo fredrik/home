@@ -123,9 +123,9 @@ outside a pinning project?"
   kustomize, hugo, pulumi. Projects that need these must pin them in their
   `mise.toml` (e.g. local-dev-blog pins hugo).
 
-`~/code/knowit/fluxcd-dataplatform`'s `.mise.toml` is the textbook example:
-exact pins matched to cluster versions, with comments. `mise prune` removes
-installed versions no config references.
+The textbook example has exact pins matched to cluster versions, with comments.
+
+`mise prune` removes installed versions no config references.
 
 ## Launch Agents
 
