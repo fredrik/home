@@ -10,7 +10,7 @@ All source code lives in `~/code/` with this structure:
 
 | Path | Purpose | Remote |
 |------|---------|--------|
-| `knowit/{project}` | Work projects | `github.com/knowit-solutions-cocreate/{project}` |
+| `knowit/{project}` | Work projects | `github.com/{employer-org}/{project}` |
 | `fredrik/{project}` | Personal projects | `github.com/fredrik/{project}` |
 | `sandbox/{project}` | Experiments, POC, scratch | Local (may graduate to `fredrik/` or `knowit/`) |
 | `upstream/{owner}/{project}` | Third-party code | `github.com/{owner}/{project}` |
@@ -33,4 +33,3 @@ Read `~/notes/CLAUDE.md` before adding a note.
 ## Research Directory
 
 `~/research/` is for focused Claude research sessions that generate material on a specific topic. Organized per topic as `{topic}/*.md`.
-
