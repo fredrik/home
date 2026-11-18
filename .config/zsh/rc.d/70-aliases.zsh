@@ -3,8 +3,6 @@
 # eza instead of ls
 alias ls='eza --git'
 alias ll='ls -l'
-alias lla='ls -la'
-alias lt='eza --tree --git-ignore --icons'
 
 # bat instead of cat
 alias cat='bat --paging=never'
