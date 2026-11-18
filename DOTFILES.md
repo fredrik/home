@@ -19,6 +19,7 @@ Dotfiles repository. Root: `~/`
 - `.config/lazygit/config.yml` - lazygit
 - `.config/zellij/config.kdl` - Zellij multiplexer
 - `.config/tmux/tmux.conf` - tmux multiplexer
+- `.config/rex/init.lua` - Rex multiplexer (key bindings and modes, migrated from Zellij)
 - `.config/pomo/pomo.yaml` - Pomodoro timer
 - `.config/bat/config`, `.config/glow/glow.yml` - bat and glow (cat/markdown rendering)
 - `.config/direnv/direnv.toml` - direnv (quiet logging)
@@ -31,6 +32,7 @@ Dotfiles repository. Root: `~/`
 - `.claude/settings.json`, `.claude/CLAUDE.md` - Claude Code global settings and instructions
 - `.claude/statusline.sh` - Claude Code status line (cwd, git, model/effort, context %, rate limits)
 - `.pi/agent/settings.json`, `.codex/AGENTS.md` - pi and Codex coding agents
+- `.agents/skills/rex/SKILL.md` - Rex skill stub for coding agents (installed by `rex skill setup`)
 
 ## Zsh Layout
 
