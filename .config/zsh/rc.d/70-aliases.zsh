@@ -42,8 +42,4 @@ alias fable='claude --model=fable'
 alias opus='claude --model=opus'
 alias sonnet='claude --model=sonnet'
 
-# mount whatbox seedbox over sshfs (fuse-t)
-alias mount-whatbox='mkdir -p ~/whatbox && sshfs whatbox: ~/whatbox -o volname=whatbox,reconnect,follow_symlinks'
-alias umount-whatbox='diskutil unmount ~/whatbox'
-
 # Also autoloaded: starship-theme, starship-build, brew-dump, brew-install, httpstatus (functions/).
