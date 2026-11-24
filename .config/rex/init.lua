@@ -38,66 +38,76 @@ rex.action{
 }
 
 -- Rex appends new tabs to the end of the tab bar and has no setting for it.
--- This opens the tab on the server instead, then moves it to just after the
--- tab the action was run from. The new shell starts in the focused pane's
--- directory.
+-- This has the app open its usual new tab, which it also focuses, and starts
+-- a helper that moves the tab to just after the one the action was run from.
+--
+-- The helper is a separate process because the app only opens the tab once
+-- the action has returned. Opening the tab from here instead leaves it without
+-- focus: the app keeps its own selected tab and doesn't reliably switch to one
+-- the server made. If the helper fails, the tab stays at the end.
+
+-- The server's PATH doesn't include the rex command.
+local rex_cli = os.getenv("HOME")
+  .. "/Library/Application Support/com.superlogical.rex/RexServer"
+  .. "/Versions/Current/Rex Server.app/Contents/MacOS/rex"
+
+-- Run with `rex do -e`. Waits up to three seconds for a tab that isn't in
+-- `known`, a comma-separated list of window IDs, and moves it in front of
+-- the window `before`.
+local place_new_tab = [[
+  local known = {}
+  for id in rex.args.known:gmatch("[^,]+") do known[id] = true end
+  for _ = 1, 60 do
+    local view = rex.session.view{}
+    for _, window in ipairs(view and view.windows or {}) do
+      if not known[window.window_id] then
+        rex.session.move_window{
+          window_id        = window.window_id,
+          before_window_id = rex.args.before,
+        }
+        return
+      end
+    end
+    rex.sleep(0.05)
+  end
+]]
+
 rex.action{
   name     = "new_tab_beside",
   title    = "New Tab Beside Current",
   keywords = "create tab window add next adjacent after",
   run      = function(ctx, args)
-    local terminal = "com.superlogical.terminal"
+    rex.client.queue("client.tab.new")
 
-    local view, err = rex.session.view{}
-    if err ~= nil then error(err, 0) end
+    local view = rex.session.view{}
+    if view == nil then return end
 
     -- The tab the action was run from: the one holding the focused pane, or
     -- the session's active tab when Rex doesn't say which pane that is.
     local current = view.active_window_id
-    local cwd
     if ctx.block_id ~= nil then
       local described = rex.session.describe_block{ block_id = ctx.block_id }
       if described ~= nil and described.block.window_id ~= nil then
         current = described.block.window_id
       end
-      local process = rex.block.call(terminal, "process", { block_id = ctx.block_id })
-      if process ~= nil and process.foreground ~= nil then
-        cwd = process.foreground.cwd
-      end
     end
 
     -- The tab that follows it, which the new tab goes in front of. There is
-    -- none when the current tab is last, and the new tab is already in place.
+    -- none when the current tab is last, and the new tab needs no moving.
     local following
+    local known = {}
     for index, window in ipairs(view.windows) do
+      known[#known + 1] = window.window_id
       if window.window_id == current and view.windows[index + 1] ~= nil then
         following = view.windows[index + 1].window_id
       end
     end
+    if following == nil then return end
 
-    local created, new_err = rex.session.new_window{
-      layout = rex.layout.block{
-        flavor  = terminal .. ".shell",
-        options = { cwd = cwd },
-      },
-    }
-    if new_err ~= nil then error(new_err, 0) end
-
-    if following ~= nil then
-      local _, move_err = rex.session.move_window{
-        window_id        = created.window_id,
-        before_window_id = following,
-      }
-      if move_err ~= nil then error(move_err, 0) end
-    end
-
-    -- The app keeps its own selected tab and doesn't follow the server's
-    -- active one, so ask it to show the new tab. Without an app to ask, as
-    -- when run from the CLI, the tab is still created and placed.
-    pcall(rex.client.queue, "session.select", {
-      session_id = view.session_id,
-      window_id  = created.window_id,
-    })
+    rex.exec.start({
+      rex_cli, "do", "-e", place_new_tab, "-s", view.session_id,
+      "before=" .. following, "known=" .. table.concat(known, ","),
+    }, { detach = true, stdout = false, stderr = false })
   end,
 }
 
