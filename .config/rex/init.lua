@@ -14,7 +14,13 @@ rex.action{
   title = "Run an action and return to normal mode",
   args  = { action = "string", args = "object?" },
   run   = function(ctx, args)
-    rex.client.queue(args.action, args.args or {})
+    -- A name with a dot is the client's action. One without is defined here.
+    if args.action:find(".", 1, true) then
+      rex.client.queue(args.action, args.args or {})
+    else
+      local _, err = rex.invoke(args.action, args.args or {})
+      if err ~= nil then error(err, 0) end
+    end
     rex.client.queue("client.mode.exit_all")
   end,
 }
@@ -28,6 +34,70 @@ rex.action{
   run   = function(ctx, args)
     rex.client.queue("client.mode.exit_all")
     rex.client.queue("client.mode.enter", { name = args.name })
+  end,
+}
+
+-- Rex appends new tabs to the end of the tab bar and has no setting for it.
+-- This opens the tab on the server instead, then moves it to just after the
+-- tab the action was run from. The new shell starts in the focused pane's
+-- directory.
+rex.action{
+  name     = "new_tab_beside",
+  title    = "New Tab Beside Current",
+  keywords = "create tab window add next adjacent after",
+  run      = function(ctx, args)
+    local terminal = "com.superlogical.terminal"
+
+    local view, err = rex.session.view{}
+    if err ~= nil then error(err, 0) end
+
+    -- The tab the action was run from: the one holding the focused pane, or
+    -- the session's active tab when Rex doesn't say which pane that is.
+    local current = view.active_window_id
+    local cwd
+    if ctx.block_id ~= nil then
+      local described = rex.session.describe_block{ block_id = ctx.block_id }
+      if described ~= nil and described.block.window_id ~= nil then
+        current = described.block.window_id
+      end
+      local process = rex.block.call(terminal, "process", { block_id = ctx.block_id })
+      if process ~= nil and process.foreground ~= nil then
+        cwd = process.foreground.cwd
+      end
+    end
+
+    -- The tab that follows it, which the new tab goes in front of. There is
+    -- none when the current tab is last, and the new tab is already in place.
+    local following
+    for index, window in ipairs(view.windows) do
+      if window.window_id == current and view.windows[index + 1] ~= nil then
+        following = view.windows[index + 1].window_id
+      end
+    end
+
+    local created, new_err = rex.session.new_window{
+      layout = rex.layout.block{
+        flavor  = terminal .. ".shell",
+        options = { cwd = cwd },
+      },
+    }
+    if new_err ~= nil then error(new_err, 0) end
+
+    if following ~= nil then
+      local _, move_err = rex.session.move_window{
+        window_id        = created.window_id,
+        before_window_id = following,
+      }
+      if move_err ~= nil then error(move_err, 0) end
+    end
+
+    -- The app keeps its own selected tab and doesn't follow the server's
+    -- active one, so ask it to show the new tab. Without an app to ask, as
+    -- when run from the CLI, the tab is still created and placed.
+    pcall(rex.client.queue, "session.select", {
+      session_id = view.session_id,
+      window_id  = created.window_id,
+    })
   end,
 }
 
@@ -85,6 +155,7 @@ end
 -- Normal mode -----------------------------------------------------------------
 
 bind_shared("")
+rex.bind("cmd+t", "new_tab_beside") -- replaces the default, client.tab.new
 rex.bind("ctrl+g", "client.mode.enter", { name = "locked" })
 for mode, key in pairs(mode_keys) do
   rex.bind(key, "client.mode.enter", { name = mode })
@@ -150,7 +221,7 @@ for index = 1, 9 do
   rex.bind("tab/" .. index, "then_normal", { action = "client.tab.goto", args = { index = index } })
 end
 rex.bind("tab/b", "then_normal", { action = "pane.move_to_new_tab" })
-rex.bind("tab/n", "then_normal", { action = "client.tab.new" })
+rex.bind("tab/n", "then_normal", { action = "new_tab_beside" })
 rex.bind("tab/r", "then_normal", { action = "client.tab.rename" })
 rex.bind("tab/x", "then_normal", { action = "client.tab.close" })
 
@@ -184,7 +255,7 @@ rex.bind("tmux/shift+'", "then_normal", { action = "pane.split", args = { direct
 rex.bind("tmux/shift+5", "then_normal", { action = "pane.split", args = { direction = "right" } })
 rex.bind("tmux/,", "then_normal", { action = "client.tab.rename" })
 rex.bind("tmux/ctrl+b", "then_normal", { action = "pane.send_key", args = { key = "ctrl+b" } })
-rex.bind("tmux/c", "then_normal", { action = "client.tab.new" })
+rex.bind("tmux/c", "then_normal", { action = "new_tab_beside" })
 rex.bind("tmux/n", "then_normal", { action = "client.tab.next" })
 rex.bind("tmux/p", "then_normal", { action = "client.tab.previous" })
 rex.bind("tmux/o", "pane.focus_next")
