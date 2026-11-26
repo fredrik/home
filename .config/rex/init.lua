@@ -136,12 +136,21 @@ local mode_keys = {
 local directions = { "left", "down", "up", "right" }
 local hjkl = { h = "left", j = "down", k = "up", l = "right" }
 
+-- Option+Left/Right move by word in the program instead of focusing a pane
+-- (alt+h and alt+l do that). They are sent as esc b and esc f, which is what
+-- Ghostty sends and what zsh binds. Rex's own encoding for them, CSI 1;3D and
+-- CSI 1;3C, isn't bound in zsh.
+local word_keys = { ["alt+left"] = "alt+b", ["alt+right"] = "alt+f" }
+
 local function bind_shared(prefix)
   for index = 1, 9 do
     rex.bind(prefix .. "ctrl+" .. index, "client.tab.goto", { index = index })
   end
-  for _, direction in ipairs(directions) do
+  for _, direction in ipairs({ "up", "down" }) do
     rex.bind(prefix .. "alt+" .. direction, "pane.focus", { direction = direction })
+  end
+  for key, sent in pairs(word_keys) do
+    rex.bind(prefix .. key, "pane.send_key", { key = sent })
   end
   for key, direction in pairs(hjkl) do
     rex.bind(prefix .. "alt+" .. key, "pane.focus", { direction = direction })
@@ -155,7 +164,7 @@ local shared_keys = { "alt+i", "alt+o", "alt+n" }
 for index = 1, 9 do
   shared_keys[#shared_keys + 1] = "ctrl+" .. index
 end
-for _, direction in ipairs(directions) do
+for _, direction in ipairs({ "up", "down" }) do
   shared_keys[#shared_keys + 1] = "alt+" .. direction
 end
 for key in pairs(hjkl) do
@@ -196,6 +205,9 @@ end
 rex.bind("locked/ctrl+g", "client.mode.exit_all")
 for _, key in ipairs(shared_keys) do
   rex.bind("locked/" .. key, "pane.send_key", { key = key })
+end
+for key, sent in pairs(word_keys) do
+  rex.bind("locked/" .. key, "pane.send_key", { key = sent })
 end
 for _, key in pairs(mode_keys) do
   rex.bind("locked/" .. key, "pane.send_key", { key = key })
